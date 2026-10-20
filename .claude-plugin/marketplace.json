@@ -1,0 +1,14 @@
+{
+  "name": "pobsteta",
+  "description": "Les outils Claude Code de Pascal Obstétar.",
+  "owner": {
+    "name": "Pascal Obstétar"
+  },
+  "plugins": [
+    {
+      "name": "imperatrice",
+      "source": "./",
+      "description": "La méthode de l'Impératrice pour piloter une équipe d'agents IA."
+    }
+  ]
+}

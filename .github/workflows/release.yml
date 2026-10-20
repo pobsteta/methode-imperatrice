@@ -1,0 +1,55 @@
+name: Release
+
+# À chaque fusion dans main : si la version de .claude-plugin/plugin.json n'a pas encore
+# de tag, pose le tag vX.Y.Z et publie la release GitHub (notes générées depuis les PR).
+# La version est écrite à la main dans plugin.json, dans la PR : c'est elle que Claude Code
+# lit pour proposer la mise à jour du plugin aux projets. Rien n'est poussé sur main.
+on:
+  push:
+    branches: [ main ]
+
+permissions: {}
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Lire la version et chercher son tag
+        id: version
+        run: |
+          python3 scripts/verifier_version.py
+          VERSION=$(python3 -c 'import json; print(json.load(open(".claude-plugin/plugin.json"))["version"])')
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+          if git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; then
+            echo "nouvelle=false" >> "$GITHUB_OUTPUT"
+            echo "v$VERSION existe déjà : pas de release (fusion sans changement du plugin)." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "nouvelle=true" >> "$GITHUB_OUTPUT"
+            echo "Nouvelle version : v$VERSION." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Tests des garde-fous avant de publier
+        if: steps.version.outputs.nouvelle == 'true'
+        run: |
+          python3 tests/test_garde_main.py
+          python3 tests/test_journal_ajout_seul.py
+
+      - name: Tag et release GitHub
+        if: steps.version.outputs.nouvelle == 'true'
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          name: imperatrice ${{ steps.version.outputs.tag }}
+          generate_release_notes: true
