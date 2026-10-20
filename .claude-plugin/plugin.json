@@ -1,0 +1,12 @@
+{
+  "name": "imperatrice",
+  "version": "0.1.0",
+  "description": "La méthode de l'Impératrice (Pascal Obstétar) pour piloter une équipe d'agents IA : huit agents, les commandes /brief, /mission, /boucle, /bilan et /demarrer, les garde-fous et les gabarits.",
+  "author": {
+    "name": "Pascal Obstétar",
+    "url": "https://github.com/pobsteta"
+  },
+  "homepage": "https://github.com/pobsteta/methode-imperatrice",
+  "repository": "https://github.com/pobsteta/methode-imperatrice",
+  "keywords": ["methode", "orchestration", "agents", "imperatrice"]
+}
