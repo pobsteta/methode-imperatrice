@@ -8,5 +8,11 @@
   },
   "homepage": "https://github.com/pobsteta/methode-imperatrice",
   "repository": "https://github.com/pobsteta/methode-imperatrice",
-  "keywords": ["methode", "orchestration", "agents", "imperatrice"]
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "methode",
+    "orchestration",
+    "agents",
+    "imperatrice"
+  ]
 }

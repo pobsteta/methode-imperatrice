@@ -1,0 +1,36 @@
+name: CI
+
+# À chaque PR et à chaque fusion dans main : tests des garde-fous, validation du plugin
+# et de la marketplace, et contrôle de la version (plugin.json) : un changement du plugin
+# sans montée de version ne serait jamais proposé en mise à jour aux projets.
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Tests du hook garde_main
+        run: python3 tests/test_garde_main.py
+
+      - name: Tests du hook journal_ajout_seul
+        run: python3 tests/test_journal_ajout_seul.py
+
+      - name: Validation du plugin et de la marketplace
+        # Version de Claude Code épinglée (publiée le 2026-10-05).
+        run: |
+          npx -y @anthropic-ai/claude-code@2.1.290 plugin validate .
+          npx -y @anthropic-ai/claude-code@2.1.290 plugin validate .claude-plugin/plugin.json
+
+      - name: Version cohérente et montée si le plugin change
+        run: python3 scripts/verifier_version.py
