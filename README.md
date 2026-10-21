@@ -24,7 +24,7 @@ garde-fous viennent d'ici, sans copie.
 | **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) |
 | **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais, le crible FRANCE |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
-| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul ; pas de « terminé » sans tests verts (`.claude/test-command`) |
+| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`) |
 | **Gabarits** | fiche de mission, ADR au crible FRANCE, `CLAUDE.md`, brief, équipe, kanban, journal |
 
 ## Installer dans un projet
@@ -98,6 +98,7 @@ python3 tests/test_garde_main.py
 python3 tests/test_journal_ajout_seul.py
 python3 tests/test_tests_obligatoires.py
 python3 tests/test_verifier_version.py
+python3 tests/test_journal_intact.py
 claude plugin validate .
 python3 scripts/verifier_version.py
 ```

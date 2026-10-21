@@ -32,6 +32,13 @@ jobs:
       - name: Tests du contrôle de version
         run: python3 tests/test_verifier_version.py
 
+      - name: Tests du hook journal_intact
+        run: python3 tests/test_journal_intact.py
+
+      - name: Journal en ajout seul depuis la base de la PR
+        if: github.event_name == 'pull_request'
+        run: python3 hooks/journal_intact.py --depuis "origin/${{ github.base_ref }}"
+
       - name: Validation du plugin et de la marketplace
         # Version de Claude Code épinglée (publiée le 2026-10-05).
         run: |
