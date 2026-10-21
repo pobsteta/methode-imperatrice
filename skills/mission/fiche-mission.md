@@ -19,6 +19,12 @@
 
 **Temps de la main :** tenir / appuyer / lâcher — _et pourquoi._
 
+## Ma réponse d'abord
+
+_Rempli par Pascal seul, avant de lire le travail de l'agent : ce qu'il attend de la
+mission, et le résultat qu'il prévoit. Une ligne suffit. L'orchestrateur ne le remplit
+pas._
+
 ## L'Homme
 
 - **Agent :** `dev` / `testeur` / `afficheur` / …
