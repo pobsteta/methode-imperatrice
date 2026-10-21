@@ -99,6 +99,7 @@ python3 tests/test_journal_ajout_seul.py
 python3 tests/test_tests_obligatoires.py
 python3 tests/test_verifier_version.py
 python3 tests/test_journal_intact.py
+python3 tests/test_alignement_livre.py
 claude plugin validate .
 python3 scripts/verifier_version.py
 ```
