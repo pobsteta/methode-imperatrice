@@ -3,7 +3,7 @@
 - **Date :** 2026-10-21
 - **Statut :** acceptée, par délégation de Pascal (« Fais ce qu'il faut pour que ça passe », 21 octobre 2026)
 - **Proposée par :** Claude (orchestrateur), mission 008
-- **Tranchée par :** Claude (orchestrateur), par délégation de Pascal ; à confirmer par Pascal
+- **Tranchée par :** Claude (orchestrateur), par délégation de Pascal ; confirmée par Pascal le 21 octobre 2026 (« Oui »)
 
 ## Ma réponse d'abord (fiche n° 15)
 
