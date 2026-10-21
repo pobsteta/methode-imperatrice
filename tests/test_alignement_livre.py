@@ -54,9 +54,15 @@ MARQUEURS = {
         "fiche 15 (mission 002)",
     ),
     "skills/mission/fiche-mission.md": (
-        ["## Ma réponse d'abord"],
+        ["## Ma réponse d'abord", "**Critère d'arrêt de la relecture :**",
+         "3 allers-retours"],
         [],
-        "fiche 15 (mission 002)",
+        "fiche 15 (missions 002 et 003)",
+    ),
+    "skills/boucle/SKILL.md": (
+        ["Critère d'arrêt de la relecture", "4e « à reprendre »", "remonte à Pascal"],
+        [],
+        "fiche 15 (mission 003)",
     ),
 }
 

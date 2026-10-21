@@ -26,8 +26,14 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    indépendantes. Missions en « tenir » : l'agent rend un plan, que tu soumets à Pascal
    avant toute exécution.
 5. **Contrôler** : pour chaque mission rendue, lancer le `relecteur`. « À reprendre » :
-   renvoyer à l'agent (nouveau contexte, fiche complétée des remarques). « Prêt » :
-   ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
+   renvoyer à l'agent (nouveau contexte, fiche complétée des remarques), et inscrire au
+   journal le numéro de l'aller-retour (« aller-retour 2/3 ») : un aller-retour est un
+   renvoi à l'agent.
+   **Critère d'arrêt de la relecture** : celui de la fiche, N allers-retours, 3 par
+   défaut. Au (N+1)e « à reprendre », soit le 4e « à reprendre » par défaut, tu ne
+   renvoies plus : la décision remonte à Pascal, en quatre temps, avec les points du
+   relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
+   « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
    par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
 6. **Dire tout de suite** : toute mission bloquée, en échec ou hors délai est annoncée à
    Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait quoi
