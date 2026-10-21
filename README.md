@@ -65,7 +65,11 @@ Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `
 
 Les agents sont génériques : ce qui est propre au domaine (référentiels, conventions
 publiées, règles de test comme « un point du terrain tombe au bon endroit ») s'écrit
-dans le `CLAUDE.md` du projet, qu'ils lisent.
+dans le `CLAUDE.md` du projet, qu'ils lisent. De même, les hooks ne connaissent aucun
+domaine : l'environnement dont les tests ont besoin s'écrit dans la commande de tests,
+par exemple `export ANDROID_HOME="${ANDROID_HOME:-$HOME/Android/Sdk}" && ./gradlew test`,
+ou dans la clé `env` des réglages locaux de Claude Code. **Depuis la 0.2.0, le hook ne
+fixe plus `ANDROID_HOME` de lui-même** (ADR 0001).
 
 ## Faire évoluer la méthode
 

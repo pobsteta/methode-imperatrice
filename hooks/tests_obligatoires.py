@@ -9,6 +9,8 @@ Au second arrêt (l'agent repart déjà à cause de ce hook), on le laisse finir
 la boucle sans fin, mais si les tests sont encore rouges, on l'inscrit au journal
 (arbitrage de Pascal, brief v0.2.0) : la mission n'est pas vérifiée, et cela se voit.
 Tant que la stack n'est pas choisie (pas de .claude/test-command), le hook ne fait rien.
+Le hook ne connaît aucun domaine : l'environnement propre au projet (ANDROID_HOME par
+exemple) s'écrit dans sa commande de tests ou dans ses réglages locaux (ADR 0001).
 """
 import datetime
 import json
@@ -67,18 +69,9 @@ def main():
     if not code_modifie:
         sys.exit(0)
 
-    # Un worktree d'agent n'a pas de local.properties : sans ANDROID_HOME, le build
-    # Android échoue (« SDK location not found »). Repli sur l'emplacement standard
-    # du SDK s'il existe sur ce poste ; rien n'est écrit dans le dépôt.
-    env = dict(os.environ)
-    if not env.get("ANDROID_HOME") and not os.path.isfile(os.path.join(cwd, "local.properties")):
-        for candidat in (os.path.expanduser("~/Android/Sdk"), os.path.expanduser("~/Library/Android/sdk")):
-            if os.path.isdir(candidat):
-                env["ANDROID_HOME"] = candidat
-                break
-
-    # Deux builds Gradle dans le même dossier se gênent (fichiers de build tronqués) :
-    # un verrou par dossier de travail fait attendre le second (incident du 2026-10-16).
+    # Deux lancements des tests dans le même dépôt se gênent (fichiers de build tronqués,
+    # incident du 2026-10-16) : un verrou par dossier git fait attendre le second.
+    # POSIX seulement (fcntl) ; ailleurs, il est ignoré.
     verrou = None
     try:
         dossier_git = subprocess.run(
@@ -94,7 +87,7 @@ def main():
 
     try:
         resultat = subprocess.run(
-            commande, shell=True, cwd=cwd, env=env,
+            commande, shell=True, cwd=cwd,
             capture_output=True, text=True, timeout=DELAI,
         )
     except subprocess.TimeoutExpired:
