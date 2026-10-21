@@ -27,7 +27,7 @@ changements de cap.
 
 ## Ma réponse d'abord
 
-_À remplir par Pascal, avant de lire la PR._
+« Je m'en passe. » — Pascal, le 21 octobre 2026 (demandée trop tard : après le résumé du travail).
 
 ## L'Homme
 
