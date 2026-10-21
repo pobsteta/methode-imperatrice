@@ -5,7 +5,8 @@
 
 Crée un dépôt temporaire par cas, avec une commande de tests factice dans
 .claude/test-command, et vérifie que le hook bloque l'arrêt (2) ou le laisse passer (0) ;
-au second arrêt (stop_hook_active) avec des tests rouges, qu'il l'inscrit au journal.
+au second arrêt (stop_hook_active) avec des tests rouges, qu'il l'inscrit au journal ;
+et qu'il ne fixe aucune variable propre à un domaine (ANDROID_HOME, ADR 0001).
 """
 import json
 import os
@@ -40,7 +41,7 @@ def lire(depot, chemin):
         return None
 
 
-def rejouer(commande, changements, actif=False, journal=True):
+def rejouer(commande, changements, actif=False, journal=True, env_en_plus=None, sans=()):
     """Dépôt temporaire commité, puis changements non commités ; renvoie (code, stderr, journal)."""
     with tempfile.TemporaryDirectory() as depot:
         git("init", "-q", "-b", "mission/x", cwd=depot)
@@ -54,7 +55,9 @@ def rejouer(commande, changements, actif=False, journal=True):
         for chemin, contenu in changements.items():
             ecrire(depot, chemin, contenu)
         entree = {"hook_event_name": "Stop", "cwd": depot, "stop_hook_active": actif}
-        env = dict(os.environ, CLAUDE_PROJECT_DIR=depot)
+        env = dict(os.environ, CLAUDE_PROJECT_DIR=depot, **(env_en_plus or {}))
+        for nom in sans:
+            env.pop(nom, None)
         r = subprocess.run([sys.executable, HOOK], input=json.dumps(entree),
                            capture_output=True, text=True, env=env)
         return r.returncode, r.stderr, lire(depot, f"pilotage/{J}")
@@ -86,6 +89,17 @@ def main():
         juste = obtenu == attendu and (controle is None or controle(err, j))
         print(("ok   " if juste else "ÉCHEC"), attendu, obtenu, nom)
         echecs += not juste
+
+    # ADR 0001 : le hook ne connaît pas Android. Même si ~/Android/Sdk existe et que
+    # ANDROID_HOME n'est pas défini, la commande de tests ne doit pas le recevoir.
+    with tempfile.TemporaryDirectory() as maison:
+        os.makedirs(os.path.join(maison, "Android", "Sdk"))
+        obtenu, err, j = rejouer('test -z "$ANDROID_HOME"', code,
+                                 env_en_plus={"HOME": maison}, sans=("ANDROID_HOME",))
+    juste = obtenu == 0
+    print(("ok   " if juste else "ÉCHEC"), 0, obtenu,
+          "~/Android/Sdk présent, pas d'ANDROID_HOME : le hook n'en fixe pas")
+    echecs += not juste
     sys.exit(1 if echecs else 0)
 
 
