@@ -61,9 +61,10 @@ MARQUEURS = {
     ),
     "skills/boucle/SKILL.md": (
         ["Critère d'arrêt de la relecture", "4e « à reprendre »", "remonte à Pascal",
-         "cartes immobiles", "depuis deux cycles"],
+         "cartes immobiles", "depuis deux cycles",
+         "qu'avons-nous vu que nous n'attendions pas ?", "`écart`"],
         [],
-        "fiches 8 et 15 (missions 003 et 004)",
+        "fiches 3, 8 et 15 (missions 003, 004 et 010)",
     ),
     "skills/demarrer/gabarit-kanban.md": (
         ["quoi, quand, combien", "comment, où, avec qui", "depuis le cycle"],
@@ -71,9 +72,22 @@ MARQUEURS = {
         "fiche 8 (mission 004)",
     ),
     "skills/bilan/SKILL.md": (
-        ["quatre questions", "Nos changements de cap", "décidé, expliqué, appuyé sur un fait"],
+        ["quatre questions", "Nos changements de cap", "décidé, expliqué, appuyé sur un fait",
+         "`écart`", "`cap`"],
         ["trois questions"],
-        "fiche 13 (mission 005)",
+        "fiches 3 et 13 (missions 005 et 010)",
+    ),
+    "skills/demarrer/gabarit-journal.md": (
+        ["· écart ·", "attendu :", "vu :", "vérifié :", "décision :",
+         "garder", "creuser", "abandonner", "· cap ·",
+         "on ne sanctionne pas un écart signalé"],
+        [],
+        "fiches 3 et 13 (mission 010)",
+    ),
+    "agents/analyste.md": (
+        ["`écart`", "`cap`"],
+        [],
+        "fiches 3 et 13 (mission 010)",
     ),
     "skills/brief/adr-france.md": (
         ["Prêts à payer ?", "**A**nticiper"],
