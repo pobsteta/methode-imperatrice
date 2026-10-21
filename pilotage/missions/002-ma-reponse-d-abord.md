@@ -37,7 +37,7 @@ fiche de mission une rubrique que seul Pascal remplit.
 - **Peut :** `skills/brief/SKILL.md`, `skills/demarrer/gabarit-brief.md`,
   `skills/mission/SKILL.md`, `skills/mission/fiche-mission.md`,
   `tests/test_alignement_livre.py` ; et `skills/demarrer/SKILL.md`, pour le seul renvoi
-  au numéro d'étape de `/brief` (ajouté en cours de mission).
+  au numéro d'étape de `/brief` (ajouté en cours de mission, validé par Pascal le 21 octobre 2026).
 - **Ne doit pas :** écrire la réponse à la place de Pascal, toucher aux hooks, à
   `release.yml` ou à `main`.
 - **Sources autorisées :** le livre imprimé (fiche n° 15), `docs/brief.md`.

@@ -19,3 +19,4 @@
 2026-10-21 · relecteur · mission 002 · relue, à reprendre : ajout hors mission à l'étape 4 de /brief ; « renvoi daté » de fiche-mission.md absent du livre ; rubrique « Ma réponse d'abord » de la fiche 002 remplie par une machine ; harnais élargi à skills/demarrer/SKILL.md à valider par Pascal ; tests verts.
 2026-10-21 · dev (Claude) · mission 002 · reprise après relecture (1er aller-retour) : ajout à l'étape 4 retiré, « renvoi daté » retiré, rubrique de la fiche 002 laissée à Pascal ; élargissement du harnais soumis à Pascal.
 2026-10-21 · Pascal · mission 002 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 002 le note.
+2026-10-21 · Pascal · mission 002 · harnais élargi à skills/demarrer/SKILL.md (renvoi à l'étape de /brief) : validé.
