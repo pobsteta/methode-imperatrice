@@ -18,12 +18,17 @@ un monde qui a changé.
 3. **Retour à l'Abstraction** : relire `docs/brief.md`. Pour chaque fonction livrée, une
    phrase pour le problème, une pour le bénéficiaire. Si on n'y arrive pas, la fonction
    a perdu son sens. Lancer le `contradicteur` si le cap semble avoir glissé.
-4. **Centre de gravité** (fiche n° 13), trois questions :
+4. **Centre de gravité** (fiche n° 13), quatre questions :
    - Où est notre action : près des sources, au milieu, tirée par la vision ?
    - Quel rythme tenons-nous réellement ? (PR relues par semaine, boucles sautées)
    - L'écart est-il tenable ? Ambition haute + PR qui s'accumulent = danger :
      **redescendre l'ambition ou réduire le nombre de missions en parallèle.** Ambition
      basse + rythme tenu = on peut viser plus haut.
+   - **Nos changements de cap** : relever au journal ceux du cycle ; chacun est-il
+     décidé, expliqué, appuyé sur un fait ? Oui : une précession, un changement de cap
+     lent et maîtrisé. Non : la toupie ralentit. Un cap qui change de plus en plus
+     souvent, sans qu'on sache pourquoi, est une chute qui commence : redescendre vers
+     les sources (faits, chiffres, terrain, mémoire).
 5. **Ajuster l'équipe** : quels agents ont servi, lesquels non ? Quelles missions sont
    passées de *tenir* à *appuyer*, d'*appuyer* à *lâcher* ? Proposer les changements à
    Pascal ; il tranche.

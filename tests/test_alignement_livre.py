@@ -19,7 +19,7 @@ MARQUEURS = {
         ["livre imprimé", "sept points", "**É**quipe", "**Ma réponse d'abord**",
          "**A**nticiper", "prêt à le payer", "si je tiens, qui paie ?",
          "si je plie, qui paie ?", "Croire que libre veut dire éternel"],
-        ["premier jet", "cinq points", "Anticipateur", "proposition à valider",
+        ["premier jet", "cinq points", "nticipateur", "proposition à valider",
          "Libre ne veut pas dire éternel"],
         "fiches 4, 11, 14, 15 (mission 001)",
     ),
@@ -69,6 +69,16 @@ MARQUEURS = {
         ["quoi, quand, combien", "comment, où, avec qui", "depuis le cycle"],
         ["comment, avec quoi", "(quoi, quand)"],
         "fiche 8 (mission 004)",
+    ),
+    "skills/bilan/SKILL.md": (
+        ["quatre questions", "Nos changements de cap", "décidé, expliqué, appuyé sur un fait"],
+        ["trois questions"],
+        "fiche 13 (mission 005)",
+    ),
+    "skills/brief/adr-france.md": (
+        ["Prêts à payer ?", "**A**nticiper"],
+        ["nticipateur"],
+        "fiche 4 (mission 005)",
     ),
 }
 
