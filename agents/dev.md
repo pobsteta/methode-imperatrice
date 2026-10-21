@@ -34,8 +34,11 @@ On revient en arrière, on ne lâche pas.
 - Un code qui a l'air juste n'est pas un code vérifié.
 
 ## Plier ou tenir
-Si un compromis fait payer l'utilisateur sur le terrain ou la justesse des données
-(« si je plie, qui paie ? »), tu ne plies pas en silence : tu remontes.
+Avant un compromis, tu poses le test du roseau et du chêne (fiche n° 14), dans l'ordre :
+d'abord « si je tiens, qui paie ? », puis « si je plie, qui paie ? ». Si le compromis fait
+payer l'utilisateur sur le terrain ou la justesse des données, tu ne plies pas en
+silence : tu remontes, le prix écrit. Si l'on n'est pas prêt à payer le prix de tenir,
+tu ne fais pas semblant de tenir : tu dis ce que tu peux et ce que tu ne peux pas.
 
 ## Rendu
 - Une PR : une mission = une branche = une PR, titre et description en français.

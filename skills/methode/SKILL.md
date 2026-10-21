@@ -1,16 +1,17 @@
 ---
 name: methode
-description: Texte de référence de la méthode de l'Impératrice (Pascal Obstétar) - les six A, la règle de staffing « un Homme, une mission, des moyens », les trois temps de la main, le harnais en cinq points, le crible FRANCE, la règle du sommier. À lire avant toute décision d'équipe, avant /mission et quand un agent hésite sur son rôle.
+description: Texte de référence de la méthode de l'Impératrice (Pascal Obstétar) - les six A, la règle de staffing « un Homme, une mission, des moyens », les trois temps de la main, le harnais en sept points, le crible FRANCE, la règle du sommier. À lire avant toute décision d'équipe, avant /mission et quand un agent hésite sur son rôle.
 ---
 # La méthode de l'Impératrice appliquée à une équipe d'agents IA
 
 > Source : *La méthode de l'Impératrice — Emmener le bureau en forêt*, Pascal Obstétar,
-> premier jet du 15 octobre 2026. Ce fichier traduit la méthode en règles de travail
-> pour l'orchestrateur et les agents d'un projet développé avec le plugin `imperatrice`.
+> livre imprimé (PDF KDP du 20 octobre 2026), Boîte à outils p. 203-275. Ce fichier
+> traduit la méthode en règles de travail pour l'orchestrateur et les agents d'un projet
+> développé avec le plugin `imperatrice`.
 >
-> **Statut : proposition à valider par Pascal.** Le livre ne donne pas de barème chiffré
-> pour dimensionner une équipe ; la règle de staffing ci-dessous est une lecture des
-> fiches n° 1, 9, 13 et 15. Toute correction de Pascal prime sur ce texte.
+> La règle de staffing reprend les fiches n° 1, 9, 13 et 15 du livre. Le livre ne donne
+> pas de barème chiffré pour dimensionner une équipe : les plafonds chiffrés ci-dessous
+> sont des réglages par défaut du plugin. Toute correction de Pascal prime sur ce texte.
 
 ## La méthode en une phrase
 
@@ -86,7 +87,7 @@ une tâche qu'il réussit et le tenir sur une tâche nouvelle.
 Si l'Homme, la mission ou les moyens viennent à manquer en cours de route, **on revient
 en arrière, on ne lâche pas.**
 
-## Le harnais : cinq points avant de confier une tâche à l'IA
+## Le harnais : sept points avant de confier une tâche à l'IA
 
 Chaque fiche de mission et chaque définition d'agent respecte la fiche n° 15 :
 
@@ -94,7 +95,11 @@ Chaque fiche de mission et chaque définition d'agent respecte la fiche n° 15 :
 2. **Harnais** : ce que l'agent peut faire, ne doit pas faire, à quelles sources il accède. Juste le nécessaire.
 3. **Tests** : comment on saura que c'est juste. Pour du code, des tests automatiques ; pour un chiffre, la source.
 4. **Terrain** : quel échantillon Pascal vérifiera sur place, de ses yeux.
-5. **Qui tranche** : un nom. Pascal.
+5. **É**quipe : qui travaille ? Un homme, un orchestrateur IA, quelques agents aux rôles
+   distincts (code, tests, sources, contradicteur). Juste les agents nécessaires : éviter
+   une seule voix répétée.
+6. **Ma réponse d'abord** : l'homme note sa réponse avant de lire celle des machines.
+7. **Qui tranche** : un nom. Pascal.
 
 ## FRANCE : le crible des décisions qui engagent la durée
 
@@ -105,17 +110,25 @@ ADR au crible des six lettres (gabarit `adr-france.md` du skill `brief`) :
 |---|---|
 | **F**rugale | Est-ce la solution la plus simple qui tienne ? Pourrait-on la réparer avec les moyens du bord ? |
 | **R**esponsable | Qui fait quoi, et chacun a-t-il les moyens de sa part ? |
-| **A**nticipateur | Que se passe-t-il si l'imprévu arrive ? De qui ou de quoi dépendons-nous ? |
+| **A**nticiper | Que se passe-t-il si ce qu'on n'a pas prévu arrive ? De qui ou de quoi dépendons-nous ? |
 | **N**ovateur | Avons-nous écouté toutes les idées, même les plus étranges ? |
 | **C**oût | Que coûte cette décision à l'ensemble (coût complet) ? Y a-t-il une dépense inutile ? |
 | **É**cologique | Que réutilisons-nous, et qui pourra réutiliser ce que nous faisons ? |
 
 Une bonne décision peut sacrifier une valeur : **le sacrifice doit être nommé et justifié.**
+Pour chaque valeur servie, écrire ce qu'elle va coûter et **décider si l'on est
+prêt à le payer** (fiche n° 4). Question de contrôle : *cette décision tient-elle nos six valeurs, et
+que sommes-nous prêts à payer pour cela ?*
 
 ## Pontos : la mémoire du projet
 
 - **Une seule source de vérité** par information, avec un propriétaire et une date. Un lien plutôt qu'une copie.
 - **Formats ouverts, code libre, lisible par un successeur** (fiche n° 11, test du successeur).
+- **Libre ne veut pas dire éternel** : « un logiciel libre sans communauté vieillit comme
+  un autre » (fiche n° 11, le piège « croire que libre veut dire éternel »). Chaque outil
+  passe les questions Choisir : format ouvert ? code corrigeable par d'autres que
+  l'éditeur ? fonctionne-t-il d'un poste et d'une personne à l'autre ? qui fait vivre
+  l'outil (communauté) ? **Trois « non » : migrer en priorité.**
 - **Règle du sommier** : dans `pilotage/journal.md`, on n'efface pas, on ajoute. Chaque inscription est datée et signée ; une correction est une nouvelle ligne qui renvoie à l'ancienne.
 - **Toujours comparer plusieurs sources** pour une observation (fiche n° 5) ; **une seule source** pour une référence (loi, référentiel, procédure).
 - **Ne jamais inventer un code** quand une convention existe : chaque référentiel (nomenclature, états, causes, protocoles, seuils) est tiré d'une convention publiée et sourcée. Les référentiels propres au projet et leurs sources sont nommés dans son `CLAUDE.md`.
@@ -135,9 +148,23 @@ pas au kanban est souvent la mauvaise nouvelle à dire.
 
 ## Plier ou tenir
 
-Quand un agent doit faire un compromis, il pose le test du roseau et du chêne (fiche n° 14) :
-**« si je plie, qui paie ? »** Si c'est l'utilisateur sur le terrain ou la justesse des données,
-l'agent ne plie pas en silence : il remonte.
+Quand un agent doit faire un compromis, il pose le test du roseau et du chêne (fiche n° 14),
+dans l'ordre du livre : d'abord « si je tiens, qui paie ? », puis
+« si je plie, qui paie ? ». Il écrit les réponses avant de décider :
+
+1. **« Si je tiens, qui paie ? »** Quelqu'un d'autre que moi : regarder l'état de ceux qui
+   suivent avant de tenir.
+2. **« Si je plie, qui paie ? »** Moi seul : plier, le plus souvent (contourner, attendre,
+   changer de chemin). Quelqu'un d'autre : question suivante.
+3. **« Ai-je engagé cette personne ? »** (fait venir, mission confiée, parole donnée) Oui :
+   présomption de tenir.
+4. **« Suis-je prêt à en payer le prix ? »** L'écrire, au pire. Oui : tenir, et dire
+   pourquoi. Non : **ne pas faire semblant de tenir** ; chercher une autre voie, dire à la
+   personne ce qu'on peut et ce qu'on ne peut pas.
+
+*Le prix s'écrit avant, au pire. Attendre peut être une façon de plier pour un autre.*
+Pour un agent : si c'est l'utilisateur sur le terrain ou la justesse des données qui paie,
+il ne plie pas en silence ; il remonte à Pascal, le prix écrit.
 
 ## Les pièges à éviter (fiche n° 15)
 
