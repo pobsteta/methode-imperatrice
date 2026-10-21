@@ -3,7 +3,7 @@
 - **Date :** 2026-10-21
 - **Statut :** acceptée, par délégation de Pascal (« Fais ce qu'il faut pour que ça passe », 21 octobre 2026)
 - **Proposée par :** Claude (orchestrateur), mission 008
-- **Tranchée par :** Pascal
+- **Tranchée par :** Claude (orchestrateur), par délégation de Pascal ; à confirmer par Pascal
 
 ## Ma réponse d'abord (fiche n° 15)
 
@@ -89,7 +89,7 @@ mots.
   La PR du plugin peut entrer dans `release/v0.2.0` avant, car rien n'est publié tant que
   cette branche n'est pas fusionnée dans `main`.
 
-## Le crible FRANCE (option B, proposée)
+## Le crible FRANCE (option B, retenue)
 
 Pour chaque valeur servie, écrire ce qu'elle va coûter et décider si l'on est prêt à le
 payer (fiche n° 4).
@@ -99,7 +99,7 @@ payer (fiche n° 4).
 | **F**rugale | Est-ce la solution la plus simple qui tienne ? Réparable avec les moyens du bord ? | Oui : une ligne de shell dans le projet, quelques lignes en moins dans le hook ; pas de nouveau format (contrairement à C) ; E est aussi simple mais propre au poste | une commande de tests un peu plus longue dans Surculus ; la ligne ne couvre pas macOS | oui (Surculus tourne sous Linux) |
 | **R**esponsable | Qui fait quoi, et chacun a-t-il les moyens de sa part ? | Le projet répond de son environnement, le plugin de la règle ; Surculus change sa commande, le plugin retire le repli | une PR dans Surculus, à faire avant la publication de la 0.2.0 | oui |
 | **A**nticiper | Que se passe-t-il si ce qu'on n'a pas prévu arrive ? De qui ou de quoi dépendons-nous ? | Si Surculus n'est pas à jour à temps, son build casse : d'où l'ordre en trois temps. Le repli ne jouait que si `~/Android/Sdk` existait sans `ANDROID_HOME` ni `local.properties` : il ne touche que des postes Android configurés ainsi ; le nombre d'autres utilisateurs du plugin n'est pas connu | dépendance à l'ordre des PR ; une note de version à écrire | oui, avec la note de version |
-| **N**ovateur | Avons-nous écouté toutes les idées, même les plus étranges ? | Quatre options (A à D), dont ne rien faire et déprécier d'abord | — | — |
+| **N**ovateur | Avons-nous écouté toutes les idées, même les plus étranges ? | Six options (A à F), dont ne rien faire, déprécier d'abord, et deux conventions publiées (E, F) apportées par le contradicteur | — | — |
 | **C**oût | Que coûte cette décision à l'ensemble ? Y a-t-il une dépense inutile ? | Deux petites PR ; pas de code à maintenir pour un domaine dans le plugin | le temps de Pascal pour relire deux PR | oui |
 | **É**cologique | Que réutilisons-nous, et qui pourra réutiliser ce que nous faisons ? | La commande de tests existe déjà ; tout projet, quel que soit son langage, règle son environnement de la même façon | — | — |
 
@@ -118,9 +118,13 @@ garde-fou relâché, renommé ou déplacé » : le repli n'est rien de cela, et 
 ne relâche aucune règle. Le repli n'a jamais fait partie de ce que le plugin déclare ; et
 SemVer dit des versions 0.y.z : « Anything MAY change at any time » (https://semver.org/,
 point 4). Avec l'ordre en trois temps, Surculus ne casse pas, ce que le brief demandait
-(« repli compatible pour Surculus »). Une note de version, dans le README et la PR finale
-de la 0.2.0, dit : « le hook ne fixe plus `ANDROID_HOME` : écrivez-le dans votre commande
-de tests ou dans la clé `env` de vos réglages locaux ».
+(« repli compatible pour Surculus »). Une note de version, dans le README (« Versions et
+releases »), dans la PR de cette mission et dans la PR finale de la 0.2.0, dit : « le hook
+ne fixe plus `ANDROID_HOME` : écrivez-le dans votre commande de tests ou dans la clé `env`
+de vos réglages locaux, chemin en entier ».
+- **Garde de l'ordre** : rien d'automatique n'empêche de publier la 0.2.0 avant Surculus.
+  La PR finale `release/v0.2.0 → main` porte donc une case bloquante : « PR Surculus
+  fusionnée et `git pull` fait dans son `main` local ».
 
 ## Sources
 
