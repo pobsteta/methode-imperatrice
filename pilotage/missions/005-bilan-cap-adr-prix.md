@@ -24,7 +24,7 @@ le crible FRANCE de l'ADR dit, pour chaque valeur, si l'on est prêt à en payer
 
 ## Ma réponse d'abord
 
-_À remplir par Pascal, avant de lire la PR._
+« Je m'en passe. » — Pascal, le 21 octobre 2026 (pas de réponse propre à cette mission).
 
 ## L'Homme
 

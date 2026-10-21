@@ -30,3 +30,4 @@
 2026-10-21 · Pascal · mission 004 · le bac à sable est surveillé aussi ; harnais élargi à l'étape 6 de /boucle, « Dire tout de suite » cite les missions immobiles.
 2026-10-21 · relecteur · mission 005 · relue : prêt pour Pascal ; tests verts ; marqueur « nticipateur » juste ; remarques : « chute qui commence » à réserver au cap qui change de plus en plus souvent (fiche 13), tournure « lentement et maîtrisé », phrase d'introduction et question A de l'ADR au-delà de la lettre de la fiche mais fidèles au livre ; question laissée à Pascal : marquer les changements de cap dans le journal ?
 2026-10-21 · dev (Claude) · mission 005 · remarques 1 et 3 appliquées (la chute réservée au cap qui change de plus en plus souvent sans qu'on sache pourquoi ; « changement de cap lent et maîtrisé ») ; points 2 et 4 soumis à Pascal.
+2026-10-21 · Pascal · mission 005 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 005 le note.
