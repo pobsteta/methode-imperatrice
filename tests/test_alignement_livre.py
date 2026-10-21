@@ -43,6 +43,21 @@ MARQUEURS = {
         ["Libre ne veut pas dire éternel"],
         "fiche 11 (mission 001)",
     ),
+    "skills/brief/SKILL.md": (
+        ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`"],
+        [],
+        "fiche 15 (mission 002)",
+    ),
+    "skills/demarrer/gabarit-brief.md": (
+        ["## Ma réponse d'abord"],
+        [],
+        "fiche 15 (mission 002)",
+    ),
+    "skills/mission/fiche-mission.md": (
+        ["## Ma réponse d'abord"],
+        [],
+        "fiche 15 (mission 002)",
+    ),
 }
 
 
