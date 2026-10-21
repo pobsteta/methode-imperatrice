@@ -20,3 +20,5 @@
 2026-10-21 · dev (Claude) · mission 002 · reprise après relecture (1er aller-retour) : ajout à l'étape 4 retiré, « renvoi daté » retiré, rubrique de la fiche 002 laissée à Pascal ; élargissement du harnais soumis à Pascal.
 2026-10-21 · Pascal · mission 002 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 002 le note.
 2026-10-21 · Pascal · mission 002 · harnais élargi à skills/demarrer/SKILL.md (renvoi à l'étape de /brief) : validé.
+2026-10-21 · relecteur · mission 003 · relue : prêt pour Pascal ; tests verts ; 3 remarques mineures (seuil N+1 à dire en clair, retour à la ligne dans /boucle, forme du champ entre gabarit et fiche 003). Question de sens laissée à Pascal : un « à reprendre » de Pascal compte-t-il dans les 3 ?
+2026-10-21 · dev (Claude) · mission 003 · remarques 1 et 2 appliquées (seuil N+1, 4e par défaut ; un aller-retour = un renvoi) ; remarque 3 laissée : la fiche 003 suit la forme des fiches 001 et 006.

@@ -48,6 +48,9 @@ pas._
 ## Qui veille, qui tranche
 
 - **Relecteur :** `relecteur`, puis Pascal.
+- **Critère d'arrêt de la relecture :** _3 allers-retours par défaut (fiche n° 15 : « Fixer
+  d'avance quand la boucle de relecture s'arrête ») ; au-delà, la décision remonte à
+  Pascal._
 - **Point de suivi :** _à quel moment l'orchestrateur fait le point._
 - **Qui tranche :** Pascal.
 
