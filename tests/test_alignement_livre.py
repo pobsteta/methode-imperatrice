@@ -18,8 +18,9 @@ MARQUEURS = {
     "skills/methode/SKILL.md": (
         ["livre imprimé", "sept points", "**É**quipe", "**Ma réponse d'abord**",
          "**A**nticiper", "prêt à le payer", "si je tiens, qui paie ?",
-         "si je plie, qui paie ?", "Libre ne veut pas dire éternel"],
-        ["premier jet", "cinq points", "Anticipateur", "proposition à valider"],
+         "si je plie, qui paie ?", "Croire que libre veut dire éternel"],
+        ["premier jet", "cinq points", "Anticipateur", "proposition à valider",
+         "Libre ne veut pas dire éternel"],
         "fiches 4, 11, 14, 15 (mission 001)",
     ),
     "skills/mission/SKILL.md": (
@@ -33,13 +34,13 @@ MARQUEURS = {
         "fiche 14 (mission 001)",
     ),
     "agents/archiviste.md": (
+        ["Croire que libre veut dire éternel"],
         ["Libre ne veut pas dire éternel"],
-        [],
         "fiche 11 (mission 001)",
     ),
     "agents/relecteur.md": (
+        ["Croire que libre veut dire éternel"],
         ["Libre ne veut pas dire éternel"],
-        [],
         "fiche 11 (mission 001)",
     ),
 }

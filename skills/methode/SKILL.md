@@ -124,8 +124,8 @@ que sommes-nous prêts à payer pour cela ?*
 
 - **Une seule source de vérité** par information, avec un propriétaire et une date. Un lien plutôt qu'une copie.
 - **Formats ouverts, code libre, lisible par un successeur** (fiche n° 11, test du successeur).
-- **Libre ne veut pas dire éternel** : « un logiciel libre sans communauté vieillit comme
-  un autre » (fiche n° 11, le piège « croire que libre veut dire éternel »). Chaque outil
+- Le piège **« Croire que libre veut dire éternel »** : un logiciel libre sans communauté
+  vieillit comme un autre (fiche n° 11). Chaque outil
   passe les questions Choisir : format ouvert ? code corrigeable par d'autres que
   l'éditeur ? fonctionne-t-il d'un poste et d'une personne à l'autre ? qui fait vivre
   l'outil (communauté) ? **Trois « non » : migrer en priorité.**

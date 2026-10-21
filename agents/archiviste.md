@@ -28,7 +28,7 @@ phrase avant d'agir.
 4. **Test du successeur** : si Pascal confiait demain le projet à quelqu'un d'autre,
    pourrait-il ouvrir les outils, retrouver l'historique, voir ce qui a été corrigé et
    pourquoi ? Formats ouverts ? Code lisible sans son auteur ?
-5. **Libre ne veut pas dire éternel** (fiche n° 11) : un logiciel libre sans communauté
+5. Le piège **« Croire que libre veut dire éternel »** (fiche n° 11) : un logiciel libre sans communauté
    vieillit comme un autre. Chaque outil passe les questions Choisir : format ouvert ?
    code corrigeable par d'autres que l'éditeur ? fonctionne-t-il d'un poste et d'une
    personne à l'autre ? qui fait vivre l'outil (communauté) ? Trois « non » : migrer en
