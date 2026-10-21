@@ -76,15 +76,18 @@ mise à jour du plugin (`/plugin marketplace update pobsteta`).
 
 La version du plugin est celle de `.claude-plugin/plugin.json` (SemVer) : c'est elle que
 Claude Code lit pour proposer la mise à jour aux projets. **Toute PR qui change le plugin
-monte cette version** : correctif → `Z+1`, ajout (agent, commande, règle) → `Y+1`, rupture
-(chemin, nom de commande, comportement d'un garde-fou) → `X+1`.
+monte cette version** : correctif → `Z+1`, ajout (agent, commande, règle, garde-fou
+durci) → `Y+1`, rupture (chemin, nom de commande, garde-fou relâché, renommé ou
+déplacé) → `X+1`. Durcir un garde-fou (refuser ce qu'il laissait passer à tort) est un
+ajout : ce qu'il permettait à raison reste permis.
 
 | Quand | Quoi | Workflow |
 |---|---|---|
 | Chaque PR et chaque fusion | tests des garde-fous, validation du plugin et de la marketplace, contrôle de version : le plugin a-t-il changé depuis le tag de sa version ? Si oui, la CI échoue tant que la version n'est pas montée | `ci.yml` |
 | Chaque fusion dans `main` | si la version n'a pas encore de tag : tag `vX.Y.Z` posé sur le commit fusionné et release GitHub, notes générées depuis les PR | `release.yml` |
 
-Les fichiers hors plugin (`README.md`, `LICENSE`, `.github/`, `scripts/`, `tests/`)
+Les fichiers hors plugin (`README.md`, `LICENSE`, `.github/`, `scripts/`, `tests/`, et
+`docs/` et `pilotage/`, où ce dépôt applique la méthode à lui-même)
 peuvent changer sans montée de version ; leur fusion ne publie rien. Les badges en tête
 de page se mettent à jour seuls.
 
@@ -93,6 +96,8 @@ Ce que la CI rejoue, à lancer avant de pousser :
 ```sh
 python3 tests/test_garde_main.py
 python3 tests/test_journal_ajout_seul.py
+python3 tests/test_tests_obligatoires.py
+python3 tests/test_verifier_version.py
 python3 tests/test_journal_intact.py
 claude plugin validate .
 python3 scripts/verifier_version.py
