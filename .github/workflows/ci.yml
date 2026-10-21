@@ -29,6 +29,9 @@ jobs:
       - name: Tests du hook tests_obligatoires
         run: python3 tests/test_tests_obligatoires.py
 
+      - name: Tests du contrôle de version
+        run: python3 tests/test_verifier_version.py
+
       - name: Validation du plugin et de la marketplace
         # Version de Claude Code épinglée (publiée le 2026-10-05).
         run: |
