@@ -26,6 +26,9 @@ jobs:
       - name: Tests du hook journal_ajout_seul
         run: python3 tests/test_journal_ajout_seul.py
 
+      - name: Tests du hook tests_obligatoires
+        run: python3 tests/test_tests_obligatoires.py
+
       - name: Validation du plugin et de la marketplace
         # Version de Claude Code épinglée (publiée le 2026-10-05).
         run: |
