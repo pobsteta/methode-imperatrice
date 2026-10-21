@@ -65,7 +65,9 @@ Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `
 
 Les agents sont génériques : ce qui est propre au domaine (référentiels, conventions
 publiées, règles de test comme « un point du terrain tombe au bon endroit ») s'écrit
-dans le `CLAUDE.md` du projet, qu'ils lisent.
+dans le `CLAUDE.md` du projet, qu'ils lisent. De même, les hooks ne connaissent aucun
+domaine : l'environnement dont les tests ont besoin s'écrit dans la commande de tests
+du projet, ou dans ses réglages locaux (voir la note de la 0.2.0 plus bas).
 
 ## Faire évoluer la méthode
 
@@ -80,6 +82,17 @@ monte cette version** : correctif → `Z+1`, ajout (agent, commande, règle, gar
 durci) → `Y+1`, rupture (chemin, nom de commande, garde-fou relâché, renommé ou
 déplacé) → `X+1`. Durcir un garde-fou (refuser ce qu'il laissait passer à tort) est un
 ajout : ce qu'il permettait à raison reste permis.
+
+**Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
+0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et
+`local.properties` manquaient. Un projet Android l'écrit désormais lui-même :
+
+- dans `.claude/test-command`, par exemple
+  `export ANDROID_HOME="${ANDROID_HOME:-$HOME/Android/Sdk}" && ./gradlew test`
+  (sous macOS : `$HOME/Library/Android/sdk`) ;
+- ou dans la clé `env` de réglages non versionnés (`~/.claude/settings.json` ou
+  `.claude/settings.local.json`), avec le chemin écrit en entier : `env` ne développe ni
+  `~` ni `$HOME`.
 
 | Quand | Quoi | Workflow |
 |---|---|---|
