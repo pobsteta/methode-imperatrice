@@ -23,3 +23,8 @@
 2026-10-21 · relecteur · mission 003 · relue : prêt pour Pascal ; tests verts ; 3 remarques mineures (seuil N+1 à dire en clair, retour à la ligne dans /boucle, forme du champ entre gabarit et fiche 003). Question de sens laissée à Pascal : un « à reprendre » de Pascal compte-t-il dans les 3 ?
 2026-10-21 · dev (Claude) · mission 003 · remarques 1 et 2 appliquées (seuil N+1, 4e par défaut ; un aller-retour = un renvoi) ; remarque 3 laissée : la fiche 003 suit la forme des fiches 001 et 006.
 2026-10-21 · Pascal · mission 003 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 003 le note.
+2026-10-21 · Pascal · mission 003 · PR #7 fusionnée en l'état : seuls les « à reprendre » du relecteur comptent dans les 3 allers-retours.
+2026-10-21 · relecteur · mission 004 · relue : prêt pour Pascal ; tests verts ; comptage juste (carte nommée à la 3e boucle après son dernier déplacement) ; remarques : libellé « Cycle en cours » à préciser, étape 6 sans « immobile », compteur quand le plafond arrête la boucle ; questions laissées à Pascal : surveiller aussi le bac à sable ? kanban de Surculus à mettre à niveau.
+2026-10-21 · dev (Claude) · mission 004 · remarque 1 appliquée (« Dernier cycle », règle dernier cycle − N ≥ 2) ; remarque 4 : chaque /boucle compte pour un cycle, même arrêtée par le plafond ; étape 6 et bac à sable soumis à Pascal.
+2026-10-21 · Pascal · mission 004 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 004 le note.
+2026-10-21 · Pascal · mission 004 · le bac à sable est surveillé aussi ; harnais élargi à l'étape 6 de /boucle, « Dire tout de suite » cite les missions immobiles.
