@@ -1,8 +1,8 @@
 # imperatrice v0.2.0 — brief
 
-> Proposé par Claude le 21 octobre 2026, **à amender et trancher par Pascal**, puis à
-> critiquer par le `contradicteur` (`/imperatrice:brief`). Le brief est à Pascal : ce
-> texte est une proposition, pas une décision.
+> Proposé par Claude le 21 octobre 2026, amendé par les arbitrages de Pascal le même
+> jour, puis à critiquer par le `contradicteur` (`/imperatrice:brief`). Le brief est à
+> Pascal : il n'est validé qu'à son « oui ».
 >
 > État de départ : `main` à `fe2857c`, tag `v0.1.0`, tests des garde-fous verts.
 > Référence : le livre imprimé, *La méthode de l'Impératrice — Emmener le bureau en
@@ -10,8 +10,9 @@
 
 ## Ma réponse d'abord (fiche n° 15)
 
-_À remplir par Pascal **avant** de lire la critique du contradicteur : en une phrase,
-qu'attends-tu de la v0.2.0 ?_
+> « J'attends un plugin qui reprend complètement la méthode de l'Impératrice. »
+>
+> — Pascal, le 21 octobre 2026, écrit avant de lire la critique du contradicteur.
 
 ## Le problème, et pour qui (Abstraction)
 
@@ -53,7 +54,7 @@ qu'attends-tu de la v0.2.0 ?_
 | 13 | 4e question : nos changements de cap sont-ils décidés, expliqués, appuyés sur un fait ? | 3 questions | `skills/bilan` (étape 4) |
 | 14 | D'abord « si je **tiens**, qui paie ? » ; si l'on n'est pas prêt à payer : ne pas faire semblant de tenir | seulement « si je plie, qui paie ? » | `skills/methode`, `agents/dev.md` |
 | 11 | « Libre ne veut pas dire éternel » ; trois « non » aux questions Choisir → migrer en priorité | absent | `agents/archiviste.md`, `agents/relecteur.md` |
-| 3 | Le carnet des écarts (attendu / vu / vérifié / décision) | absent | **à trancher** (voir plus bas) |
+| 3 | Le carnet des écarts (attendu / vu / vérifié / décision) | absent | `skills/boucle` (étape « observer »), `agents/analyste.md`, `skills/bilan` : mission 010 |
 | — | Source et statut | « premier jet du 15 octobre » ; règle de staffing « à valider » | `skills/methode` (en-tête) |
 
 - **Les garde-fous à fermer** :
@@ -74,16 +75,19 @@ qu'attends-tu de la v0.2.0 ?_
 |---|---|---|---|
 | 001 | Aligner `skills/methode` sur le livre imprimé (source, harnais en 7 points, « Anticiper », plier ou tenir dans l'ordre du livre), pour que livre et plugin disent la même chose | `archiviste` | **tenir** : c'est le texte de la méthode, Pascal relit le plan |
 | 002 | Ajouter « ma réponse d'abord » à `/brief` et à la fiche de mission, pour que Pascal écrive sa réponse avant de lire celle des machines | `dev` | appuyer |
-| 003 | Ajouter à la fiche de mission un critère d'arrêt de la relecture (par défaut 2 allers-retours, puis remonter à Pascal), et le faire respecter par `/boucle` | `dev` | appuyer |
+| 003 | Ajouter à la fiche de mission un critère d'arrêt de la relecture (par défaut 3 allers-retours, puis remonter à Pascal), et le faire respecter par `/boucle` | `dev` | appuyer |
 | 004 | Aligner les cartes du kanban sur la fiche n° 8, et faire signaler par `/boucle` toute carte immobile depuis deux cycles | `dev` | appuyer |
 | 005 | Ajouter à `/bilan` la question des changements de cap et à l'ADR la colonne « prêts à payer ? », pour compléter les fiches 13 et 4 | `dev` | appuyer |
 | 006 | Écrire les tests de `tests_obligatoires.py` et les brancher dans la CI, pour que le garde-fou central soit lui-même vérifié | `testeur` | appuyer |
 | 007 | Écrire d'abord les tests qui échouent pour `tee`, `cp` et l'écriture par script sur le journal, puis fermer ces contournements | `testeur` puis `dev` | appuyer |
 | 008 | Sortir du hook générique ce qui est propre à Android, sans casser Surculus | `dev` | **tenir** : ADR FRANCE d'abord, cela touche un projet en service |
 | 009 | Monter la version à 0.2.0 et mettre le README à jour | `archiviste` | appuyer |
+| 010 | Ajouter le carnet des écarts en variante légère : une ligne de journal marquée `écart` (attendu / vu / vérifié / décision), proposée par `/boucle` à l'étape « observer » et comptée par l'`analyste` au `/bilan`, pour compléter la fiche n° 3 | `dev` | appuyer |
+| 011 | Ajouter `docs/` et `pilotage/` à `HORS_PLUGIN` dans `scripts/verifier_version.py`, ouvrir `pilotage/` dans ce dépôt, pour que la méthode s'applique à son propre dépôt sans forcer de montée de version | `dev` | appuyer |
 
 Les missions 006 et 007 précèdent toute autre modification des hooks. La mission 008
-attend son ADR.
+attend son ADR. La mission 011 doit être fusionnée avant la PR de ce brief : sans elle,
+`docs/brief.md` compte comme un changement du plugin et la CI de la PR du brief échoue.
 
 ## Ce qu'elle ne fait pas (hors périmètre)
 
@@ -96,17 +100,17 @@ attend son ADR.
   chemin. Une rupture ferait passer en 1.0.0.
 - Pas de changement du déroulé en trois portes.
 
-## À trancher par Pascal avant `/mission`
+## Arbitrages de Pascal (21 octobre 2026)
 
-1. **Le carnet des écarts (fiche n° 3)** : faut-il l'ajouter ? Une variante légère
-   serait une ligne de journal marquée `écart` (attendu / vu / vérifié / décision),
-   proposée par `/boucle` à l'étape « observer » et comptée par l'`analyste` au
-   `/bilan`. Sinon, on le reporte en v0.3.
-2. **Appliquer la méthode à son propre dépôt** : faut-il garder ce brief dans `docs/` et
-   ouvrir un `pilotage/` ici ? Si oui, ajouter `docs/` et `pilotage/` à `HORS_PLUGIN`
-   dans `scripts/verifier_version.py`. Sinon, le brief compte comme un changement du
-   plugin et force une montée de version.
-3. **Le critère d'arrêt par défaut** : 2 allers-retours, ou un autre nombre ?
+1. **Le carnet des écarts (fiche n° 3)** : **oui, en v0.2**, en variante légère (une
+   ligne de journal marquée `écart` : attendu / vu / vérifié / décision, proposée par
+   `/boucle` à l'étape « observer » et comptée par l'`analyste` au `/bilan`).
+   → mission 010.
+2. **Appliquer la méthode à son propre dépôt** : **oui**. Le brief reste dans `docs/`,
+   un `pilotage/` est ouvert ici, et `docs/` et `pilotage/` rejoignent `HORS_PLUGIN`
+   dans `scripts/verifier_version.py`. → mission 011.
+3. **Le critère d'arrêt par défaut** : **3 allers-retours** de relecture, puis la
+   décision remonte à Pascal. → mission 003.
 
 ## Contraintes connues
 
@@ -126,11 +130,11 @@ attend son ADR.
 | Point | Contenu |
 |---|---|
 | Brief | ce document, validé par Pascal |
-| Harnais | les agents peuvent modifier `skills/`, `agents/`, `hooks/`, `tests/`, `scripts/`, le README, et `plugin.json` (mission 009 seulement). Ils ne touchent ni `LICENSE`, ni `.github/workflows/release.yml`, ni `main`. Sources : le livre imprimé, ce brief, les ADR |
+| Harnais | les agents peuvent modifier `skills/`, `agents/`, `hooks/`, `tests/`, `scripts/`, `pilotage/` (journal en ajout seul), le README, et `plugin.json` (mission 009 seulement). Ils ne touchent ni `LICENSE`, ni `.github/workflows/release.yml`, ni `main`. Sources : le livre imprimé, ce brief, les ADR |
 | Tests | `python3 tests/test_garde_main.py`, `tests/test_journal_ajout_seul.py`, les nouveaux tests de `tests_obligatoires.py`, `claude plugin validate .`, `python3 scripts/verifier_version.py` |
 | Terrain | Pascal installe la 0.2.0 dans Surculus et y fait tourner une `/boucle` complète : une mission, une relecture, une PR. Il vérifie qu'un `tee` sur le journal est refusé et que le build Android passe toujours |
 | Équipe | l'orchestrateur ; `archiviste`, `dev`, `testeur`, `relecteur`, et le `contradicteur` sur ce brief et sur l'ADR 008 |
-| Ma réponse d'abord | en tête de ce document |
+| Ma réponse d'abord | en tête de ce document, écrite par Pascal le 21 octobre 2026 |
 | Qui tranche | Pascal |
 
 ## Question de contrôle
