@@ -15,14 +15,17 @@ _Pourquoi faut-il décider maintenant ? Quelles options ont été envisagées (y
 
 ## Le crible FRANCE
 
-| Lettre | Question | Réponse (une ligne) | Ce que ça coûte |
-|---|---|---|---|
-| **F**rugale | Est-ce la solution la plus simple qui tienne ? Réparable avec les moyens du bord ? | | |
-| **R**esponsable | Qui fait quoi, et chacun a-t-il les moyens de sa part ? | | |
-| **A**nticipateur | Que se passe-t-il si l'imprévu arrive ? De qui ou de quoi dépendons-nous ? | | |
-| **N**ovateur | Avons-nous écouté toutes les idées, même les plus étranges ? | | |
-| **C**oût | Que coûte cette décision à l'ensemble ? Y a-t-il une dépense inutile ? | | |
-| **É**cologique | Que réutilisons-nous, et qui pourra réutiliser ce que nous faisons ? | | |
+Pour chaque valeur servie, écrire ce qu'elle va coûter et décider si l'on est prêt à le
+payer (fiche n° 4).
+
+| Lettre | Question | Réponse (une ligne) | Ce que ça coûte | Prêts à payer ? |
+|---|---|---|---|---|
+| **F**rugale | Est-ce la solution la plus simple qui tienne ? Réparable avec les moyens du bord ? | | | |
+| **R**esponsable | Qui fait quoi, et chacun a-t-il les moyens de sa part ? | | | |
+| **A**nticiper | Que se passe-t-il si ce qu'on n'a pas prévu arrive ? De qui ou de quoi dépendons-nous ? | | | |
+| **N**ovateur | Avons-nous écouté toutes les idées, même les plus étranges ? | | | |
+| **C**oût | Que coûte cette décision à l'ensemble ? Y a-t-il une dépense inutile ? | | | |
+| **É**cologique | Que réutilisons-nous, et qui pourra réutiliser ce que nous faisons ? | | | |
 
 ## Valeurs sacrifiées
 
