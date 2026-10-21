@@ -60,9 +60,15 @@ MARQUEURS = {
         "fiche 15 (missions 002 et 003)",
     ),
     "skills/boucle/SKILL.md": (
-        ["Critère d'arrêt de la relecture", "4e « à reprendre »", "remonte à Pascal"],
+        ["Critère d'arrêt de la relecture", "4e « à reprendre »", "remonte à Pascal",
+         "cartes immobiles", "depuis deux cycles"],
         [],
-        "fiche 15 (mission 003)",
+        "fiches 8 et 15 (missions 003 et 004)",
+    ),
+    "skills/demarrer/gabarit-kanban.md": (
+        ["quoi, quand, combien", "comment, où, avec qui", "depuis le cycle"],
+        ["comment, avec quoi", "(quoi, quand)"],
+        "fiche 8 (mission 004)",
     ),
 }
 
