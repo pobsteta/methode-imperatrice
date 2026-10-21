@@ -27,3 +27,4 @@
 2026-10-21 · relecteur · mission 004 · relue : prêt pour Pascal ; tests verts ; comptage juste (carte nommée à la 3e boucle après son dernier déplacement) ; remarques : libellé « Cycle en cours » à préciser, étape 6 sans « immobile », compteur quand le plafond arrête la boucle ; questions laissées à Pascal : surveiller aussi le bac à sable ? kanban de Surculus à mettre à niveau.
 2026-10-21 · dev (Claude) · mission 004 · remarque 1 appliquée (« Dernier cycle », règle dernier cycle − N ≥ 2) ; remarque 4 : chaque /boucle compte pour un cycle, même arrêtée par le plafond ; étape 6 et bac à sable soumis à Pascal.
 2026-10-21 · Pascal · mission 004 · ma réponse d'abord : « Je m'en passe » ; la rubrique de la fiche 004 le note.
+2026-10-21 · Pascal · mission 004 · le bac à sable est surveillé aussi ; harnais élargi à l'étape 6 de /boucle, « Dire tout de suite » cite les missions immobiles.

@@ -16,8 +16,8 @@ s'oriente ; une boucle précipitée saute directement à l'action.
 1. **Observer** : lire `pilotage/kanban.md`, les PR ouvertes, les dernières lignes de
    `pilotage/journal.md`. Combien de PR attendent Pascal ? Si le plafond humain est atteint,
    **ne lance rien** : dis-le, et propose de relire plutôt que de produire.
-   Nomme les **cartes immobiles** : celles de « validé » et « planifié » qui sont dans leur
-   colonne depuis deux cycles ou plus (dernier cycle du kanban − N ≥ 2, où N est le
+   Nomme les **cartes immobiles** : celles du bac à sable, de « validé » et de « planifié »
+   qui sont dans leur colonne depuis deux cycles ou plus (dernier cycle du kanban − N ≥ 2, où N est le
    « depuis le cycle N » de la carte). Une carte qui ne bouge pas est souvent la mauvaise nouvelle à dire tout de
    suite (fiche n° 8) : chacune est annoncée à Pascal à l'étape « Dire tout de suite ».
 2. **S'orienter** : quelles missions validées ont leurs moyens prêts (référentiel
@@ -39,9 +39,9 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
    « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
    par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
-6. **Dire tout de suite** : toute mission bloquée, en échec ou hors délai est annoncée à
-   Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait quoi
-   d'ici quand), sans euphémisme.
+6. **Dire tout de suite** : toute mission bloquée, en échec, hors délai ou immobile est
+   annoncée à Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui
+   fait quoi d'ici quand), sans euphémisme.
 7. **Tenir la mémoire** : ajouter à `pilotage/journal.md` les lignes proposées par les
    agents (une par mission, datée, signée), mettre à jour `pilotage/kanban.md` :
    augmenter de 1 le dernier cycle, et noter ce nouveau numéro sur chaque carte qui a

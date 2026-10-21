@@ -31,7 +31,8 @@ combien ; comment, où, avec qui) et le cycle depuis lequel elle est dans sa col
 
 - **Agent :** `testeur` (marqueurs d'abord rouges), puis `dev`.
 - **Ce qui ne lui est pas demandé :** changer les cinq colonnes, toucher aux autres étapes
-  de `/boucle` que l'observation et la tenue du kanban.
+  de `/boucle` que l'observation, la tenue du kanban et, sur décision de Pascal du
+  21 octobre 2026, « Dire tout de suite » (étape 6, « ou immobile »).
 
 ## Harnais
 
