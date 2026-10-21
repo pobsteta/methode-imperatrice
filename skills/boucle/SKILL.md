@@ -16,6 +16,12 @@ s'oriente ; une boucle précipitée saute directement à l'action.
 1. **Observer** : lire `pilotage/kanban.md`, les PR ouvertes, les dernières lignes de
    `pilotage/journal.md`. Combien de PR attendent Pascal ? Si le plafond humain est atteint,
    **ne lance rien** : dis-le, et propose de relire plutôt que de produire.
+   Pose la question du carnet des écarts (fiche n° 3) :
+   *qu'avons-nous vu que nous n'attendions pas ?* Et l'avons-nous vérifié ? Dans les
+   rendus des agents, les tests, les retours de Pascal. Pour chaque écart, propose une
+   ligne `écart` au journal, zéro ligne est permis :
+   `AAAA-MM-JJ · auteur · mission · écart · attendu : … · vu : … · vérifié : comment (ou « non ») · décision : garder / creuser (prochain essai, daté) / abandonner`
+   On ne sanctionne pas un écart signalé.
    Nomme les **cartes immobiles** : celles du bac à sable, de « validé » et de « planifié »
    qui sont dans leur colonne depuis deux cycles ou plus (dernier cycle du kanban − N ≥ 2, où N est le
    « depuis le cycle N » de la carte). Une carte qui ne bouge pas est souvent la mauvaise nouvelle à dire tout de
@@ -47,6 +53,9 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    augmenter de 1 le dernier cycle, et noter ce nouveau numéro sur chaque carte qui a
    changé de colonne. Cette étape a lieu même quand le plafond humain a arrêté la boucle
    à l'étape 1 : chaque `/boucle` compte pour un cycle.
+   Quand Pascal change de cap (périmètre, priorité, mission abandonnée ou redécoupée),
+   inscrire une ligne signée de lui :
+   `AAAA-MM-JJ · Pascal · mission · cap · ancien → nouveau · pourquoi : … · fait : …`
 
 ## Sortie
 

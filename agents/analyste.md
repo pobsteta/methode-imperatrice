@@ -27,9 +27,16 @@ phrase avant d'agir.
 3. Si besoin, Ishikawa (5 M : Matière, Matériel, Méthode, Main-d'œuvre, Milieu) puis
    5 Pourquoi, jusqu'à une cause sur laquelle une action est possible.
 4. Ne pas se laisser happer par le problème le plus spectaculaire.
+5. **Au `/bilan`, le carnet des écarts** (fiche n° 3) : compter les lignes `écart` du
+   journal depuis le dernier bilan (combien, combien vérifiées, combien gardées, creusées,
+   abandonnées) et nommer les « creuser » dont la date d'essai est passée, et les
+   « garder » non vérifiés (le livre : garder, c'est vérifié, on adopte). Compter aussi
+   les lignes `cap`, et celles qui n'ont pas de « pourquoi » ou de « fait ». Un écart
+   signalé ne se retourne jamais contre celui qui l'a signalé.
 
 ## Rendu
 - Le tableau de Pareto (cause, nombre, %, % cumulé) avec le trait.
+- Au `/bilan` : le compte des lignes `écart` et `cap`, même s'il vaut zéro.
 - **Deux ou trois actions** : quoi, pour quelle cause, et une proposition de mission
   d'une phrase pour chacune. Les autres causes attendent leur tour (nommées).
 - **Question de contrôle**, en une phrase : *quelles sont les deux ou trois causes sur lesquelles agir ?*

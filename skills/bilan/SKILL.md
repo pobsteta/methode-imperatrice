@@ -11,8 +11,9 @@ un monde qui a changé.
 ## Étapes
 
 1. **Analyse** : lancer l'`analyste` sur les échecs du cycle (tests, PR à reprendre,
-   retours terrain de Pascal). Retenir deux ou trois causes ; les autres attendent leur
-   tour, nommées.
+   retours terrain de Pascal), et lui faire compter les lignes `écart` et `cap` du
+   journal depuis le dernier bilan. Retenir deux ou trois causes ; les autres attendent
+   leur tour, nommées.
 2. **Archivage** : lancer l'`archiviste` pour le test de la minute et le **test du
    successeur** : un autre développeur pourrait-il reprendre le projet demain ?
 3. **Retour à l'Abstraction** : relire `docs/brief.md`. Pour chaque fonction livrée, une
@@ -24,7 +25,8 @@ un monde qui a changé.
    - L'écart est-il tenable ? Ambition haute + PR qui s'accumulent = danger :
      **redescendre l'ambition ou réduire le nombre de missions en parallèle.** Ambition
      basse + rythme tenu = on peut viser plus haut.
-   - **Nos changements de cap** : relever au journal ceux du cycle ; chacun est-il
+   - **Nos changements de cap** : relever au journal ceux du cycle (lignes
+     `AAAA-MM-JJ · auteur · mission · cap · ancien → nouveau · pourquoi : … · fait : …`) ; chacun est-il
      décidé, expliqué, appuyé sur un fait ? Oui : une précession, un changement de cap
      lent et maîtrisé. Non : la toupie ralentit. Un cap qui change de plus en plus
      souvent, sans qu'on sache pourquoi, est une chute qui commence : redescendre vers
