@@ -1,6 +1,6 @@
 ---
 name: brief
-description: Étape Abstraction de la méthode de l'Impératrice. Fait critiquer docs/brief.md par le contradicteur, aide Pascal à l'amender, puis prépare la spec et les ADR FRANCE des décisions structurantes. À lancer avant tout développement.
+description: Étape Abstraction de la méthode de l'Impératrice. Fait noter à Pascal sa réponse d'abord, puis fait critiquer docs/brief.md par le contradicteur, aide Pascal à l'amender, puis prépare la spec et les ADR FRANCE des décisions structurantes. À lancer avant tout développement.
 ---
 # /brief — prendre de la hauteur avant d'agir
 
@@ -12,22 +12,28 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
 1. **Lire `docs/brief.md`.** S'il est encore au stade de gabarit (rubriques en italique
    non remplies), ne lance personne : pose à Pascal les questions manquantes, au plus
    quatre, et attends ses réponses. Le brief est à Pascal ; tu ne l'inventes pas.
-2. **Lancer le `contradicteur`** sur le brief, avec pour consigne explicite : critiquer,
+2. **Ma réponse d'abord** (fiche n° 15 : « l'homme note sa réponse avant de lire celle
+   des machines »). Demande à Pascal d'écrire sa propre réponse, datée, dans la rubrique
+   « Ma réponse d'abord » de `docs/brief.md` : ce qu'il attend, et pourquoi. Elle doit
+   être écrite avant de lancer le `contradicteur`, et avant que Pascal lise toute critique
+   ou proposition des machines. Tu ne la rédiges pas, tu ne la suggères pas, tu ne la
+   reformules pas. Tant qu'elle manque, tu ne lances personne.
+3. **Lancer le `contradicteur`** sur le brief, avec pour consigne explicite : critiquer,
    citer ses sources, chercher les conventions publiées du domaine (celles que nomme le
    `CLAUDE.md` du projet, et les autres) avant toute invention.
-3. **Rendre la critique à Pascal**, classée, sans l'adoucir. Pour chaque point : ce que
+4. **Rendre la critique à Pascal**, classée, sans l'adoucir. Pour chaque point : ce que
    tu proposes de changer dans le brief. Pascal tranche ; tu reportes ses arbitrages
    dans `docs/brief.md`.
-4. **Rédiger `docs/spec.md`** à partir du brief validé : parcours utilisateur sur le
+5. **Rédiger `docs/spec.md`** à partir du brief validé : parcours utilisateur sur le
    terrain, données manipulées, ce qui est hors périmètre, critères d'acceptation, et
    les besoins en référentiels (à confier à l'`acquereur`).
-5. **Lister les décisions structurantes** (stack, stockage, hors-ligne, formats
+6. **Lister les décisions structurantes** (stack, stockage, hors-ligne, formats
    d'échange, licence…). Pour chacune, une ADR proposée dans `docs/adr/` au crible FRANCE
    (gabarit `adr-france.md`, à côté de ce fichier), avec les valeurs sacrifiées nommées. Le
    `contradicteur` critique chaque ADR avant que Pascal la tranche.
-6. Dès que la stack est tranchée, écrire la commande de tests du projet dans
+7. Dès que la stack est tranchée, écrire la commande de tests du projet dans
    `.claude/test-command` (une seule ligne, ex. `npm test` ou `Rscript -e 'testthat::test_dir("tests")'`).
-7. Ajouter une inscription à `pilotage/journal.md`.
+8. Ajouter une inscription à `pilotage/journal.md`.
 
 ## Sortie
 

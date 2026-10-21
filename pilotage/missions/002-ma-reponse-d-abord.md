@@ -24,8 +24,7 @@ fiche de mission une rubrique que seul Pascal remplit.
 
 ## Ma réponse d'abord
 
-Celle du brief v0.2.0, écrite par Pascal le 21 octobre 2026 : « J'attends un plugin qui
-reprend complètement la méthode de l'Impératrice. »
+_À remplir par Pascal, avant de lire la PR._
 
 ## L'Homme
 
@@ -37,7 +36,8 @@ reprend complètement la méthode de l'Impératrice. »
 
 - **Peut :** `skills/brief/SKILL.md`, `skills/demarrer/gabarit-brief.md`,
   `skills/mission/SKILL.md`, `skills/mission/fiche-mission.md`,
-  `tests/test_alignement_livre.py`.
+  `tests/test_alignement_livre.py` ; et `skills/demarrer/SKILL.md`, pour le seul renvoi
+  au numéro d'étape de `/brief` (ajouté en cours de mission).
 - **Ne doit pas :** écrire la réponse à la place de Pascal, toucher aux hooks, à
   `release.yml` ou à `main`.
 - **Sources autorisées :** le livre imprimé (fiche n° 15), `docs/brief.md`.

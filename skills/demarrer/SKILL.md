@@ -21,7 +21,7 @@ la méthode a besoin, **sans rien écraser**. Les gabarits sont à côté de ce 
      gabarits, et le dossier `pilotage/missions/` ;
    - `docs/adr/` vide.
 4. **Ne pas créer `.claude/test-command`** : il sera écrit dès que la stack sera tranchée
-   (`/brief`, étape 6).
+   (`/brief`, étape 7).
 5. Première inscription au journal : la date, « Claude (orchestrateur) », « méthode
    installée », et ce qui reste à remplir.
 
