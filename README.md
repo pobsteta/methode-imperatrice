@@ -96,6 +96,7 @@ Ce que la CI rejoue, à lancer avant de pousser :
 ```sh
 python3 tests/test_garde_main.py
 python3 tests/test_journal_ajout_seul.py
+python3 tests/test_tests_obligatoires.py
 python3 tests/test_verifier_version.py
 claude plugin validate .
 python3 scripts/verifier_version.py
