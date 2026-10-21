@@ -7,14 +7,16 @@
 2. La marketplace ne fixe pas d'autre version que celle du plugin.
 3. Si le tag vX.Y.Z existe déjà, le plugin n'a pas changé depuis ce tag : un changement
    sans montée de version ne serait jamais proposé en mise à jour aux projets.
-   README.md, LICENSE, .github/, scripts/ et tests/ ne comptent pas comme changement du plugin.
+   README.md, LICENSE, .github/, scripts/, tests/, docs/ et pilotage/ ne comptent pas comme
+   changement du plugin : docs/ et pilotage/ portent le brief et le pilotage de ce dépôt,
+   qui applique la méthode à lui-même.
 """
 import json
 import re
 import subprocess
 import sys
 
-HORS_PLUGIN = ("README.md", "LICENSE", ".github/", "scripts/", "tests/")
+HORS_PLUGIN = ("README.md", "LICENSE", ".github/", "scripts/", "tests/", "docs/", "pilotage/")
 
 
 def echouer(message):
