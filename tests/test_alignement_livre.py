@@ -6,7 +6,8 @@
 Référence : *La méthode de l'Impératrice — Emmener le bureau en forêt*, livre imprimé
 (PDF KDP du 20 octobre 2026), Boîte à outils p. 203-275. Pour chaque fichier, les
 formules que le livre a fixées doivent s'y trouver, et celles qu'il a abandonnées ne
-doivent plus y être. Chaque mission d'alignement de la v0.2.0 ajoute ses marqueurs ici.
+doivent plus y être. Chaque mission d'alignement ajoute ses marqueurs ici ; ceux de la
+mission 011 (v0.3.0) viennent du brief au livre (`docs/livre/`), en attendant l'impression.
 """
 import os
 import sys
@@ -62,20 +63,27 @@ MARQUEURS = {
     "skills/boucle/SKILL.md": (
         ["Critère d'arrêt de la relecture", "4e « à reprendre »", "remonte à Pascal",
          "cartes immobiles", "depuis deux cycles",
-         "qu'avons-nous vu que nous n'attendions pas ?", "`écart`"],
-        [],
-        "fiches 3, 8 et 15 (missions 003, 004 et 010)",
+         "qu'avons-nous vu que nous n'attendions pas ?", "`écart`",
+         "Quelle livraison proposons-nous, différente de la précédente, et pour qui ?",
+         "dernière livraison inscrite au kanban", "rubrique « Livraisons » du kanban",
+         "même quand le plafond l'a arrêtée", "une mauvaise nouvelle est une livraison sur laquelle on apprend"],
+        ["MVP", "rien de neuf"],
+        "fiches 3, 8, 12 et 15 (missions 003, 004, 010 et 011)",
     ),
     "skills/demarrer/gabarit-kanban.md": (
-        ["quoi, quand, combien", "comment, où, avec qui", "depuis le cycle"],
-        ["comment, avec quoi", "(quoi, quand)"],
-        "fiche 8 (mission 004)",
+        ["quoi, quand, combien", "comment, où, avec qui", "depuis le cycle",
+         "## Livraisons", "ce qu'elle apporte de plus que la précédente",
+         "une mauvaise nouvelle est une livraison sur laquelle on apprend", "ce qu'elle nous apprend"],
+        ["comment, avec quoi", "(quoi, quand)", "MVP", "rien de neuf"],
+        "fiches 8 et 12 (missions 004 et 011)",
     ),
     "skills/bilan/SKILL.md": (
         ["quatre questions", "Nos changements de cap", "décidé, expliqué, appuyé sur un fait",
-         "`écart`", "`cap`"],
-        ["trois questions"],
-        "fiches 3 et 13 (missions 005 et 010)",
+         "`écart`", "`cap`",
+         "Quelle livraison proposons-nous, différente de la précédente, et pour qui ?",
+         "rubrique « Livraisons » du kanban"],
+        ["trois questions", "MVP"],
+        "fiches 3, 12 et 13 (missions 005, 010 et 011)",
     ),
     "skills/demarrer/gabarit-journal.md": (
         ["· écart ·", "attendu :", "vu :", "vérifié :", "décision :",

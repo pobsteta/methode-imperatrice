@@ -6,13 +6,17 @@
 Crée un dépôt temporaire par cas, avec une commande de tests factice dans
 .claude/test-command, et vérifie que le hook bloque l'arrêt (2) ou le laisse passer (0) ;
 au second arrêt (stop_hook_active) avec des tests rouges, qu'il l'inscrit au journal ;
-et qu'il ne fixe aucune variable propre à un domaine (ANDROID_HOME, ADR 0001).
+et qu'il ne fixe aucune variable propre à un domaine (ANDROID_HOME, ADR 0001) ;
+et que l'attente du verrou des tests reste dans le délai du hook (mission 012).
 """
+import fcntl
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
+import threading
 
 HOOK = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hooks", "tests_obligatoires.py")
 J = "journal" + ".md"  # le hook de la session lit aussi ce fichier : pas de chemin en clair
@@ -41,8 +45,13 @@ def lire(depot, chemin):
         return None
 
 
-def rejouer(commande, changements, actif=False, journal=True, env_en_plus=None, sans=()):
-    """Dépôt temporaire commité, puis changements non commités ; renvoie (code, stderr, journal)."""
+def rejouer(commande, changements, actif=False, journal=True, env_en_plus=None, sans=(),
+            verrou_libre_apres=None):
+    """Dépôt temporaire commité, puis changements non commités ; renvoie (code, stderr, journal).
+
+    verrou_libre_apres : si donné, le verrou des tests est tenu pendant ce nombre de
+    secondes (float("inf") : tout le temps), comme par un autre lancement des tests.
+    """
     with tempfile.TemporaryDirectory() as depot:
         git("init", "-q", "-b", "mission/x", cwd=depot)
         ecrire(depot, "src/a.py", "a = 1\n")
@@ -58,8 +67,23 @@ def rejouer(commande, changements, actif=False, journal=True, env_en_plus=None, 
         env = dict(os.environ, CLAUDE_PROJECT_DIR=depot, **(env_en_plus or {}))
         for nom in sans:
             env.pop(nom, None)
-        r = subprocess.run([sys.executable, HOOK], input=json.dumps(entree),
-                           capture_output=True, text=True, env=env)
+        tenu = minuterie = None
+        if verrou_libre_apres is not None:
+            tenu = open(os.path.join(depot, ".git", "imperatrice-tests.lock"), "w")
+            fcntl.flock(tenu, fcntl.LOCK_EX)
+            if verrou_libre_apres != float("inf"):
+                minuterie = threading.Timer(verrou_libre_apres, tenu.close)
+                minuterie.start()
+        try:
+            r = subprocess.run([sys.executable, HOOK], input=json.dumps(entree),
+                               capture_output=True, text=True, env=env, timeout=60)
+        except subprocess.TimeoutExpired:
+            return "bloqué plus de 60 s", "", lire(depot, f"pilotage/{J}")
+        finally:
+            if minuterie is not None:
+                minuterie.cancel()
+            if tenu is not None and not tenu.closed:
+                tenu.close()
         return r.returncode, r.stderr, lire(depot, f"pilotage/{J}")
 
 
@@ -99,6 +123,41 @@ def main():
     juste = obtenu == 0
     print(("ok   " if juste else "ÉCHEC"), 0, obtenu,
           "~/Android/Sdk présent, pas d'ANDROID_HOME : le hook n'en fixe pas")
+    echecs += not juste
+
+    # Mission 012 : l'attente du verrou partage le budget des tests, sous le délai du hook.
+    petit = {"IMPERATRICE_BUDGET_TESTS": "3"}
+    verrou = [
+        # (nom, verrou libre après, stop_hook_active, code attendu, contrôle)
+        ("verrou tenu, premier arrêt : bloqué, le message nomme le verrou",
+         float("inf"), False, 2, lambda err, j: "verrou" in err and j == LIGNE),
+        ("verrou tenu, second arrêt : passe, inscrit au journal",
+         float("inf"), True, 0, lambda err, j: j.startswith(LIGNE) and "verrou" in j),
+        ("verrou libéré pendant l'attente, tests verts : passe",
+         1.0, False, 0, lambda err, j: j == LIGNE),
+    ]
+    for nom, apres, actif, attendu, controle in verrou:
+        obtenu, err, j = rejouer(VERT, code, actif, env_en_plus=petit, verrou_libre_apres=apres)
+        juste = obtenu == attendu and controle(err, j)
+        print(("ok   " if juste else "ÉCHEC"), attendu, obtenu, nom)
+        echecs += not juste
+
+    with open(HOOK, encoding="utf-8") as f:
+        source = f.read()
+    budget = re.search(r"^BUDGET = (\d+)", source, re.M)
+    # Une variable IMPERATRICE_BUDGET_TESTS énorme ne doit pas rouvrir la coupure
+    # silencieuse : le hook la plafonne à BUDGET (le vérifier en vrai prendrait 630 s).
+    juste = "min(BUDGET," in source
+    print(("ok   " if juste else "ÉCHEC"), "IMPERATRICE_BUDGET_TESTS plafonnée à BUDGET")
+    echecs += not juste
+    with open(os.path.join(os.path.dirname(HOOK), "hooks.json"), encoding="utf-8") as f:
+        delais = [h.get("timeout") for blocs in json.load(f)["hooks"].values()
+                  for bloc in blocs for h in bloc["hooks"]
+                  if "tests_obligatoires" in h["command"]]
+    juste = bool(budget) and delais and all(d and int(budget.group(1)) + 20 <= d for d in delais)
+    print(("ok   " if juste else "ÉCHEC"),
+          f"budget {budget.group(1) if budget else '?'} s, délais du hook {delais}",
+          ": attente du verrou et tests tiennent dans le délai, avec 20 s de marge")
     echecs += not juste
     sys.exit(1 if echecs else 0)
 
