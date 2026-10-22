@@ -59,3 +59,4 @@
 2026-10-22 · dev (Claude) · mission 012 · remarques 1 à 3 appliquées : IMPERATRICE_BUDGET_TESTS bornée entre 1 et BUDGET (contrôlé par le test), minuterie du test annulée. La mission 012 ferme le point « attente non bornée » de l'ADR 0001.
 2026-10-22 · Pascal · mission 012 · PR #15 fusionnée dans release/v0.3.0 (« Oui »).
 2026-10-22 · Claude (orchestrateur) · v0.3.0 · README mis à jour pour la 0.3.0 (livraison de fin de cycle à tous les rythmes, verrou borné) ; PR finale release/v0.3.0 → main à ouvrir.
+2026-10-22 · Claude (orchestrateur) · v0.3.1 · correctif demandé par Pascal : /brief ne demande la réponse d'abord qu'une fois le brief rempli par Pascal (étape 1) ; le gabarit du brief rappelle l'ordre ; /demarrer rend ses réponses à Pascal sans les recopier ; le README donne l'enchaînement des commandes.

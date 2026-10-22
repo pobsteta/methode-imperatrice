@@ -51,6 +51,33 @@ Claude Code propose d'installer le plugin à l'ouverture du projet. À la main :
 
 Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `pilotage/`.
 
+## L'enchaînement des commandes dans un projet
+
+```
+/demarrer → [Pascal remplit le brief, puis sa réponse d'abord] → /brief → /mission
+         → /boucle ×N → /bilan → (retour à /brief ou /mission si le cap change) → /boucle …
+```
+
+1. **`/imperatrice:demarrer`**, une fois : pose les fichiers et demande, en une seule
+   fois, le nom du projet, ce qu'il fait, pour qui, et les référentiels connus.
+2. **Pascal remplit `docs/brief.md`**, sans commande : le problème et pour qui, ce que
+   fait le projet, ce qu'il ne fait pas, les contraintes ; puis sa réponse d'abord,
+   datée (fiche n° 15). Le pourquoi et le pour qui sont à lui : l'IA propose ensuite,
+   Pascal tranche.
+3. **`/imperatrice:brief`** : rattrape un brief resté vide (au plus quatre questions),
+   fait écrire la réponse d'abord, fait critiquer le brief par le `contradicteur`, puis
+   prépare la spec, les ADR FRANCE et la commande de tests. Rien ne passe à `/mission`
+   sans le « oui » de Pascal.
+4. **`/imperatrice:mission`** : découpe la spec en missions d'une phrase, applique les
+   trois questions et propose `pilotage/equipe.md`.
+5. **`/imperatrice:boucle`**, à chaque cycle : missions confiées, PR relues, compte rendu
+   en quatre temps, livraison proposée (ou mauvaise nouvelle), et pour qui.
+6. **`/imperatrice:bilan`**, à chaque jalon : retour à l'Abstraction ; si le cap change,
+   on repasse par `/brief` ou `/mission`.
+
+`/imperatrice:methode` n'est pas une étape : c'est le texte de référence, à lire en cas
+de doute.
+
 ## Où vivent les choses dans un projet
 
 | Information | Emplacement |
@@ -89,6 +116,11 @@ en sept points, « ma réponse d'abord » dans `/brief` et la fiche de mission, 
 d'arrêt de la relecture, cartes immobiles nommées par `/boucle`, changements de cap au
 `/bilan`, carnet des écarts au journal) ; le journal est protégé par un invariant vérifié
 à chaque arrêt et en CI ; le hook de tests est testé et ne connaît plus aucun domaine.
+
+**Ce que change la 0.3.1** : l'ordre du brief est explicite. `/brief` ne demande la
+réponse d'abord qu'une fois le brief rempli par Pascal ; le gabarit du brief rappelle
+l'ordre (le problème et pour qui, puis la réponse d'abord, puis la critique) ; le README
+donne l'enchaînement des commandes dans un projet.
 
 **Ce que change la 0.3.0** : chaque fin de cycle propose une livraison, différente de la
 précédente, et pour qui : `/boucle` à la fin de chaque cycle, `/bilan` à la distance de
