@@ -64,9 +64,14 @@ lui permet de dire ce qui manque, pas la plus petite qu'on puisse montrer.
   kanban, nomme son bénéficiaire ; s'il n'en trouve pas de différente, il l'annonce en
   quatre temps. Pascal tranche.
 - `pilotage/kanban.md` reçoit une rubrique « Livraisons » : une ligne par cycle,
-  `cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente`.
+  `cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente`, ou `cycle N · rien de neuf` ; la question se pose à chaque `/boucle`, même
+  quand le plafond humain l'a arrêtée.
 
 ## À trancher par Pascal
+
+- **La formule, mot pour mot.** « Pour qui », « proposons » et la comparaison écrite
+  sont des ajouts de Claude à la réponse de Pascal ; le test et le plugin dépendent de la
+  formule exacte.
 
 - **Quels rythmes ?** Le brief l'applique à la petite boucle (la semaine, ou chaque
   `/boucle`). Le mois et le trimestre doivent-ils aussi proposer une livraison, plus

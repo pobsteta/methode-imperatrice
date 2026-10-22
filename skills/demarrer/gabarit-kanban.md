@@ -34,7 +34,7 @@ _Avec la raison, en une ligne._
 
 _Une ligne par cycle, ajoutée sous la précédente à la fin de chaque `/boucle` : la
 livraison que Pascal a retenue, pour qui, et ce qu'elle apporte de plus que la précédente.
-Un cycle qui n'a rien livré de neuf s'inscrit aussi, comme tel._
+Un cycle qui n'a rien livré de neuf s'inscrit aussi : `cycle N · rien de neuf`._
 
 ```
 - cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente
