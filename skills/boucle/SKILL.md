@@ -71,7 +71,8 @@ question de sortie de la fiche n° 12) :
 Tu y réponds par une proposition, que Pascal accepte ou non : ce qu'un bénéficiaire nommé
 au brief peut prendre en main à la fin du cycle (une version, une fonction dont il se
 sert, une page publiée), et en une ligne, ce qu'elle apporte de plus que la
-dernière livraison inscrite au kanban. Une livraison qui reprend la précédente sous un
+dernière livraison inscrite au kanban pour un cycle (ligne `cycle N`, pas un bilan).
+Une livraison qui reprend la précédente sous un
 autre nom n'en est pas une. Si tu n'en trouves pas de différente, le cycle livre sa
 mauvaise nouvelle, car, comme l'a dit Pascal le 22 octobre 2026,
 « une mauvaise nouvelle est une livraison sur laquelle on apprend » : annonce-la comme à

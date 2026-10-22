@@ -106,7 +106,12 @@ Le plugin a deux rythmes : `/boucle` (la petite boucle) et `/bilan` (la grande).
 ## Reste à trancher par Pascal
 
 - **La formule, mot pour mot.** « Pour qui », « proposons » et la comparaison écrite
-  sont des ajouts de Claude à la réponse de Pascal ; Pascal ne les a pas repris le
-  22 octobre, elles restent. Le test et le plugin dépendent de la formule exacte.
+  sont des ajouts de Claude à la réponse de Pascal. Pascal ne s'est pas prononcé sur la
+  formule : elle reste à trancher, et le plugin l'applique en attendant. Le test et le
+  plugin dépendent de la formule exacte.
 - **Le tableau des rythmes** (mois, trimestre, semestre) est une proposition de Claude,
-  à reprendre ou à réécrire dans le livre.
+  à reprendre ou à réécrire dans le livre. Au semestre, la bilatérale tourne la question
+  vers la personne (« ce que chacun a livré ») plutôt que vers le bénéficiaire.
+- **Les phrases de Claude dans le texte à porter au livre** : « Ce qu'on ne livre pas,
+  c'est le silence » et « Ce qui use l'équipe, c'est une boucle qui tourne sans rien
+  livrer ni rien apprendre », ainsi que le cinquième piège et le schéma.

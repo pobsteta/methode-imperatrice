@@ -43,4 +43,5 @@ l'inscrit avec ce qu'elle nous apprend._
 - cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente
 - cycle N · mauvaise nouvelle : … · pour qui · ce qu'elle nous apprend
 - bilan du AAAA-MM-JJ · livraison · pour qui · ce qu'elle apporte de plus que la précédente
+- bilan du AAAA-MM-JJ · mauvaise nouvelle : … · pour qui · ce qu'elle nous apprend
 ```

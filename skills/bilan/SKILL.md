@@ -52,6 +52,7 @@ brief ont gagné depuis le dernier bilan, lu dans les lignes de la rubrique « L
 écrites depuis, et en une ligne, ce que cela apporte de plus que la livraison du dernier
 bilan. Si le bilan ne trouve rien de plus, il livre sa mauvaise nouvelle : dis-la en
 quatre temps, avec ce qu'elle nous apprend. Après la réponse de Pascal, ajoute une ligne
-`bilan du AAAA-MM-JJ` à cette rubrique.
+`bilan du AAAA-MM-JJ` à cette rubrique : la livraison retenue, ou la mauvaise nouvelle et
+ce qu'elle nous apprend.
 Ajouter une inscription à `pilotage/journal.md` et mettre à jour `pilotage/equipe.md` après
 validation.
