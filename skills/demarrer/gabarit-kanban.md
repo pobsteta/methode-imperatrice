@@ -29,3 +29,13 @@ _Modèle de carte :_
 ## Abandonné
 
 _Avec la raison, en une ligne._
+
+## Livraisons
+
+_Une ligne par cycle, ajoutée sous la précédente à la fin de chaque `/boucle` : la
+livraison que Pascal a retenue, pour qui, et ce qu'elle apporte de plus que la précédente.
+Un cycle qui n'a rien livré de neuf s'inscrit aussi, comme tel._
+
+```
+- cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente
+```

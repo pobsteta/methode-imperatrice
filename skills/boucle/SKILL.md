@@ -56,9 +56,20 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    Quand Pascal change de cap (périmètre, priorité, mission abandonnée ou redécoupée),
    inscrire une ligne signée de lui :
    `AAAA-MM-JJ · Pascal · mission · cap · ancien → nouveau · pourquoi : … · fait : …`
+   Inscrire aussi, dans la rubrique « Livraisons » du kanban, la livraison que Pascal a
+   retenue en sortie (une ligne, sous la précédente).
 
 ## Sortie
 
 Un tableau d'une ligne par mission (mission, agent, verdict du relecteur, PR, ce que
 Pascal doit vérifier sur le terrain), puis la question :
 **« Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
+
+Puis la question de la livraison (brief au livre, fiche n° 12) :
+**« Quelle livraison proposons-nous, différente de la précédente, et pour qui ? »**
+Tu y réponds par une proposition, que Pascal accepte ou non : ce qu'un bénéficiaire nommé
+au brief peut prendre en main à la fin du cycle (une version, une fonction dont il se
+sert, une page publiée), et en une ligne, ce qu'elle apporte de plus que la
+dernière livraison inscrite au kanban. Une livraison qui reprend la précédente sous un autre nom
+n'en est pas une. Si tu n'en trouves pas de différente, dis-le tout de suite, en quatre
+temps : le cycle n'a rien livré de neuf.
