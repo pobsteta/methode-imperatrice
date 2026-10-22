@@ -68,3 +68,16 @@ toute écriture.
 
 Deux `/boucle` de suite qui ne livrent rien de neuf sont annoncées comme telles, au lieu
 de passer sous silence.
+
+## Suite, après la fusion de la PR #13
+
+Pascal, le 22 octobre 2026, sur les points laissés à trancher : « Tous les rythmes et un
+cycle sans livraison aussi, une mauvaise nouvelle est une livraison sur laquelle on
+apprend. » La formule n'a pas été reprise : elle reste telle quelle.
+
+- **Tous les rythmes** : `/boucle` (la petite boucle) et `/bilan` (la grande) posent la
+  question de la livraison, chacun à sa distance.
+- **Un cycle sans livraison neuve** livre sa mauvaise nouvelle : elle est dite tout de
+  suite et inscrite aux livraisons, avec ce qu'elle nous apprend. La ligne « rien de
+  neuf » disparaît.
+- **Harnais de la suite :** en plus de ce qui précède, `skills/bilan/SKILL.md`.
