@@ -42,5 +42,17 @@ un monde qui a changé.
 Une page : le Pareto avec son trait, les trous de mémoire, le réglage du centre de
 gravité, les changements d'équipe proposés. Puis :
 **« Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
+
+Puis la question de la livraison, à la distance de la grande boucle (brief au livre
+`docs/livre/brief-livraison-fin-de-cycle.md`, en attendant le livre ; elle vaut pour
+tous les rythmes) :
+**« Quelle livraison proposons-nous, différente de la précédente, et pour qui ? »**
+Tu y réponds par une proposition, que Pascal accepte ou non : ce que les bénéficiaires du
+brief ont gagné depuis le dernier bilan, lu dans les lignes de la rubrique « Livraisons » du kanban
+écrites depuis, et en une ligne, ce que cela apporte de plus que la livraison du dernier
+bilan. Si le bilan ne trouve rien de plus, il livre sa mauvaise nouvelle : dis-la en
+quatre temps, avec ce qu'elle nous apprend. Après la réponse de Pascal, ajoute une ligne
+`bilan du AAAA-MM-JJ` à cette rubrique : la livraison retenue, ou la mauvaise nouvelle et
+ce qu'elle nous apprend.
 Ajouter une inscription à `pilotage/journal.md` et mettre à jour `pilotage/equipe.md` après
 validation.

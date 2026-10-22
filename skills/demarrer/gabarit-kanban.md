@@ -32,10 +32,16 @@ _Avec la raison, en une ligne._
 
 ## Livraisons
 
-_Une ligne par cycle, ajoutée sous la précédente à la fin de chaque `/boucle` : la
-livraison que Pascal a retenue, pour qui, et ce qu'elle apporte de plus que la précédente.
-Un cycle qui n'a rien livré de neuf s'inscrit aussi : `cycle N · rien de neuf`._
+_Une ligne par cycle, ajoutée sous la précédente à la fin de chaque `/boucle`, et une
+par `/bilan` : la livraison que Pascal a retenue, pour qui, et ce qu'elle apporte de plus
+que la précédente du même rythme. Un cycle sans livraison neuve livre sa mauvaise
+nouvelle, car
+« une mauvaise nouvelle est une livraison sur laquelle on apprend » (Pascal) : on
+l'inscrit avec ce qu'elle nous apprend._
 
 ```
 - cycle N · livraison · pour qui · ce qu'elle apporte de plus que la précédente
+- cycle N · mauvaise nouvelle : … · pour qui · ce qu'elle nous apprend
+- bilan du AAAA-MM-JJ · livraison · pour qui · ce qu'elle apporte de plus que la précédente
+- bilan du AAAA-MM-JJ · mauvaise nouvelle : … · pour qui · ce qu'elle nous apprend
 ```
