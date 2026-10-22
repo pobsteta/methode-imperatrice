@@ -67,18 +67,21 @@ def rejouer(commande, changements, actif=False, journal=True, env_en_plus=None, 
         env = dict(os.environ, CLAUDE_PROJECT_DIR=depot, **(env_en_plus or {}))
         for nom in sans:
             env.pop(nom, None)
-        tenu = None
+        tenu = minuterie = None
         if verrou_libre_apres is not None:
             tenu = open(os.path.join(depot, ".git", "imperatrice-tests.lock"), "w")
             fcntl.flock(tenu, fcntl.LOCK_EX)
             if verrou_libre_apres != float("inf"):
-                threading.Timer(verrou_libre_apres, tenu.close).start()
+                minuterie = threading.Timer(verrou_libre_apres, tenu.close)
+                minuterie.start()
         try:
             r = subprocess.run([sys.executable, HOOK], input=json.dumps(entree),
                                capture_output=True, text=True, env=env, timeout=60)
         except subprocess.TimeoutExpired:
             return "bloqué plus de 60 s", "", lire(depot, f"pilotage/{J}")
         finally:
+            if minuterie is not None:
+                minuterie.cancel()
             if tenu is not None and not tenu.closed:
                 tenu.close()
         return r.returncode, r.stderr, lire(depot, f"pilotage/{J}")
@@ -140,7 +143,13 @@ def main():
         echecs += not juste
 
     with open(HOOK, encoding="utf-8") as f:
-        budget = re.search(r"^BUDGET = (\d+)", f.read(), re.M)
+        source = f.read()
+    budget = re.search(r"^BUDGET = (\d+)", source, re.M)
+    # Une variable IMPERATRICE_BUDGET_TESTS énorme ne doit pas rouvrir la coupure
+    # silencieuse : le hook la plafonne à BUDGET (le vérifier en vrai prendrait 630 s).
+    juste = "min(BUDGET," in source
+    print(("ok   " if juste else "ÉCHEC"), "IMPERATRICE_BUDGET_TESTS plafonnée à BUDGET")
+    echecs += not juste
     with open(os.path.join(os.path.dirname(HOOK), "hooks.json"), encoding="utf-8") as f:
         delais = [h.get("timeout") for blocs in json.load(f)["hooks"].values()
                   for bloc in blocs for h in bloc["hooks"]

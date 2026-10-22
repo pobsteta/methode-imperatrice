@@ -24,7 +24,8 @@ import time
 # Attente du verrou et tests partagent ce budget, en secondes. Il reste sous le
 # « timeout » de 660 s de hooks/hooks.json : au-delà, Claude Code couperait le hook et
 # l'agent s'arrêterait sans vérification (mission 012). La variable
-# IMPERATRICE_BUDGET_TESTS ne sert qu'aux tests du hook.
+# IMPERATRICE_BUDGET_TESTS ne sert qu'aux tests du hook : elle ne peut que réduire le
+# budget, jamais le porter au-delà de BUDGET.
 BUDGET = 630
 JOURNAL = os.path.join("pilotage", "journal.md")
 
@@ -78,7 +79,7 @@ def main():
 
     budget = BUDGET
     try:
-        budget = int(os.environ.get("IMPERATRICE_BUDGET_TESTS", BUDGET))
+        budget = min(BUDGET, max(1, int(os.environ.get("IMPERATRICE_BUDGET_TESTS", BUDGET))))
     except ValueError:
         pass
     debut = time.monotonic()
