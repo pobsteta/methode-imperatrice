@@ -1,6 +1,8 @@
 # NOM — brief
 
 > À remplir par Pascal ; critiqué par le `contradicteur` avec `/imperatrice:brief`.
+> Dans l'ordre : 1. le problème et pour qui, et les rubriques qui suivent ; 2. ma réponse
+> d'abord, datée ; 3. la critique du contradicteur, puis les arbitrages de Pascal.
 
 ## Ma réponse d'abord (fiche n° 15)
 

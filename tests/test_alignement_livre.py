@@ -45,14 +45,15 @@ MARQUEURS = {
         "fiche 11 (mission 001)",
     ),
     "skills/brief/SKILL.md": (
-        ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`"],
+        ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`",
+         "Une fois le brief rempli par Pascal (étape 1)"],
         [],
-        "fiche 15 (mission 002)",
+        "fiche 15 (mission 002, correctif 0.3.1)",
     ),
     "skills/demarrer/gabarit-brief.md": (
-        ["## Ma réponse d'abord"],
+        ["## Ma réponse d'abord", "Dans l'ordre : 1. le problème et pour qui"],
         [],
-        "fiche 15 (mission 002)",
+        "fiche 15 (mission 002, correctif 0.3.1)",
     ),
     "skills/mission/fiche-mission.md": (
         ["## Ma réponse d'abord", "**Critère d'arrêt de la relecture :**",

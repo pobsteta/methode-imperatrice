@@ -16,7 +16,9 @@ la méthode a besoin, **sans rien écraser**. Les gabarits sont à côté de ce 
    déjà connus (avec leurs sources).
 3. **Créer, à partir des gabarits** :
    - `CLAUDE.md` depuis `gabarit-claude.md` ;
-   - `docs/brief.md` depuis `gabarit-brief.md` (rubriques en italique, laissées à Pascal) ;
+   - `docs/brief.md` depuis `gabarit-brief.md` (rubriques en italique, laissées à Pascal ;
+     les réponses aux questions de l'étape 2 y sont rendues à Pascal comme point de départ,
+     pas recopiées à sa place) ;
    - `pilotage/equipe.md`, `pilotage/kanban.md`, `pilotage/journal.md` depuis leurs
      gabarits, et le dossier `pilotage/missions/` ;
    - `docs/adr/` vide.
