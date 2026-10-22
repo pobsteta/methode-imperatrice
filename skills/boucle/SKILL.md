@@ -45,9 +45,10 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
    « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
    par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
-6. **Dire tout de suite** : toute mission bloquée, en échec, hors délai ou immobile est
-   annoncée à Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui
-   fait quoi d'ici quand), sans euphémisme.
+6. **Dire tout de suite** : toute mission bloquée, en échec, hors délai ou immobile, et
+   tout cycle qui n'a rien livré de neuf (voir « Sortie »), est annoncé à Pascal en quatre
+   temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait quoi d'ici quand), sans
+   euphémisme.
 7. **Tenir la mémoire** : ajouter à `pilotage/journal.md` les lignes proposées par les
    agents (une par mission, datée, signée), mettre à jour `pilotage/kanban.md` :
    augmenter de 1 le dernier cycle, et noter ce nouveau numéro sur chaque carte qui a
@@ -62,3 +63,19 @@ s'oriente ; une boucle précipitée saute directement à l'action.
 Un tableau d'une ligne par mission (mission, agent, verdict du relecteur, PR, ce que
 Pascal doit vérifier sur le terrain), puis la question :
 **« Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
+
+Puis la question de la livraison (brief au livre
+`docs/livre/brief-livraison-fin-de-cycle.md`, en attendant le livre ; elle prolonge la
+question de sortie de la fiche n° 12) :
+**« Quelle livraison proposons-nous, différente de la précédente, et pour qui ? »**
+Tu y réponds par une proposition, que Pascal accepte ou non : ce qu'un bénéficiaire nommé
+au brief peut prendre en main à la fin du cycle (une version, une fonction dont il se
+sert, une page publiée), et en une ligne, ce qu'elle apporte de plus que la
+dernière livraison inscrite au kanban. Une livraison qui reprend la précédente sous un
+autre nom n'en est pas une. Si tu n'en trouves pas de différente, c'est un cycle qui n'a
+rien livré de neuf : annonce-le comme à l'étape 6.
+La question se pose à chaque `/boucle`, même quand le plafond l'a arrêtée à l'étape 1.
+
+Après la réponse de Pascal, ajoute une ligne à la rubrique « Livraisons » du kanban, sous
+la précédente, avec N le dernier cycle que l'étape 7 vient d'augmenter : la livraison
+retenue, ou, si Pascal n'en retient aucune, « rien de neuf ».
