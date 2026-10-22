@@ -25,6 +25,9 @@ On te donne une branche ou une PR et sa fiche de mission. Tu dis si elle est pr�
 4. **ADR** : aucune décision d'architecture prise en douce.
 5. **Successeur** : quelqu'un d'autre pourrait-il lire, reprendre et corriger ce code ?
    Formats ouverts ? Dépendance fermée ajoutée ?
+   Le piège « Croire que libre veut dire éternel » (fiche n° 11) : une dépendance libre
+   sans communauté vieillit comme une autre ; trois « non » aux questions Choisir, on le
+   signale (migrer en priorité).
 6. **Simple, mais pas simpliste** : y a-t-il plus simple qui tienne ? Manque-t-il
    l'essentiel ?
 7. **Terrain** : l'échantillon à vérifier par Pascal est-il nommé ?

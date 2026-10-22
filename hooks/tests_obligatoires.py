@@ -5,14 +5,35 @@ Méthode de l'Impératrice, fiche n° 15 : « avec l'IA, et surtout avec elle, l
 sont obligatoires ». Si du code a changé (hors docs/, pilotage/ et .claude/) et que la commande
 de tests du projet est définie dans .claude/test-command, on la lance ; si elle
 échoue, l'agent ne peut pas s'arrêter et reçoit la sortie des tests.
+Au second arrêt (l'agent repart déjà à cause de ce hook), on le laisse finir pour éviter
+la boucle sans fin, mais si les tests sont encore rouges, on l'inscrit au journal
+(arbitrage de Pascal, brief v0.2.0) : la mission n'est pas vérifiée, et cela se voit.
 Tant que la stack n'est pas choisie (pas de .claude/test-command), le hook ne fait rien.
+Le hook ne connaît aucun domaine : l'environnement propre au projet (ANDROID_HOME par
+exemple) s'écrit dans sa commande de tests ou dans ses réglages locaux (ADR 0001).
 """
+import datetime
 import json
 import os
 import subprocess
 import sys
 
 DELAI = 600  # secondes
+JOURNAL = os.path.join("pilotage", "journal.md")
+
+
+def inscrire_au_journal(racine, commande, motif):
+    """Ajoute une ligne datée en fin de journal, s'il existe (on ne le crée pas)."""
+    chemin = os.path.join(racine, JOURNAL)
+    if not os.path.isfile(chemin):
+        return
+    with open(chemin, encoding="utf-8") as f:
+        fin = f.read()[-1:]
+    ligne = (f"{datetime.date.today().isoformat()} · hook tests_obligatoires · — · "
+             f"arrêt accepté au second essai avec des tests rouges ({motif}, `{commande}`) : "
+             "mission non vérifiée, à reprendre.\n")
+    with open(chemin, "a", encoding="utf-8") as f:
+        f.write(("\n" if fin not in ("", "\n") else "") + ligne)
 
 
 def main():
@@ -20,9 +41,9 @@ def main():
         entree = json.load(sys.stdin)
     except Exception:
         entree = {}
-    # Évite la boucle infinie : si l'agent repart déjà à cause de ce hook, on le laisse finir.
-    if entree.get("stop_hook_active"):
-        sys.exit(0)
+    # Si l'agent repart déjà à cause de ce hook, on le laissera finir (pas de boucle sans
+    # fin), mais des tests encore rouges seront inscrits au journal.
+    second_arret = bool(entree.get("stop_hook_active"))
 
     racine = os.environ.get("CLAUDE_PROJECT_DIR") or entree.get("cwd") or os.getcwd()
     cwd = entree.get("cwd") or racine
@@ -48,18 +69,9 @@ def main():
     if not code_modifie:
         sys.exit(0)
 
-    # Un worktree d'agent n'a pas de local.properties : sans ANDROID_HOME, le build
-    # Android échoue (« SDK location not found »). Repli sur l'emplacement standard
-    # du SDK s'il existe sur ce poste ; rien n'est écrit dans le dépôt.
-    env = dict(os.environ)
-    if not env.get("ANDROID_HOME") and not os.path.isfile(os.path.join(cwd, "local.properties")):
-        for candidat in (os.path.expanduser("~/Android/Sdk"), os.path.expanduser("~/Library/Android/sdk")):
-            if os.path.isdir(candidat):
-                env["ANDROID_HOME"] = candidat
-                break
-
-    # Deux builds Gradle dans le même dossier se gênent (fichiers de build tronqués) :
-    # un verrou par dossier de travail fait attendre le second (incident du 2026-10-16).
+    # Deux lancements des tests dans le même dépôt se gênent (fichiers de build tronqués,
+    # incident du 2026-10-16) : un verrou par dossier git fait attendre le second.
+    # POSIX seulement (fcntl) ; ailleurs, il est ignoré.
     verrou = None
     try:
         dossier_git = subprocess.run(
@@ -75,15 +87,21 @@ def main():
 
     try:
         resultat = subprocess.run(
-            commande, shell=True, cwd=cwd, env=env,
+            commande, shell=True, cwd=cwd,
             capture_output=True, text=True, timeout=DELAI,
         )
     except subprocess.TimeoutExpired:
+        if second_arret:
+            inscrire_au_journal(racine, commande, f"délai de {DELAI} s dépassé")
+            sys.exit(0)
         print(f"Tests trop longs (> {DELAI} s) : impossible de vérifier. "
               "Dis-le à l'orchestrateur, ne déclare pas la mission terminée.", file=sys.stderr)
         sys.exit(2)
 
     if resultat.returncode != 0:
+        if second_arret:
+            inscrire_au_journal(racine, commande, f"code {resultat.returncode}")
+            sys.exit(0)
         sortie = (resultat.stdout + "\n" + resultat.stderr)[-3000:]
         print(
             "Mission non terminée : les tests échouent (« un code qui a l'air juste "

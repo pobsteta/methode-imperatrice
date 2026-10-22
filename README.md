@@ -10,8 +10,9 @@
 [![Licence](https://img.shields.io/badge/licence-GPL--3.0-blue)](LICENSE)
 
 Piloter une équipe d'agents IA selon **la méthode de l'Impératrice** de Pascal Obstétar
-(*La méthode de l'Impératrice — Emmener le bureau en forêt*) : **l'IA propose, l'homme
-tranche et assume.**
+(*La méthode de l'Impératrice — Emmener le bureau en forêt*, livre imprimé, Boîte à outils
+p. 203-275) : **l'IA propose, l'homme tranche et assume.** Le plugin reprend les formules
+du livre ; `tests/test_alignement_livre.py` vérifie qu'elles y sont.
 
 Ce dépôt contient la méthode, et elle seule. Chaque projet garde son produit (`docs/`) et
 la trace de son pilotage (`pilotage/`) ; la méthode, les agents, les commandes et les
@@ -22,10 +23,10 @@ garde-fous viennent d'ici, sans copie.
 | Élément | Contenu |
 |---|---|
 | **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) |
-| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais, le crible FRANCE |
+| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
-| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul ; pas de « terminé » sans tests verts (`.claude/test-command`) |
-| **Gabarits** | fiche de mission, ADR au crible FRANCE, `CLAUDE.md`, brief, équipe, kanban, journal |
+| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`) ; au second arrêt avec des tests rouges, l'agent sort mais c'est inscrit au journal |
+| **Gabarits** | fiche de mission (ma réponse d'abord, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes et cycles), journal (lignes `écart` et `cap`) |
 
 ## Installer dans un projet
 
@@ -65,7 +66,9 @@ Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `
 
 Les agents sont génériques : ce qui est propre au domaine (référentiels, conventions
 publiées, règles de test comme « un point du terrain tombe au bon endroit ») s'écrit
-dans le `CLAUDE.md` du projet, qu'ils lisent.
+dans le `CLAUDE.md` du projet, qu'ils lisent. De même, les hooks ne connaissent aucun
+domaine : l'environnement dont les tests ont besoin s'écrit dans la commande de tests
+du projet, ou dans ses réglages locaux (voir la note de la 0.2.0 plus bas).
 
 ## Faire évoluer la méthode
 
@@ -80,6 +83,23 @@ monte cette version** : correctif → `Z+1`, ajout (agent, commande, règle, gar
 durci) → `Y+1`, rupture (chemin, nom de commande, garde-fou relâché, renommé ou
 déplacé) → `X+1`. Durcir un garde-fou (refuser ce qu'il laissait passer à tort) est un
 ajout : ce qu'il permettait à raison reste permis.
+
+**Ce que change la 0.2.0** : le plugin suit le livre imprimé du 20 octobre 2026 (harnais
+en sept points, « ma réponse d'abord » dans `/brief` et la fiche de mission, critère
+d'arrêt de la relecture, cartes immobiles nommées par `/boucle`, changements de cap au
+`/bilan`, carnet des écarts au journal) ; le journal est protégé par un invariant vérifié
+à chaque arrêt et en CI ; le hook de tests est testé et ne connaît plus aucun domaine.
+
+**Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
+0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et
+`local.properties` manquaient. Un projet Android l'écrit désormais lui-même :
+
+- dans `.claude/test-command`, par exemple
+  `export ANDROID_HOME="${ANDROID_HOME:-$HOME/Android/Sdk}" && ./gradlew test`
+  (sous macOS : `$HOME/Library/Android/sdk`) ;
+- ou dans la clé `env` de réglages non versionnés (`~/.claude/settings.json` ou
+  `.claude/settings.local.json`), avec le chemin écrit en entier : `env` ne développe ni
+  `~` ni `$HOME`.
 
 | Quand | Quoi | Workflow |
 |---|---|---|
@@ -96,7 +116,10 @@ Ce que la CI rejoue, à lancer avant de pousser :
 ```sh
 python3 tests/test_garde_main.py
 python3 tests/test_journal_ajout_seul.py
+python3 tests/test_tests_obligatoires.py
 python3 tests/test_verifier_version.py
+python3 tests/test_journal_intact.py
+python3 tests/test_alignement_livre.py
 claude plugin validate .
 python3 scripts/verifier_version.py
 ```
