@@ -58,3 +58,4 @@
 2026-10-22 · relecteur · mission 012 · à reprendre (aller-retour 1/3) · verrou borné (LOCK_NB, budget de 630 s partagé avec les tests, sous les 660 s du hook), 3 tests rouges sur l'ancien hook puis verts, suite verte ; plafonner IMPERATRICE_BUDGET_TESTS à BUDGET (sinon une grande valeur rouvre la coupure silencieuse).
 2026-10-22 · dev (Claude) · mission 012 · remarques 1 à 3 appliquées : IMPERATRICE_BUDGET_TESTS bornée entre 1 et BUDGET (contrôlé par le test), minuterie du test annulée. La mission 012 ferme le point « attente non bornée » de l'ADR 0001.
 2026-10-22 · Pascal · mission 012 · PR #15 fusionnée dans release/v0.3.0 (« Oui »).
+2026-10-22 · Claude (orchestrateur) · v0.3.0 · README mis à jour pour la 0.3.0 (livraison de fin de cycle à tous les rythmes, verrou borné) ; PR finale release/v0.3.0 → main à ouvrir.

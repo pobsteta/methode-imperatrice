@@ -22,10 +22,10 @@ garde-fous viennent d'ici, sans copie.
 
 | Élément | Contenu |
 |---|---|
-| **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) |
+| **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) ; `boucle` et `bilan` se closent sur une livraison différente de la précédente |
 | **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
-| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`) ; au second arrêt avec des tests rouges, l'agent sort mais c'est inscrit au journal |
+| **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`, attente du verrou comprise, 630 s au plus) ; au second arrêt sans tests verts, l'agent sort mais c'est inscrit au journal |
 | **Gabarits** | fiche de mission (ma réponse d'abord, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes, cycles et livraisons), journal (lignes `écart` et `cap`) |
 
 ## Installer dans un projet
@@ -89,6 +89,16 @@ en sept points, « ma réponse d'abord » dans `/brief` et la fiche de mission, 
 d'arrêt de la relecture, cartes immobiles nommées par `/boucle`, changements de cap au
 `/bilan`, carnet des écarts au journal) ; le journal est protégé par un invariant vérifié
 à chaque arrêt et en CI ; le hook de tests est testé et ne connaît plus aucun domaine.
+
+**Ce que change la 0.3.0** : chaque fin de cycle propose une livraison, différente de la
+précédente, et pour qui : `/boucle` à la fin de chaque cycle, `/bilan` à la distance de
+la grande boucle, inscrites dans la rubrique « Livraisons » du kanban. Un cycle sans
+livraison neuve livre sa mauvaise nouvelle, « une livraison sur laquelle on apprend »,
+dite tout de suite avec ce qu'elle nous apprend. La formule vient du brief au livre
+(`docs/livre/brief-livraison-fin-de-cycle.md`), en attendant le livre. Le hook de tests
+borne l'attente de son verrou : attente et tests tiennent dans 630 s, sous le délai du
+hook, et un verrou resté occupé arrête l'agent en le disant au lieu de le laisser
+couper sans vérification.
 
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et
