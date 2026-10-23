@@ -12,6 +12,7 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
 1. **Lire `docs/brief.md`.** S'il est encore au stade de gabarit (rubriques en italique
    non remplies), ne lance personne : pose à Pascal les questions manquantes, au plus
    quatre, et attends ses réponses. Le brief est à Pascal ; tu ne l'inventes pas.
+   **Coût complet** non renseigné : écris « inconnu » ; ce n'est pas une question bloquante.
 2. **Ma réponse d'abord** (fiche n° 15 : « l'homme note sa réponse avant de lire celle
    des machines »). Demande à Pascal d'écrire sa propre réponse, datée, dans la rubrique
    « Ma réponse d'abord » de `docs/brief.md` : ce qu'il attend, et pourquoi. Elle doit
