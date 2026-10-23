@@ -60,3 +60,4 @@
 2026-10-22 · Pascal · mission 012 · PR #15 fusionnée dans release/v0.3.0 (« Oui »).
 2026-10-22 · Claude (orchestrateur) · v0.3.0 · README mis à jour pour la 0.3.0 (livraison de fin de cycle à tous les rythmes, verrou borné) ; PR finale release/v0.3.0 → main à ouvrir.
 2026-10-23 · archiviste · mission 011 de terrain · liste de contrôle avant « prêt » ajoutée (skills/methode/liste-de-controle.md, citée par acquereur et testeur, marqueurs dans test_alignement_livre) ; version non montée, à régler à la fusion avec la PR #19.
+2026-10-23 · archiviste · mission 011 de terrain · aller-retour 1/3 traité : liste rendue générique, jointe à la consigne par l'orchestrateur (skills methode et boucle), marqueurs de test retirés, valeur provisoire admise.
