@@ -63,10 +63,10 @@ _Si la mission s'appuie sur une autre qui n'est pas encore fusionnée (branche e
 - **PR en brouillon jusqu'à :** _l'événement qui la sort du brouillon (fusion de A, par exemple)._
 - **CI rouge attendue :** _quel test ou quelle étape est rouge, **pourquoi**, et jusqu'à quand
   (« rouge justifiée » : jusqu'à la fusion de B). Une CI rouge qui n'est pas écrite ici est
-  une anomalie._
+  un écart (carnet des écarts)._
 
-L'orchestrateur reporte cette rubrique en tête de la PR et dans le kanban ; le relecteur
-vérifie que le rouge constaté est bien celui qui est annoncé, ni plus, ni moins.
+L'orchestrateur reporte cette rubrique en tête de la PR ; le relecteur vérifie que le rouge
+constaté est bien celui qui est annoncé, ni plus, ni moins.
 
 ## Tests
 

@@ -112,7 +112,7 @@ l'orchestrateur joint à leur consigne dans `/boucle`.
 **Ce que change la 0.6.0** (tiré du bilan n° 1 du projet terrain, 2026-10-23, cause C : missions
 empilées sans ordre écrit) : la fiche de mission a une rubrique « Dépend de / rouge attendu
 jusqu'à » (missions dont elle dépend, ordre de fusion, PR en brouillon jusqu'à quand, CI
-rouge justifiée et sa date de fin) ; une CI rouge non annoncée dans la fiche est une anomalie.
+rouge justifiée et sa date de fin) ; une CI rouge non annoncée dans la fiche est un écart (carnet des écarts).
 
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et

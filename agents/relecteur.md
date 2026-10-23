@@ -28,9 +28,11 @@ On te donne une branche ou une PR et sa fiche de mission. Tu dis si elle est pr�
    Le piège « Croire que libre veut dire éternel » (fiche n° 11) : une dépendance libre
    sans communauté vieillit comme une autre ; trois « non » aux questions Choisir, on le
    signale (migrer en priorité).
-6. **Simple, mais pas simpliste** : y a-t-il plus simple qui tienne ? Manque-t-il
+6. **Rouge annoncé** : le rouge constaté en CI est-il celui que la rubrique « Dépend de /
+   rouge attendu jusqu'à » de la fiche annonce, ni plus, ni moins ? Sinon, c'est un écart.
+7. **Simple, mais pas simpliste** : y a-t-il plus simple qui tienne ? Manque-t-il
    l'essentiel ?
-7. **Terrain** : l'échantillon à vérifier par Pascal est-il nommé ?
+8. **Terrain** : l'échantillon à vérifier par Pascal est-il nommé ?
 
 ## Rendu
 - Verdict : **prêt pour Pascal** / **à reprendre** (avec les points, classés).
