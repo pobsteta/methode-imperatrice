@@ -65,3 +65,4 @@
 2026-10-23 · archiviste · mission 011 de terrain · liste de contrôle avant « prêt » ajoutée (skills/methode/liste-de-controle.md, citée par acquereur et testeur, marqueurs dans test_alignement_livre) ; version non montée, à régler à la fusion avec la PR #19.
 2026-10-23 · archiviste · mission 011 de terrain · aller-retour 1/3 traité : liste rendue générique, jointe à la consigne par l'orchestrateur (skills methode et boucle), marqueurs de test retirés, valeur provisoire admise.
 2026-10-23 · Claude (orchestrateur) · v0.5.0 · sur l'ordre de Pascal (une seule montée pour les missions 010 et 011 de terrain) : branche 011 fusionnée dans la 010, version 0.5.0 ; la PR #21 est fermée, son contenu passe par la #20.
+2026-10-23 · archiviste · mission 012 de terrain · rubrique « Dépend de / rouge attendu jusqu'à » ajoutée à skills/mission/fiche-mission.md ; version 0.6.0 (plugin.json, README). Remplie pour 005, 006, 007 dans le corps de la PR.
