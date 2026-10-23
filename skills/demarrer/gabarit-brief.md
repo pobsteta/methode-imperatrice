@@ -12,7 +12,8 @@
 
 - **Problème** : _ce qui ne va pas aujourd'hui, constaté où et par qui._
 - **Bénéficiaires** : _qui en profite d'abord, qui ensuite._
-- **Coût complet aujourd'hui** : _ce que le problème coûte, avec ses sources._
+- **Coût complet aujourd'hui** : _ce que le problème coûte, avec ses sources ; « inconnu »
+  si Pascal ne le renseigne pas._
 
 ## Ce que fait NOM
 
