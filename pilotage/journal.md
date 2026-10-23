@@ -60,3 +60,4 @@
 2026-10-22 · Pascal · mission 012 · PR #15 fusionnée dans release/v0.3.0 (« Oui »).
 2026-10-22 · Claude (orchestrateur) · v0.3.0 · README mis à jour pour la 0.3.0 (livraison de fin de cycle à tous les rythmes, verrou borné) ; PR finale release/v0.3.0 → main à ouvrir.
 2026-10-23 · archiviste · mission 010 (terrain) · gabarit `skills/mission/fiche-mission.md` : rubrique « Valeur provisoire » (valeur, mesurée par, gel ; mesure en première tâche) ; étape 6 de `skills/mission/SKILL.md` le rappelle. Version non montée (0.4.0 portée par la PR #19). Source : bilan n° 1 de terrain, cause A, 8 incidents sur 25.
+2026-10-23 · archiviste · mission 010 (terrain) · aller-retour 1/3 traité : « Gel » et « première tâche » réconciliés (mesure externe = mission préalable ou valeur provisoire sans gel ; Pascal juge), « jamais le code testé » retiré, libellé « (chiffre, réglage) », README « Gabarits » complété, corps de PR enrichi. Version toujours non montée.
