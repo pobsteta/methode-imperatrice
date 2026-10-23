@@ -59,3 +59,4 @@
 2026-10-22 · dev (Claude) · mission 012 · remarques 1 à 3 appliquées : IMPERATRICE_BUDGET_TESTS bornée entre 1 et BUDGET (contrôlé par le test), minuterie du test annulée. La mission 012 ferme le point « attente non bornée » de l'ADR 0001.
 2026-10-22 · Pascal · mission 012 · PR #15 fusionnée dans release/v0.3.0 (« Oui »).
 2026-10-22 · Claude (orchestrateur) · v0.3.0 · README mis à jour pour la 0.3.0 (livraison de fin de cycle à tous les rythmes, verrou borné) ; PR finale release/v0.3.0 → main à ouvrir.
+2026-10-23 · archiviste · mission 010 (terrain) · gabarit `skills/mission/fiche-mission.md` : rubrique « Valeur provisoire » (valeur, mesurée par, gel ; mesure en première tâche) ; étape 6 de `skills/mission/SKILL.md` le rappelle. Version non montée (0.4.0 portée par la PR #19). Source : bilan n° 1 de terrain, cause A, 8 incidents sur 25.

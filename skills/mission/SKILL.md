@@ -40,7 +40,9 @@ Sinon : arrête-toi et propose `/brief`.
    plafond de `pilotage/equipe.md`. Le reste va en « planifié ».
 6. **Écrire chaque fiche** dans `pilotage/missions/NNN-titre.md` à partir du
    gabarit `fiche-mission.md` (à côté de ce fichier), harnais en sept points compris (brief, harnais,
-   tests, terrain, équipe, ma réponse d'abord, qui tranche). La rubrique « Ma réponse
+   tests, terrain, équipe, ma réponse d'abord, qui tranche). Renseigner la rubrique « Valeur
+   provisoire » : toute valeur fixée avant d'être mesurée est nommée, avec ce qui la mesure et
+   l'étape où elle gèle ; la mesure passe en première tâche de la mission. La rubrique « Ma réponse
    d'abord » est laissée vide : Pascal la remplit lui-même, avant de lire le travail de
    l'agent. Associer à chaque mission de développement une mission
    `testeur` qui la précède ou l'accompagne.
