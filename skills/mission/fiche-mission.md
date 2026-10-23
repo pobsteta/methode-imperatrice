@@ -37,6 +37,21 @@ pas._
 - **Ne doit pas :** _sortir du périmètre, inventer un code, toucher à `main`, …_
 - **Sources autorisées :** _fichiers, référentiels, ADR à lire — juste le nécessaire._
 
+## Valeur provisoire (chiffre, réglage)
+
+_Si la mission fixe ou reprend une valeur (seuil, couleur, durée, taille, format, délai…) qu'on n'a
+pas encore mesurée, la dire ici ; sinon écrire « aucune » (une ligne suffit)._
+
+- **Valeur provisoire :** _la valeur retenue pour avancer, marquée « provisoire » partout où elle apparaît._
+- **Mesurée par :** _l'outil tiers, l'essai ou la personne qui la mesurera, et à quelle date._
+- **Gel :** _avant quelle étape elle doit être mesurée (ADR, spec, publication) ; la valeur ne se grave pas avant._
+
+**Si la mesure est dans les moyens de la mission, elle en est la première tâche**, avant
+d'écrire ce qui en dépend. Si elle revient à un autre (essai de Pascal, outil tiers
+absent), elle devient une mission préalable (règle de staffing, « non à la 3e question »),
+ou la valeur reste provisoire jusqu'à sa date et rien de ce qui en dépend ne gèle avant.
+Qui juge la mesure suffisante : Pascal (« Qui tranche »).
+
 ## Tests
 
 - **Comment saura-t-on que c'est juste :** _tests automatiques attendus, critères d'acceptation._

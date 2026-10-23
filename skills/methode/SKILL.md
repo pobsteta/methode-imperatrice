@@ -131,6 +131,7 @@ que sommes-nous prêts à payer pour cela ?*
   l'outil (communauté) ? **Trois « non » : migrer en priorité.**
 - **Règle du sommier** : dans `pilotage/journal.md`, on n'efface pas, on ajoute. Chaque inscription est datée et signée ; une correction est une nouvelle ligne qui renvoie à l'ancienne.
 - **Toujours comparer plusieurs sources** pour une observation (fiche n° 5) ; **une seule source** pour une référence (loi, référentiel, procédure).
+- **Liste de contrôle avant « prêt »** : `liste-de-controle.md` (dans ce skill), pour l'`acquereur` et le `testeur`, que l'orchestrateur joint à leur consigne (sources et emplacements, décomptes complets, termes exacts).
 - **Ne jamais inventer un code** quand une convention existe : chaque référentiel (nomenclature, états, causes, protocoles, seuils) est tiré d'une convention publiée et sourcée. Les référentiels propres au projet et leurs sources sont nommés dans son `CLAUDE.md`.
 
 ## Les boucles et les rituels
