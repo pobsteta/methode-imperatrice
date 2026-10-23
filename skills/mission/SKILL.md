@@ -46,7 +46,8 @@ Sinon : arrête-toi et propose `/brief`.
    première tâche. Mesure qui revient à un autre (essai de Pascal, outil tiers absent) :
    mission préalable, ou valeur provisoire jusqu'à sa date, sans gel de ce qui en dépend ;
    Pascal juge la mesure suffisante. Associer à chaque mission de développement une mission
-   `testeur` qui la précède ou l'accompagne.
+   `testeur` qui la précède ou l'accompagne. Renseigner aussi la rubrique « Dépend de / rouge
+   attendu jusqu'à » (voir le gabarit) : missions dont celle-ci dépend, ordre de fusion, rouge annoncé.
 7. **Mettre à jour `pilotage/equipe.md`** (tableau des missions) et `pilotage/kanban.md`
    (colonne « validé » après accord).
 

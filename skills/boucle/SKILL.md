@@ -48,6 +48,9 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
    « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
    par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
+   Rubrique « Dépend de / rouge attendu jusqu'à » de la fiche (voir le gabarit) : la reporter en
+   tête de la PR, ouvrir la PR en brouillon quand elle le dit, respecter l'ordre de fusion écrit, et ne pas fusionner tant que
+   le rouge annoncé n'est pas levé.
 6. **Dire tout de suite** : toute mission bloquée, en échec, hors délai ou immobile, et
    tout cycle dont la livraison est une mauvaise nouvelle (voir « Sortie »), est annoncé
    à Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait
