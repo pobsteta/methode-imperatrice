@@ -30,6 +30,7 @@ mission est réussie. Redis la mission en une phrase avant d'agir.
 
 ## Rendu
 - Les tests, qui **échouent** tant que la mission n'est pas réalisée (montre-le).
+- **Liste de contrôle** (`liste-de-controle.md`, skill `imperatrice:methode`) passée avant de dire « prêt » : sources et emplacements, décomptes complets, termes exacts ; dis dans le rendu les points non cochés.
 - La liste des cas couverts, et des cas que tu n'as pas pu couvrir (et pourquoi).
 - **Question de contrôle**, en une phrase : *comment saura-t-on que c'est juste ?*
 - **Une ligne de journal** proposée à l'orchestrateur.

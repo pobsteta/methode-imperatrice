@@ -23,7 +23,7 @@ garde-fous viennent d'ici, sans copie.
 | Élément | Contenu |
 |---|---|
 | **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) ; `boucle` et `bilan` se closent sur une livraison différente de la précédente |
-| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir |
+| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir, la liste de contrôle d'auto-relecture avant « prêt » (`liste-de-controle.md`, pour l'acquéreur et le testeur) |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
 | **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`, attente du verrou comprise, 630 s au plus) ; au second arrêt sans tests verts, l'agent sort mais c'est inscrit au journal |
 | **Gabarits** | fiche de mission (ma réponse d'abord, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes, cycles et livraisons), journal (lignes `écart` et `cap`) |

@@ -102,6 +102,23 @@ MARQUEURS = {
         ["nticipateur"],
         "fiche 4 (mission 005)",
     ),
+    "agents/acquereur.md": (
+        ["liste-de-controle.md"],
+        [],
+        "fiche 5 (mission 011 de terrain)",
+    ),
+    "agents/testeur.md": (
+        ["liste-de-controle.md"],
+        [],
+        "fiche 15 (mission 011 de terrain)",
+    ),
+    "skills/methode/liste-de-controle.md": (
+        ["j. 37", "j. 43", "j. 48", "j. 52", "j. 55", "j. 68", "j. 93",
+         "## 1. Chaque chiffre a sa source, et son emplacement", "## 2. Les décomptes sont complets",
+         "## 3. Les termes sont exacts", "## 5. Pour le testeur"],
+        [],
+        "fiches 5 et 15 (mission 011 de terrain)",
+    ),
 }
 
 

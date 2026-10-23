@@ -34,6 +34,7 @@ compare. Concordance : avancer. Écart : vérifier la mesure, puis chercher la c
 ## Rendu
 - Le ou les fichiers de référentiel (CSV ou YAML, format ouvert), avec en tête : source,
   date de consultation, propriétaire (Pascal), écarts relevés entre sources.
+- **Liste de contrôle** (`liste-de-controle.md`, skill `imperatrice:methode`) passée avant de dire « prêt » : sources et emplacements, décomptes complets, termes exacts ; dis dans le rendu les points non cochés.
 - **Trois points au sol** : les trois cas où la décision est la plus sensible ou les
   sources divergent, que Pascal pourra vérifier sur le terrain.
 - **Question de contrôle**, en une phrase : *quelle décision cette donnée va-t-elle éclairer ?*
