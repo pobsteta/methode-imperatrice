@@ -41,7 +41,7 @@ Sinon : arrête-toi et propose `/brief`.
 6. **Écrire chaque fiche** dans `pilotage/missions/NNN-titre.md` à partir du
    gabarit `fiche-mission.md` (à côté de ce fichier), harnais en sept points compris (brief, harnais,
    tests, terrain, équipe, ma réponse d'abord, qui tranche). Renseigner la rubrique « Valeur
-   provisoire (chiffre, réglage) » : toute valeur fixée avant d'être mesurée est nommée, avec
+   provisoire (chiffre, réglage) » : toute valeur fixée ou reprise avant d'être mesurée est nommée, avec
    ce qui la mesure, la date et l'étape où elle gèle. Mesure dans les moyens de la mission :
    première tâche. Mesure qui revient à un autre (essai de Pascal, outil tiers absent) :
    mission préalable, ou valeur provisoire jusqu'à sa date, sans gel de ce qui en dépend ;

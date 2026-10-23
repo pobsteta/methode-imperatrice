@@ -39,7 +39,7 @@ pas._
 
 ## Valeur provisoire (chiffre, réglage)
 
-_Si la mission fixe une valeur (seuil, couleur, durée, taille, format, délai…) qu'on n'a
+_Si la mission fixe ou reprend une valeur (seuil, couleur, durée, taille, format, délai…) qu'on n'a
 pas encore mesurée, la dire ici ; sinon écrire « aucune » (une ligne suffit)._
 
 - **Valeur provisoire :** _la valeur retenue pour avancer, marquée « provisoire » partout où elle apparaît._
