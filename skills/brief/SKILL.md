@@ -15,8 +15,9 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
    des machines »). Première question, avant toute autre et avant que tu écrives quoi que
    ce soit : **« Qu'attends-tu de ce projet, et pourquoi ? »** Tu recopies sa réponse mot
    pour mot, entre guillemets et datée, dans la rubrique « Ma réponse d'abord » de
-   `docs/brief.md`. Elle est écrite avant que tu rédiges le brief, donc avant de lancer le
-   `contradicteur` et avant que Pascal lise toute proposition des machines. Tu ne la
+   `docs/brief.md`. Elle est écrite avant que tu rédiges le brief, donc
+   avant de lancer le `contradicteur` et avant que Pascal lise toute proposition des
+   machines. Tu ne la
    rédiges pas, tu ne la suggères pas, tu ne la reformules pas.
    « Je m'en passe » est une réponse ; l'absence de réponse n'en est pas une : tant
    qu'elle manque, tu n'écris rien d'autre et tu ne lances personne.
