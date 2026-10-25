@@ -33,10 +33,13 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    Agent, **`isolation: "worktree"`** pour les agents qui écrivent du code, et pour seule
    consigne : *« Ta mission est dans pilotage/missions/NNN-titre.md. Redis-la en une phrase,
    puis réalise-la selon ta définition. »* Lancer en parallèle les missions
-   indépendantes. Missions en « tenir » : l'agent rend un plan, que tu soumets à Pascal
+   indépendantes. Pour l'`acquereur` et le `testeur`, joindre à la consigne le contenu de
+   `liste-de-controle.md` (skill `methode`) : les agents ne peuvent pas l'ouvrir
+   eux-mêmes. Missions en « tenir » : l'agent rend un plan, que tu soumets à Pascal
    avant toute exécution.
 5. **Contrôler** : pour chaque mission rendue, lancer le `relecteur`. « À reprendre » :
-   renvoyer à l'agent (nouveau contexte, fiche complétée des remarques), et inscrire au
+   renvoyer à l'agent (nouveau contexte, fiche complétée des remarques, liste de
+   contrôle de nouveau jointe pour l'`acquereur` et le `testeur`), et inscrire au
    journal le numéro de l'aller-retour (« aller-retour 2/3 ») : un aller-retour est un
    renvoi à l'agent.
    **Critère d'arrêt de la relecture** : celui de la fiche, N allers-retours, 3 par
@@ -45,6 +48,9 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
    « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
    par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
+   Rubrique « Dépend de / rouge attendu jusqu'à » de la fiche (voir le gabarit) : la reporter en
+   tête de la PR, ouvrir la PR en brouillon quand elle le dit, respecter l'ordre de fusion écrit, et ne pas fusionner tant que
+   le rouge annoncé n'est pas levé.
 6. **Dire tout de suite** : toute mission bloquée, en échec, hors délai ou immobile, et
    tout cycle dont la livraison est une mauvaise nouvelle (voir « Sortie »), est annoncé
    à Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait

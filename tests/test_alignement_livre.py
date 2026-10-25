@@ -46,14 +46,15 @@ MARQUEURS = {
     ),
     "skills/brief/SKILL.md": (
         ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`",
-         "Une fois le brief rempli par Pascal (étape 1)"],
+         "Qu'attends-tu de ce projet, et pourquoi ?", "au plus quatre questions par tour",
+         "à partir des\n   seules réponses de Pascal", "« Est-ce bien ce que tu as\n   dit ? »"],
         [],
-        "fiche 15 (mission 002, correctif 0.3.1)",
+        "fiche 15 (mission 002, version 0.7.0)",
     ),
     "skills/demarrer/gabarit-brief.md": (
-        ["## Ma réponse d'abord", "Dans l'ordre : 1. le problème et pour qui"],
+        ["## Ma réponse d'abord", "1. ma réponse d'abord, dans les mots de Pascal"],
         [],
-        "fiche 15 (mission 002, correctif 0.3.1)",
+        "fiche 15 (mission 002, version 0.7.0)",
     ),
     "skills/mission/fiche-mission.md": (
         ["## Ma réponse d'abord", "**Critère d'arrêt de la relecture :**",

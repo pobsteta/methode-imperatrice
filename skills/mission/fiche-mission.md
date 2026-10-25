@@ -37,6 +37,37 @@ pas._
 - **Ne doit pas :** _sortir du périmètre, inventer un code, toucher à `main`, …_
 - **Sources autorisées :** _fichiers, référentiels, ADR à lire — juste le nécessaire._
 
+## Valeur provisoire (chiffre, réglage)
+
+_Si la mission fixe ou reprend une valeur (seuil, couleur, durée, taille, format, délai…) qu'on n'a
+pas encore mesurée, la dire ici ; sinon écrire « aucune » (une ligne suffit)._
+
+- **Valeur provisoire :** _la valeur retenue pour avancer, marquée « provisoire » partout où elle apparaît._
+- **Mesurée par :** _l'outil tiers, l'essai ou la personne qui la mesurera, et à quelle date._
+- **Gel :** _avant quelle étape elle doit être mesurée (ADR, spec, publication) ; la valeur ne se grave pas avant._
+
+**Si la mesure est dans les moyens de la mission, elle en est la première tâche**, avant
+d'écrire ce qui en dépend. Si elle revient à un autre (essai de Pascal, outil tiers
+absent), elle devient une mission préalable (règle de staffing, « non à la 3e question »),
+ou la valeur reste provisoire jusqu'à sa date et rien de ce qui en dépend ne gèle avant.
+Qui juge la mesure suffisante : Pascal (« Qui tranche »).
+
+## Dépend de / rouge attendu jusqu'à
+
+_Si la mission s'appuie sur une autre qui n'est pas encore fusionnée (branche empilée, tests
+écrits avant le code, code dont le test n'a pas encore de quoi passer), le dire ici ; sinon
+écrire « aucune » (une ligne suffit)._
+
+- **Dépend de :** _les missions (ou PR) dont celle-ci a besoin, et de quelle branche elle part._
+- **Ordre de fusion :** _l'ordre écrit (A → B → C), ou « groupée » si elles fusionnent ensemble._
+- **PR en brouillon jusqu'à :** _l'événement qui la sort du brouillon (fusion de A, par exemple)._
+- **CI rouge attendue :** _quel test ou quelle étape est rouge, **pourquoi**, et jusqu'à quand
+  (« rouge justifiée » : jusqu'à la fusion de B). Une CI rouge qui n'est pas écrite ici est
+  un écart (carnet des écarts)._
+
+L'orchestrateur reporte cette rubrique en tête de la PR ; le relecteur vérifie que le rouge
+constaté est bien celui qui est annoncé, ni plus, ni moins.
+
 ## Tests
 
 - **Comment saura-t-on que c'est juste :** _tests automatiques attendus, critères d'acceptation._

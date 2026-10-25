@@ -16,18 +16,18 @@ la méthode a besoin, **sans rien écraser**. Les gabarits sont à côté de ce 
    déjà connus (avec leurs sources).
 3. **Créer, à partir des gabarits** :
    - `CLAUDE.md` depuis `gabarit-claude.md` ;
-   - `docs/brief.md` depuis `gabarit-brief.md` (rubriques en italique, laissées à Pascal ;
-     les réponses aux questions de l'étape 2 y sont rendues à Pascal comme point de départ,
-     pas recopiées à sa place) ;
+   - `docs/brief.md` depuis `gabarit-brief.md`, rubriques en italique laissées telles
+     quelles : `/brief` les remplira en questionnant Pascal, et reprendra les réponses
+     de l'étape 2 ;
    - `pilotage/equipe.md`, `pilotage/kanban.md`, `pilotage/journal.md` depuis leurs
      gabarits, et le dossier `pilotage/missions/` ;
    - `docs/adr/` vide.
 4. **Ne pas créer `.claude/test-command`** : il sera écrit dès que la stack sera tranchée
-   (`/brief`, étape 7).
+   (`/brief`, étape 9).
 5. Première inscription au journal : la date, « Claude (orchestrateur) », « méthode
    installée », et ce qui reste à remplir.
 
 ## Sortie
 
 La liste des fichiers créés et de ceux laissés tels quels, puis :
-**« Le brief est à vous : quand il sera rempli, lançons `/brief`. Qui le remplit, d'ici quand ? »**
+**« Lançons `/brief` : je te poserai d'abord ta réponse, puis les questions du brief. Quand ? »**

@@ -23,10 +23,10 @@ garde-fous viennent d'ici, sans copie.
 | Élément | Contenu |
 |---|---|
 | **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) ; `boucle` et `bilan` se closent sur une livraison différente de la précédente |
-| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir |
+| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir, la liste de contrôle d'auto-relecture avant « prêt » (`liste-de-controle.md`, pour l'acquéreur et le testeur) |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
 | **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`, attente du verrou comprise, 630 s au plus) ; au second arrêt sans tests verts, l'agent sort mais c'est inscrit au journal |
-| **Gabarits** | fiche de mission (ma réponse d'abord, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes, cycles et livraisons), journal (lignes `écart` et `cap`) |
+| **Gabarits** | fiche de mission (ma réponse d'abord, valeur provisoire à mesurer avant gel, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes, cycles et livraisons), journal (lignes `écart` et `cap`) |
 
 ## Installer dans un projet
 
@@ -54,25 +54,25 @@ Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `
 ## L'enchaînement des commandes dans un projet
 
 ```
-/demarrer → [Pascal remplit le brief, puis sa réponse d'abord] → /brief → /mission
+/demarrer → /brief (ta réponse d'abord, puis les questions) → /mission
          → /boucle ×N → /bilan → (retour à /brief ou /mission si le cap change) → /boucle …
 ```
 
 1. **`/imperatrice:demarrer`**, une fois : pose les fichiers et demande, en une seule
    fois, le nom du projet, ce qu'il fait, pour qui, et les référentiels connus.
-2. **Pascal remplit `docs/brief.md`**, sans commande : le problème et pour qui, ce que
-   fait le projet, ce qu'il ne fait pas, les contraintes ; puis sa réponse d'abord,
-   datée (fiche n° 15). Le pourquoi et le pour qui sont à lui : l'IA propose ensuite,
-   Pascal tranche.
-3. **`/imperatrice:brief`** : rattrape un brief resté vide (au plus quatre questions),
-   fait écrire la réponse d'abord, fait critiquer le brief par le `contradicteur`, puis
-   prépare la spec, les ADR FRANCE et la commande de tests. Rien ne passe à `/mission`
-   sans le « oui » de Pascal.
-4. **`/imperatrice:mission`** : découpe la spec en missions d'une phrase, applique les
+2. **`/imperatrice:brief`** : d'abord la réponse de Pascal, recopiée mot pour mot
+   (« Qu'attends-tu de ce projet, et pourquoi ? », fiche n° 15) ; puis Claude pose les
+   questions du brief, au plus quatre par tour, et rédige `docs/brief.md` à partir des
+   seules réponses de Pascal, qui le relit (« Est-ce bien ce que tu as dit ? ») ; puis
+   le `contradicteur` critique, Pascal tranche, et viennent la spec, les ADR FRANCE et la
+   commande de tests. Le pourquoi et le pour qui restent ceux de Pascal : Claude les
+   écrit sous sa dictée, l'IA propose ensuite, Pascal tranche. Rien ne passe à
+   `/mission` sans le « oui » de Pascal.
+3. **`/imperatrice:mission`** : découpe la spec en missions d'une phrase, applique les
    trois questions et propose `pilotage/equipe.md`.
-5. **`/imperatrice:boucle`**, à chaque cycle : missions confiées, PR relues, compte rendu
+4. **`/imperatrice:boucle`**, à chaque cycle : missions confiées, PR relues, compte rendu
    en quatre temps, livraison proposée (ou mauvaise nouvelle), et pour qui.
-6. **`/imperatrice:bilan`**, à chaque jalon : retour à l'Abstraction ; si le cap change,
+5. **`/imperatrice:bilan`**, à chaque jalon : retour à l'Abstraction ; si le cap change,
    on repasse par `/brief` ou `/mission`.
 
 `/imperatrice:methode` n'est pas une étape : c'est le texte de référence, à lire en cas
@@ -117,11 +117,6 @@ d'arrêt de la relecture, cartes immobiles nommées par `/boucle`, changements d
 `/bilan`, carnet des écarts au journal) ; le journal est protégé par un invariant vérifié
 à chaque arrêt et en CI ; le hook de tests est testé et ne connaît plus aucun domaine.
 
-**Ce que change la 0.3.1** : l'ordre du brief est explicite. `/brief` ne demande la
-réponse d'abord qu'une fois le brief rempli par Pascal ; le gabarit du brief rappelle
-l'ordre (le problème et pour qui, puis la réponse d'abord, puis la critique) ; le README
-donne l'enchaînement des commandes dans un projet.
-
 **Ce que change la 0.3.0** : chaque fin de cycle propose une livraison, différente de la
 précédente, et pour qui : `/boucle` à la fin de chaque cycle, `/bilan` à la distance de
 la grande boucle, inscrites dans la rubrique « Livraisons » du kanban. Un cycle sans
@@ -131,6 +126,27 @@ dite tout de suite avec ce qu'elle nous apprend. La formule vient du brief au li
 borne l'attente de son verrou : attente et tests tiennent dans 630 s, sous le délai du
 hook, et un verrou resté occupé arrête l'agent en le disant au lieu de le laisser
 couper sans vérification.
+
+**Ce que change la 0.4.0** : un « Coût complet » de brief non renseigné s'écrit
+« inconnu » (gabarit du brief et `/brief`).
+
+**Ce que change la 0.5.0** (tiré du bilan n° 1 du projet terrain, 2026-10-23) : la fiche
+de mission a une rubrique « Valeur provisoire (chiffre, réglage) », mesure en première
+tâche ou mission préalable, et rien ne gèle avant ; l'acquéreur et le testeur passent une
+liste de contrôle (`skills/methode/liste-de-controle.md`) avant de dire « prêt », que
+l'orchestrateur joint à leur consigne dans `/boucle`.
+
+**Ce que change la 0.6.0** (tiré du bilan n° 1 du projet terrain, 2026-10-23, cause C : missions
+empilées sans ordre écrit) : la fiche de mission a une rubrique « Dépend de / rouge attendu
+jusqu'à » (missions dont elle dépend, ordre de fusion, PR en brouillon jusqu'à quand, CI
+rouge justifiée et sa date de fin) ; une CI rouge non annoncée dans la fiche est un écart (carnet des écarts).
+
+**Ce que change la 0.7.0** (demandé par Pascal) : le brief est rédigé par Claude en
+questionnant Pascal. `/brief` recueille d'abord la réponse de Pascal, mot pour mot (fiche
+n° 15), pose ensuite les questions du brief (au plus quatre par tour, questions ouvertes),
+rédige `docs/brief.md` à partir des seules réponses et le fait relire avant toute
+critique ; `/demarrer` ne demande plus à Pascal de remplir le brief seul. Le README donne
+l'enchaînement des commandes dans un projet.
 
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et

@@ -1,20 +1,22 @@
 # NOM — brief
 
-> À remplir par Pascal ; critiqué par le `contradicteur` avec `/imperatrice:brief`.
-> Dans l'ordre : 1. le problème et pour qui, et les rubriques qui suivent ; 2. ma réponse
-> d'abord, datée ; 3. la critique du contradicteur, puis les arbitrages de Pascal.
+> Rédigé par Claude avec `/imperatrice:brief`, à partir des seules réponses de Pascal à
+> ses questions ; relu par Pascal, puis critiqué par le `contradicteur`. Dans l'ordre :
+> 1. ma réponse d'abord, dans les mots de Pascal ; 2. les questions, puis le brief rédigé ;
+> 3. la relecture de Pascal ; 4. la critique du contradicteur, puis les arbitrages de Pascal.
 
 ## Ma réponse d'abord (fiche n° 15)
 
 > _Ce que j'attends, et pourquoi, en quelques lignes._
 >
-> — _Pascal, le JJ mois AAAA, écrit avant de lire la critique du contradicteur._
+> — _Pascal, le JJ mois AAAA, dit avant que Claude rédige le brief, recopié mot pour mot._
 
 ## Le problème, et pour qui (Abstraction)
 
 - **Problème** : _ce qui ne va pas aujourd'hui, constaté où et par qui._
 - **Bénéficiaires** : _qui en profite d'abord, qui ensuite._
-- **Coût complet aujourd'hui** : _ce que le problème coûte, avec ses sources._
+- **Coût complet aujourd'hui** : _ce que le problème coûte, avec ses sources ; « inconnu »
+  si Pascal ne le renseigne pas._
 
 ## Ce que fait NOM
 
