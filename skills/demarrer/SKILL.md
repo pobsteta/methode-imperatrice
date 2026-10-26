@@ -30,4 +30,4 @@ la méthode a besoin, **sans rien écraser**. Les gabarits sont à côté de ce 
 ## Sortie
 
 La liste des fichiers créés et de ceux laissés tels quels, puis :
-**« Lançons `/brief` : je te poserai d'abord ta réponse, puis les questions du brief. Quand ? »**
+**« Lançons `/brief` : je te demanderai d'abord ta réponse, puis je te proposerai une réponse à chaque question du brief, à retenir ou corriger. Quand ? »**

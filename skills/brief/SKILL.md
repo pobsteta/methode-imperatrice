@@ -1,6 +1,6 @@
 ---
 name: brief
-description: Étape Abstraction de la méthode de l'Impératrice. Fait noter à Pascal sa réponse d'abord, rédige docs/brief.md à partir des réponses de Pascal à ses questions, le fait critiquer par le contradicteur, aide Pascal à l'amender, puis prépare la spec et les ADR FRANCE des décisions structurantes. À lancer avant tout développement.
+description: Étape Abstraction de la méthode de l'Impératrice. Fait noter à Pascal sa réponse d'abord, pose les questions du brief en proposant à chacune une réponse que Pascal retient, corrige ou rejette, rédige docs/brief.md, le fait critiquer par le contradicteur, aide Pascal à l'amender, puis prépare la spec et les ADR FRANCE des décisions structurantes. À lancer avant tout développement.
 ---
 # /brief — prendre de la hauteur avant d'agir
 
@@ -21,19 +21,24 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
    rédiges pas, tu ne la suggères pas, tu ne la reformules pas.
    « Je m'en passe » est une réponse ; l'absence de réponse n'en est pas une : tant
    qu'elle manque, tu n'écris rien d'autre et tu ne lances personne.
-3. **Poser les questions du brief.** Tu remplis le brief en interrogeant Pascal, rubrique
-   par rubrique (le problème, et pour qui ; ce que fait le projet ; ce qu'il ne fait pas ;
-   les contraintes), **au plus quatre questions par tour**, et tu attends ses réponses
-   avant le tour suivant. Questions ouvertes, sans réponse suggérée : c'est sur le sens
-   (Polos) que l'ancrage coûte le plus. Tu reprends les réponses déjà données à
-   `/demarrer` au lieu de les redemander.
-4. **Rédiger le brief, puis le faire relire.** Tu écris `docs/brief.md` à partir des
-   seules réponses de Pascal, au plus près de ses mots : chaque ligne vient d'une
-   réponse, rien n'est inventé. Ce qu'il n'a pas dit s'écrit « à trancher par Pascal ».
-   **Coût complet** non renseigné : écris « inconnu » ; ce n'est pas une question
-   bloquante. Puis tu lui rends le brief avec une question : **« Est-ce bien ce que tu as
-   dit ? »** Tu reportes ses corrections ; tant qu'il ne l'a pas relu, tu ne lances
-   personne.
+3. **Poser les questions du brief : proposer, puis ajuster.** Tu remplis le brief en
+   interrogeant Pascal, rubrique par rubrique (le problème, et pour qui ; ce que fait le
+   projet ; ce qu'il ne fait pas ; les contraintes),
+   **au plus quatre questions par tour**. À chaque question, tu joins une
+   **proposition de Claude**, tirée de la description du projet (réponses à `/demarrer`,
+   `CLAUDE.md`, sa réponse d'abord) et de ses réponses précédentes, en disant d'où elle
+   vient. Pascal la retient, la corrige ou
+   la rejette ; tu ajustes les propositions suivantes à ce qu'il a répondu, et tu
+   reproposes celle qu'il a corrigée jusqu'à ce qu'il la retienne. Une proposition sans
+   réponse de Pascal n'est pas retenue. Tu ne proposes aucun chiffre sans source : un
+   **Coût complet** que ni Pascal ni une source ne donne s'écrit « inconnu », et ce
+   n'est pas une question bloquante. Tu ne redemandes pas ce que Pascal a déjà dit à
+   `/demarrer`.
+4. **Rédiger le brief, puis le faire relire.** Tu écris `docs/brief.md` avec ce que
+   Pascal a retenu ou corrigé, et rien d'autre : chaque ligne vient d'une de ses
+   réponses. Ce qu'il n'a pas tranché s'écrit « à trancher par Pascal ». Puis tu lui
+   rends le brief avec une question : **« Est-ce bien ce que tu as retenu ? »** Tu
+   reportes ses corrections ; tant qu'il ne l'a pas relu, tu ne lances personne.
 5. **Lancer le `contradicteur`** sur le brief, avec pour consigne explicite : critiquer,
    citer ses sources, chercher les conventions publiées du domaine (celles que nomme le
    `CLAUDE.md` du projet, et les autres) avant toute invention.

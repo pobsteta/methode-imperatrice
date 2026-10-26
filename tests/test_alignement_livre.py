@@ -47,7 +47,8 @@ MARQUEURS = {
     "skills/brief/SKILL.md": (
         ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`",
          "Qu'attends-tu de ce projet, et pourquoi ?", "au plus quatre questions par tour",
-         "à partir des\n   seules réponses de Pascal", "« Est-ce bien ce que tu as\n   dit ? »"],
+         "proposer, puis ajuster", "**proposition de Claude**",
+         "Tu ne proposes aucun chiffre sans source", "« Est-ce bien ce que tu as retenu ? »"],
         [],
         "fiche 15 (mission 002, version 0.7.0)",
     ),
