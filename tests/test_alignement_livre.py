@@ -45,14 +45,17 @@ MARQUEURS = {
         "fiche 11 (mission 001)",
     ),
     "skills/brief/SKILL.md": (
-        ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`"],
+        ["**Ma réponse d'abord**", "avant de lancer le `contradicteur`",
+         "Qu'attends-tu de ce projet, et pourquoi ?", "au plus quatre questions par tour",
+         "proposer, puis ajuster", "**proposition de Claude**",
+         "Tu ne proposes aucun chiffre sans source", "« Est-ce bien ce que tu as retenu ? »"],
         [],
-        "fiche 15 (mission 002)",
+        "fiche 15 (mission 002, version 0.7.0)",
     ),
     "skills/demarrer/gabarit-brief.md": (
-        ["## Ma réponse d'abord"],
+        ["## Ma réponse d'abord", "1. ma réponse d'abord, dans les mots de Pascal"],
         [],
-        "fiche 15 (mission 002)",
+        "fiche 15 (mission 002, version 0.7.0)",
     ),
     "skills/mission/fiche-mission.md": (
         ["## Ma réponse d'abord", "**Critère d'arrêt de la relecture :**",

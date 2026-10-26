@@ -1,12 +1,16 @@
 # NOM — brief
 
-> À remplir par Pascal ; critiqué par le `contradicteur` avec `/imperatrice:brief`.
+> Rédigé par Claude avec `/imperatrice:brief` : à chaque question, une proposition de
+> Claude que Pascal retient, corrige ou rejette ; relu par Pascal, puis critiqué par le
+> `contradicteur`. Dans l'ordre : 1. ma réponse d'abord, dans les mots de Pascal ;
+> 2. les questions et leurs propositions, ajustées aux réponses, puis le brief rédigé ;
+> 3. la relecture de Pascal ; 4. la critique du contradicteur, puis les arbitrages de Pascal.
 
 ## Ma réponse d'abord (fiche n° 15)
 
 > _Ce que j'attends, et pourquoi, en quelques lignes._
 >
-> — _Pascal, le JJ mois AAAA, écrit avant de lire la critique du contradicteur._
+> — _Pascal, le JJ mois AAAA, dit avant toute proposition de Claude, recopié mot pour mot._
 
 ## Le problème, et pour qui (Abstraction)
 

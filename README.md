@@ -51,6 +51,34 @@ Claude Code propose d'installer le plugin à l'ouverture du projet. À la main :
 
 Nouveau projet : `/imperatrice:demarrer` crée `CLAUDE.md`, `docs/brief.md` et `pilotage/`.
 
+## L'enchaînement des commandes dans un projet
+
+```
+/demarrer → /brief (ta réponse d'abord, puis les questions) → /mission
+         → /boucle ×N → /bilan → (retour à /brief ou /mission si le cap change) → /boucle …
+```
+
+1. **`/imperatrice:demarrer`**, une fois : pose les fichiers et demande, en une seule
+   fois, le nom du projet, ce qu'il fait, pour qui, et les référentiels connus.
+2. **`/imperatrice:brief`** : d'abord la réponse de Pascal, recopiée mot pour mot
+   (« Qu'attends-tu de ce projet, et pourquoi ? », fiche n° 15), avant toute proposition ;
+   puis Claude pose les questions du brief, au plus quatre par tour, avec à chacune une
+   proposition tirée de la description du projet, que Pascal retient, corrige ou rejette
+   et que Claude ajuste à ses réponses ; Claude rédige `docs/brief.md` avec ce que Pascal
+   a retenu, et Pascal le relit (« Est-ce bien ce que tu as retenu ? ») ; puis le
+   `contradicteur` critique, Pascal tranche, et viennent la spec, les ADR FRANCE et la
+   commande de tests. L'IA propose, Pascal tranche. Rien ne passe à `/mission` sans le
+   « oui » de Pascal.
+3. **`/imperatrice:mission`** : découpe la spec en missions d'une phrase, applique les
+   trois questions et propose `pilotage/equipe.md`.
+4. **`/imperatrice:boucle`**, à chaque cycle : missions confiées, PR relues, compte rendu
+   en quatre temps, livraison proposée (ou mauvaise nouvelle), et pour qui.
+5. **`/imperatrice:bilan`**, à chaque jalon : retour à l'Abstraction ; si le cap change,
+   on repasse par `/brief` ou `/mission`.
+
+`/imperatrice:methode` n'est pas une étape : c'est le texte de référence, à lire en cas
+de doute.
+
 ## Où vivent les choses dans un projet
 
 | Information | Emplacement |
@@ -113,6 +141,15 @@ l'orchestrateur joint à leur consigne dans `/boucle`.
 empilées sans ordre écrit) : la fiche de mission a une rubrique « Dépend de / rouge attendu
 jusqu'à » (missions dont elle dépend, ordre de fusion, PR en brouillon jusqu'à quand, CI
 rouge justifiée et sa date de fin) ; une CI rouge non annoncée dans la fiche est un écart (carnet des écarts).
+
+**Ce que change la 0.7.0** (demandé par Pascal) : le brief est rédigé par Claude en
+questionnant Pascal. `/brief` recueille d'abord la réponse de Pascal, mot pour mot (fiche
+n° 15), pose ensuite les questions du brief (au plus quatre par tour), chacune avec une
+proposition de Claude tirée de la description du projet et ajustée aux réponses de Pascal,
+qui la retient, la corrige ou la rejette ; aucun chiffre proposé sans source ; Claude
+rédige `docs/brief.md` avec ce que Pascal a retenu et le fait relire avant toute
+critique ; `/demarrer` ne demande plus à Pascal de remplir le brief seul. Le README donne
+l'enchaînement des commandes dans un projet.
 
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et
