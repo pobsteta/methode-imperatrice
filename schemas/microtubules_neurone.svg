@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" font-family="Helvetica,Arial,sans-serif">
+<rect width="1000" height="640" fill="#ffffff"/>
+<text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">Les microtubules dans un neurone</text>
+<text x="30" y="75" font-size="15" font-weight="bold" fill="#444">A. Le neurone</text>
+<line x1="77" y1="245" x2="20" y2="278" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<line x1="71" y1="211" x2="7" y2="200" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<line x1="79" y1="191" x2="26" y2="154" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<line x1="95" y1="177" x2="62" y2="120" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<line x1="95" y1="263" x2="63" y2="320" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<line x1="116" y1="170" x2="110" y2="105" stroke="#e7a1a1" stroke-width="9" stroke-linecap="round"/>
+<path d="M160,200 L460,200 L460,240 L160,240 Z" fill="#f6d0d0" stroke="#c96a6a" stroke-width="2"/>
+<circle cx="120" cy="220" r="55" fill="#f6d0d0" stroke="#c96a6a" stroke-width="2"/>
+<circle cx="115" cy="220" r="18" fill="#b05a8a"/>
+<text x="200" y="320" text-anchor="middle" font-size="13" fill="#333">corps cellulaire</text>
+<text x="115" y="225" text-anchor="middle" font-size="10" fill="#fff">noyau</text>
+<line x1="170" y1="208" x2="455" y2="208" stroke="#2e7d32" stroke-width="2.5"/>
+<line x1="170" y1="216" x2="455" y2="216" stroke="#2e7d32" stroke-width="2.5"/>
+<line x1="170" y1="224" x2="455" y2="224" stroke="#2e7d32" stroke-width="2.5"/>
+<line x1="170" y1="232" x2="455" y2="232" stroke="#2e7d32" stroke-width="2.5"/>
+<text x="310" y="190" text-anchor="middle" font-size="13" fill="#333">axone</text>
+<text x="310" y="265" text-anchor="middle" font-size="13" fill="#2e7d32">microtubules (en vert) : les « rails » du neurone</text>
+<rect x="370" y="198" width="60" height="44" fill="none" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,3"/>
+<line x1="430" y1="198" x2="540" y2="110" stroke="#1565c0" stroke-dasharray="5,3"/>
+<line x1="430" y1="242" x2="540" y2="290" stroke="#1565c0" stroke-dasharray="5,3"/>
+<text x="540" y="75" font-size="15" font-weight="bold" fill="#444">B. Zoom sur un microtubule</text>
+<rect x="540" y="110" width="420" height="180" rx="8" fill="#f4f8ff" stroke="#1565c0" stroke-width="1.5"/>
+<circle cx="560" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="578" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="596" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="614" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="632" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="650" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="668" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="686" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="704" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="722" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="740" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="758" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="776" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="794" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="812" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="830" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="848" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="866" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="884" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="902" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="920" cy="130" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="938" cy="130" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="564" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="582" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="600" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="618" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="636" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="654" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="672" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="690" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="708" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="726" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="744" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="762" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="780" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="798" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="816" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="834" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="852" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="870" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="888" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="906" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="924" cy="150" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="942" cy="150" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="560" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="578" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="596" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="614" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="632" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="650" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="668" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="686" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="704" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="722" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="740" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="758" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="776" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="794" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="812" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="830" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="848" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="866" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="884" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="902" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="920" cy="170" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="938" cy="170" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="564" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="582" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="600" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="618" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="636" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="654" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="672" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="690" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="708" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="726" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="744" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="762" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="780" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="798" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="816" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="834" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="852" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="870" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="888" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="906" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="924" cy="190" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="942" cy="190" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="560" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="578" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="596" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="614" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="632" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="650" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="668" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="686" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="704" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="722" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="740" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="758" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="776" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="794" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="812" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="830" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="848" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="866" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="884" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="902" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="920" cy="210" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="938" cy="210" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="564" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="582" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="600" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="618" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="636" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="654" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="672" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="690" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="708" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="726" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="744" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="762" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="780" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="798" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="816" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="834" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="852" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="870" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="888" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="906" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="924" cy="230" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="942" cy="230" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="560" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="578" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="596" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="614" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="632" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="650" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="668" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="686" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="704" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="722" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="740" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="758" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="776" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="794" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="812" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="830" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="848" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="866" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="884" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="902" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="920" cy="250" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="938" cy="250" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="564" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="582" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="600" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="618" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="636" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="654" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="672" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="690" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="708" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="726" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="744" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="762" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="780" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="798" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="816" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="834" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="852" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="870" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="888" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="906" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="924" cy="270" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="942" cy="270" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="560" cy="318" r="8" fill="#90caf9" stroke="#0d3c73" stroke-width="0.6"/><text x="574" y="323" font-size="13" fill="#333">α-tubuline</text>
+<circle cx="670" cy="318" r="8" fill="#1565c0" stroke="#0d3c73" stroke-width="0.6"/><text x="684" y="323" font-size="13" fill="#333">β-tubuline</text>
+<text x="780" y="323" font-size="13" fill="#333">α + β = 1 dimère (≈ 8 nm)</text>
+<text x="560" y="345" font-size="13" fill="#333">Les dimères s'empilent en files (protofilaments) qui forment un tube creux.</text>
+<text x="540" y="385" font-size="15" font-weight="bold" fill="#444">C. Coupe transversale</text>
+<circle cx="702.0" cy="480.0" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="696.0" cy="504.2" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="679.5" cy="522.8" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="656.3" cy="531.6" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="631.6" cy="528.6" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="611.1" cy="514.5" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="599.5" cy="492.4" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="599.5" cy="467.6" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="611.1" cy="445.5" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="631.6" cy="431.4" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="656.3" cy="428.4" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="679.5" cy="437.2" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<circle cx="696.0" cy="455.8" r="12" fill="#5c9ee0" stroke="#0d3c73" stroke-width="0.6"/>
+<line x1="586" y1="560" x2="714" y2="560" stroke="#333" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<text x="650" y="578" text-anchor="middle" font-size="13" fill="#333">≈ 25 nm de diamètre</text>
+<text x="650" y="485" text-anchor="middle" font-size="11" fill="#555">creux</text>
+<text x="740" y="455" font-size="13" fill="#333">13 protofilaments</text>
+<text x="740" y="475" font-size="13" fill="#333">disposés en cercle</text>
+<text x="740" y="505" font-size="12" fill="#777">(≈ 2 000 fois plus fin</text>
+<text x="740" y="521" font-size="12" fill="#777">qu'un cheveu)</text>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#333"/></marker></defs>
+<rect x="30" y="370" width="470" height="245" rx="8" fill="#fafafa" stroke="#bbb"/>
+<text x="45" y="395" font-size="15" font-weight="bold" fill="#2e7d32">Rôle reconnu (biologie)</text>
+<text x="45" y="418" font-size="13" fill="#333">• Squelette interne : donnent sa forme au neurone</text>
+<text x="45" y="437" font-size="13" fill="#333">• Rails de transport : des « moteurs » (kinésine,</text>
+<text x="45" y="456" font-size="13" fill="#333">   dynéine) y transportent vésicules et protéines</text>
+<text x="45" y="500" font-size="15" font-weight="bold" fill="#b26a00">Hypothèse Orch-OR (Penrose &amp; Hameroff)</text>
+<text x="45" y="523" font-size="13" fill="#333">• Les tubulines seraient le siège d'états quantiques</text>
+<text x="45" y="541" font-size="13" fill="#333">• Leur « effondrement » orchestré produirait</text>
+<text x="45" y="559" font-size="13" fill="#333">   des moments de conscience</text>
+<text x="45" y="577" font-size="13" fill="#333">• Très controversée : le cerveau est jugé trop chaud</text>
+<text x="45" y="595" font-size="13" fill="#333"> et humide pour préserver ces états quantiques</text>
+</svg>
