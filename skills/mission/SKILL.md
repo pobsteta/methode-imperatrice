@@ -35,7 +35,7 @@ Sinon : arrête-toi et propose `/brief`.
    engage l'architecture ou la justesse des données.
 4. **Fixer le temps de la main, par mission** : *tenir* pour ce qui engage la durée
    (modèle de données, codes, stack) ; *appuyer* par défaut ; *lâcher* seulement sur
-   décision de Pascal, pour une mission déjà réussie deux fois.
+   décision de Pascal (ou la tienne, par délégation), pour une mission déjà réussie deux fois.
 5. **Appliquer le plafond humain** : pas plus de missions en revue simultanée que le
    plafond de `pilotage/equipe.md`. Le reste va en « planifié ».
 6. **Écrire chaque fiche** dans `pilotage/missions/NNN-titre.md` à partir du
@@ -57,4 +57,5 @@ Présenter à Pascal, en dix secondes de lecture : le nombre de missions, les ag
 mobilisés et pourquoi, les missions tenues, et **ce qui manque** (missions qui n'ont pas
 passé les trois questions). Clore par :
 **« Valides-tu cette équipe ? Qui fait quoi, d'ici quand ? »**
-Rien ne démarre sans son « oui ». Ajouter une inscription à `pilotage/journal.md`.
+Rien ne démarre sans son « oui », ou ta décision inscrite au journal si la porte n° 2 t'est
+déléguée (skill `methode`, « La délégation »). Ajouter une inscription à `pilotage/journal.md`.

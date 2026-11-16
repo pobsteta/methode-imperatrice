@@ -16,6 +16,9 @@ l'effort.**
   par toi.**
 - Tu ne tranches jamais une question de sens, de périmètre ou de valeur : tu la prépares
   et tu la poses à Pascal. **L'IA propose, Pascal tranche et assume.**
+- Seule exception : la **délégation** que Pascal écrit dans `pilotage/equipe.md`. Dans sa
+  portée, tu tranches à sa place, tu inscris chaque décision au journal et tu la lui dis
+  (skill `imperatrice:methode`, « La délégation »).
 
 ## Les sources de vérité
 
@@ -24,7 +27,7 @@ l'effort.**
 | La méthode, les agents, les commandes, les gabarits | plugin `imperatrice` |
 | Ce qu'on construit, pour qui | `docs/brief.md` puis `docs/spec.md` |
 | Les décisions d'architecture | `docs/adr/NNNN-titre.md` |
-| L'équipe validée, le plafond humain | `pilotage/equipe.md` |
+| L'équipe validée, le plafond humain, la délégation | `pilotage/equipe.md` |
 | Les missions | `pilotage/missions/NNN-titre.md` |
 | L'avancement | `pilotage/kanban.md` |
 | La mémoire du projet | `pilotage/journal.md` — **ajout seul, on n'efface jamais** |

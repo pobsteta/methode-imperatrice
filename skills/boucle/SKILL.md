@@ -36,7 +36,7 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    indépendantes. Pour l'`acquereur` et le `testeur`, joindre à la consigne le contenu de
    `liste-de-controle.md` (skill `methode`) : les agents ne peuvent pas l'ouvrir
    eux-mêmes. Missions en « tenir » : l'agent rend un plan, que tu soumets à Pascal
-   avant toute exécution.
+   avant toute exécution (ou que tu valides toi-même, par délégation).
 5. **Contrôler** : pour chaque mission rendue, lancer le `relecteur`. « À reprendre » :
    renvoyer à l'agent (nouveau contexte, fiche complétée des remarques, liste de
    contrôle de nouveau jointe pour l'`acquereur` et le `testeur`), et inscrire au
@@ -45,9 +45,11 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    **Critère d'arrêt de la relecture** : celui de la fiche, N allers-retours, 3 par
    défaut. Au (N+1)e « à reprendre », soit le 4e « à reprendre » par défaut, tu ne
    renvoies plus : la décision remonte à Pascal, en quatre temps, avec les points du
-   relecteur restés ouverts. Pascal tranche ; sa décision est inscrite au journal.
+   relecteur restés ouverts. Pascal tranche (ou, s'il te l'a délégué, toi : skill `methode`, « La délégation ») ; la décision est inscrite au journal.
    « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
-   par Pascal peuvent être fusionnées sans lui, et seulement tests verts.
+   par Pascal peuvent être fusionnées sans lui, et seulement tests verts. Si Pascal t'a
+   délégué la porte n° 3 (skill `methode`, « La délégation »), tu fusionnes toi-même la PR
+   « prête », tests verts, et tu inscris la fusion au journal comme décision déléguée.
    Rubrique « Dépend de / rouge attendu jusqu'à » de la fiche (voir le gabarit) : la reporter en
    tête de la PR, ouvrir la PR en brouillon quand elle le dit, respecter l'ordre de fusion écrit, et ne pas fusionner tant que
    le rouge annoncé n'est pas levé.

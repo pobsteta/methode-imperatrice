@@ -38,13 +38,15 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
    Pascal a retenu ou corrigé, et rien d'autre : chaque ligne vient d'une de ses
    réponses. Ce qu'il n'a pas tranché s'écrit « à trancher par Pascal ». Puis tu lui
    rends le brief avec une question : **« Est-ce bien ce que tu as retenu ? »** Tu
-   reportes ses corrections ; tant qu'il ne l'a pas relu, tu ne lances personne.
+   reportes ses corrections ; tant qu'il ne l'a pas relu, tu ne lances personne. Si
+   Pascal t'a délégué la porte n° 1, tu relis toi-même, à l'aune de sa réponse d'abord,
+   et tu inscris ta décision au journal.
 5. **Lancer le `contradicteur`** sur le brief, avec pour consigne explicite : critiquer,
    citer ses sources, chercher les conventions publiées du domaine (celles que nomme le
    `CLAUDE.md` du projet, et les autres) avant toute invention.
 6. **Rendre la critique à Pascal**, classée, sans l'adoucir. Pour chaque point : ce que
-   tu proposes de changer dans le brief. Pascal tranche ; tu reportes ses arbitrages
-   dans `docs/brief.md`.
+   tu proposes de changer dans le brief. Pascal tranche (ou, s'il te l'a délégué, toi : skill `methode`, « La délégation ») ; tu reportes les
+   arbitrages dans `docs/brief.md`, en disant qui les a rendus.
 7. **Rédiger `docs/spec.md`** à partir du brief validé : parcours utilisateur sur le
    terrain, données manipulées, ce qui est hors périmètre, critères d'acceptation, et
    les besoins en référentiels (à confier à l'`acquereur`).
@@ -60,4 +62,6 @@ Tu es l'orchestrateur. Objectif : que Pascal valide un brief et une spec qui dis
 
 Clore par une question, pas par un résumé :
 **« Valides-tu le brief et la spec ? Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
-Rien ne passe à `/mission` sans le « oui » de Pascal.
+Rien ne passe à `/mission` sans le « oui » de Pascal, ou ta décision inscrite au journal
+si la porte n° 1 t'est déléguée (tu poses alors la question pour l'information de Pascal,
+sans attendre sa réponse).

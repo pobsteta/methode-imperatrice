@@ -19,7 +19,9 @@ MARQUEURS = {
     "skills/methode/SKILL.md": (
         ["livre imprimé", "sept points", "**É**quipe", "**Ma réponse d'abord**",
          "**A**nticiper", "prêt à le payer", "si je tiens, qui paie ?",
-         "si je plie, qui paie ?", "Croire que libre veut dire éternel"],
+         "si je plie, qui paie ?", "Croire que libre veut dire éternel",
+         "## La délégation", "seulement s'il le demande", "Ce qui ne se délègue pas",
+         "Révocable à tout moment", "· délégation · portée :"],
         ["premier jet", "cinq points", "nticipateur", "proposition à valider",
          "Libre ne veut pas dire éternel"],
         "fiches 4, 11, 14, 15 (mission 001)",
@@ -99,6 +101,16 @@ MARQUEURS = {
         ["`écart`", "`cap`"],
         [],
         "fiches 3 et 13 (mission 010)",
+    ),
+    "skills/demarrer/gabarit-equipe.md": (
+        ["## Délégation", "Vide : aucune délégation, Pascal tranche tout."],
+        [],
+        "délégation (hors livre, demandée par Pascal le 2026-11-16, version 0.8.0)",
+    ),
+    "skills/demarrer/gabarit-claude.md": (
+        ["**L'IA propose, Pascal tranche et assume.**", "**délégation**"],
+        [],
+        "délégation (hors livre, version 0.8.0)",
     ),
     "skills/brief/adr-france.md": (
         ["Prêts à payer ?", "**A**nticiper"],

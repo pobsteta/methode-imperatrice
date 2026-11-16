@@ -16,4 +16,9 @@
 >
 > **Les changements de cap** (fiche n° 13), en une ligne marquée `cap`, signée par qui l'a
 > décidé : `AAAA-MM-JJ · auteur · mission · cap · ancien → nouveau · pourquoi : … · fait : …`
+>
+> **La délégation**, en une ligne marquée `délégation`, signée de Pascal :
+> `AAAA-MM-JJ · Pascal · — · délégation · portée : … · jusqu'à : … · réservé : …`
+> Chaque décision prise par délégation :
+> `AAAA-MM-JJ · Claude (orchestrateur, par délégation) · mission · décidé : … · pourquoi : … · ce que Pascal peut défaire : …`
 
