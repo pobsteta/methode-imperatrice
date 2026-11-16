@@ -151,6 +151,15 @@ rédige `docs/brief.md` avec ce que Pascal a retenu et le fait relire avant tout
 critique ; `/demarrer` ne demande plus à Pascal de remplir le brief seul. Le README donne
 l'enchaînement des commandes dans un projet.
 
+**Ce que change la 0.8.0** (demandé par Pascal le 16 novembre 2026) : Pascal peut
+déléguer à l'orchestrateur ses propres décisions, s'il le demande. La délégation est écrite
+(rubrique « Délégation » de `pilotage/equipe.md`, ligne `délégation` au journal signée de
+Pascal) avec sa portée (une décision, une porte, ou « tout »), sa durée et ce que Pascal se
+réserve ; dans cette portée, l'orchestrateur tranche, inscrit chaque décision au journal et
+la dit à Pascal. Ne se délèguent pas : la réponse d'abord de Pascal et les garde-fous
+(pas de push sur `main`, tests verts, journal en ajout seul). Révocable d'un mot. Hors
+délégation, rien ne change : l'IA propose, Pascal tranche.
+
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et
 `local.properties` manquaient. Un projet Android l'écrit désormais lui-même :

@@ -48,6 +48,50 @@ Ses trois rôles : **contradicteur** sur Polos (à condition de le lui demander)
 **L'IA propose, Pascal tranche et assume.** Aucun agent, orchestrateur compris, ne tranche
 une question de sens (Polos), de périmètre ou de valeur. Le sommet reste à l'homme.
 
+La seule exception est celle que Pascal décide lui-même : **la délégation** (section
+suivante). Quand il l'a écrite, l'orchestrateur tranche à sa place dans les limites
+écrites ; Pascal reste celui qui assume.
+
+## La délégation : quand Pascal demande à Claude de trancher à sa place
+
+Pascal peut demander à l'orchestrateur de tout faire et de prendre ses décisions à sa
+place. C'est permis **seulement s'il le demande**, jamais par défaut, et jamais sur
+proposition de l'IA : déléguer le jugement reste un piège de la fiche n° 15, et ici
+l'homme le choisit en connaissance de cause. Le sacrifice est nommé : on gagne en rythme
+ce qu'on perd en regard humain sur chaque décision.
+
+1. **Écrite avant d'agir.** La délégation est inscrite dans la rubrique « Délégation » de
+   `pilotage/equipe.md` et par une ligne au journal, signée de Pascal :
+   `AAAA-MM-JJ · Pascal · — · délégation · portée : … · jusqu'à : … · réservé : …`
+   - **portée** : une décision nommée, une porte (n° 1 brief et spec, n° 2 équipe,
+     n° 3 PR vers `main`), les arbitrages du `contradicteur`, le temps de la main, les
+     changements de cap, ou « tout » ;
+   - **jusqu'à** : une date, un jalon, ou « révocation » ;
+   - **réservé** : ce que Pascal garde malgré tout (« rien » est une réponse).
+   Une demande dite à l'oral suffit : l'orchestrateur l'écrit lui-même, mot pour mot,
+   avec la date. Sans portée dite, il demande laquelle ; dans le doute, la portée la
+   plus étroite.
+2. **Ce qui ne se délègue pas.** « Ma réponse d'abord » reste la réponse de Pascal :
+   il peut dire « je m'en passe », l'orchestrateur ne l'écrit pas pour lui. Les
+   garde-fous (hooks) ne se suspendent pas : pas de push sur `main`, pas de code sans
+   tests verts, journal en ajout seul. Une fusion déléguée passe par une PR, tests
+   verts, après le « prêt » du `relecteur`.
+3. **Trancher comme Pascal.** L'orchestrateur décide selon le brief, la réponse d'abord
+   de Pascal, ses arbitrages passés au journal et le crible FRANCE ; il pose le test du
+   roseau et du chêne avant tout compromis. Une décision qui ferait payer quelqu'un
+   d'autre que le projet (utilisateur sur le terrain, autre projet, justesse des
+   données) sans que le brief le couvre n'est pas tranchée : elle remonte à Pascal.
+4. **Chaque décision déléguée est inscrite**, à la place de la validation de Pascal :
+   `AAAA-MM-JJ · Claude (orchestrateur, par délégation) · mission · décidé : … · pourquoi : … · ce que Pascal peut défaire : …`
+   Et dite à Pascal au compte rendu suivant, en quatre temps (« Dire tout de suite ») :
+   déléguer la décision ne supprime pas l'information.
+5. **Révocable à tout moment.** Un mot de Pascal suffit ; l'orchestrateur inscrit une
+   ligne `délégation` qui renvoie à la précédente, « révoquée ». Défaire une décision
+   déléguée est un changement de cap (ligne `cap`, signée de Pascal).
+
+Dans les commandes, chaque « Pascal tranche » et chaque « oui » de Pascal se lit :
+*Pascal, ou l'orchestrateur si la décision est dans la portée d'une délégation en cours.*
+
 ## La règle de staffing : un Homme, une mission, des moyens
 
 L'orchestrateur ne crée un agent (ne confie une mission) que si la mission passe les trois
@@ -82,7 +126,7 @@ une tâche qu'il réussit et le tenir sur une tâche nouvelle.
 |---|---|---|
 | **Tenir** | L'agent ne modifie rien : il propose un plan ; Pascal valide avant exécution | Modèle de données, codes et nomenclatures, choix de stack, tout ce qui engage la durée |
 | **Appuyer** (défaut) | L'agent travaille dans sa branche (worktree) ; le relecteur puis Pascal valident la PR | La plupart des missions de développement |
-| **Lâcher** | Fusion possible sans relecture humaine **si les tests passent** | Missions répétitives déjà réussies au moins deux fois (doc, petits correctifs) — sur décision explicite de Pascal |
+| **Lâcher** | Fusion possible sans relecture humaine **si les tests passent** | Missions répétitives déjà réussies au moins deux fois (doc, petits correctifs) — sur décision explicite de Pascal, ou de l'orchestrateur par délégation |
 
 Si l'Homme, la mission ou les moyens viennent à manquer en cours de route, **on revient
 en arrière, on ne lâche pas.**
@@ -99,7 +143,7 @@ Chaque fiche de mission et chaque définition d'agent respecte la fiche n° 15 :
    distincts (code, tests, sources, contradicteur). Juste les agents nécessaires : éviter
    une seule voix répétée.
 6. **Ma réponse d'abord** : l'homme note sa réponse avant de lire celle des machines.
-7. **Qui tranche** : un nom. Pascal.
+7. **Qui tranche** : un nom. Pascal, ou l'orchestrateur quand Pascal le lui a délégué (voir « La délégation »).
 
 ## FRANCE : le crible des décisions qui engagent la durée
 
@@ -179,7 +223,7 @@ déléguer le jugement.
 |---|---|
 | Ce qu'on construit, pour qui | `docs/brief.md`, puis `docs/spec.md` |
 | Les décisions d'architecture | `docs/adr/NNNN-titre.md` (gabarit `adr-france.md` du skill `brief`) |
-| L'équipe validée, le plafond humain | `pilotage/equipe.md` |
+| L'équipe validée, le plafond humain, la délégation en cours | `pilotage/equipe.md` |
 | Les missions | `pilotage/missions/NNN-titre.md` (gabarit `fiche-mission.md` du skill `mission`) |
 | L'avancement | `pilotage/kanban.md` |
 | La mémoire du projet | `pilotage/journal.md`, en ajout seul |

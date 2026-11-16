@@ -33,7 +33,9 @@ un monde qui a changé.
      les sources (faits, chiffres, terrain, mémoire).
 5. **Ajuster l'équipe** : quels agents ont servi, lesquels non ? Quelles missions sont
    passées de *tenir* à *appuyer*, d'*appuyer* à *lâcher* ? Proposer les changements à
-   Pascal ; il tranche.
+   Pascal ; il tranche (ou, s'il te l'a délégué, toi : skill `methode`, « La délégation »). Relever aussi les décisions prises par délégation depuis
+   le dernier bilan : en compter les défaites (lignes `cap`) et proposer à Pascal de
+   garder, d'élargir ou de restreindre la délégation.
 6. **La question du harnais** : *qu'est-ce que l'IA nous a fait gagner, et à quoi ce
    temps a-t-il servi ?* (Pour l'auteur : le rendre au terrain et aux Hommes.)
 

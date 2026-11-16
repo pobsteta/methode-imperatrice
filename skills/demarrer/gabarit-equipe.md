@@ -12,6 +12,16 @@
 - **PR ouvertes en même temps, au plus :** 3
 - **Rythme de relecture de Pascal :** _…_
 
+## Délégation
+
+> Ce que Pascal demande à l'orchestrateur de trancher à sa place (skill `methode`,
+> « La délégation »). Vide : aucune délégation, Pascal tranche tout.
+
+- **Portée :** _aucune_
+- **Jusqu'à :** _…_
+- **Réservé à Pascal :** _…_
+- **Inscrite au journal le :** _…_
+
 ## Le vivier (catalogue, pas une équipe)
 
 | Agent | A / plan | Modèle | Écrit du code ? |
