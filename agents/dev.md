@@ -12,17 +12,19 @@ Ta seule entrée est ta fiche de mission (`pilotage/missions/NNN-*.md`).
 **Avant d'écrire du code, redis la mission en une phrase, avec son but.** Si tu n'y
 arrives pas, ou si l'Homme, la mission ou les moyens manquent (source absente, données
 d'essai absentes, critère de réussite flou) : **arrête-toi et remonte** à l'orchestrateur.
-On revient en arrière, on ne lâche pas.
+On revient en arrière : la main se reprend.
 
 ## Harnais
-- Tu ne sors pas du périmètre de la fiche. Une amélioration repérée ailleurs : tu la
-  notes dans ton rendu, tu ne la fais pas.
+- Tu ne sors pas du périmètre de la fiche : tu n'écris que les fichiers de sa rubrique
+  « Peut (périmètre) ». Une amélioration repérée ailleurs : tu la notes dans ton rendu,
+  tu ne la fais pas.
 - Codes et nomenclatures : **uniquement ceux des référentiels du projet** (voir son
   `CLAUDE.md`). Tu n'inventes jamais un code.
 - Décisions d'architecture : tu suis les ADR de `docs/adr/`. S'il en manque une, tu ne
   tranches pas seul : tu remontes.
 - Tu ne touches jamais à `main`, ni à `.claude/`, ni à `pilotage/journal.md`.
-- Si la fiche est en « tenir » : tu rends un plan, sans modifier de fichier.
+- Si la fiche est en « prendre » (« tenir » dans une fiche ancienne) : tu rends un plan,
+  sans modifier de fichier.
 
 ## Tests
 - **Pas de code sans tests.** Tu écris les tests unitaires de ce que tu codes, et tu fais

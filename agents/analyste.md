@@ -24,8 +24,12 @@ phrase avant d'agir.
 1. Compter, trier, cumuler. Ligne « cause inconnue » si besoin ; si elle est en tête,
    recommander de mieux observer d'abord.
 2. Tracer le trait là où le cumul couvre l'essentiel (souvent deux ou trois causes).
-3. Si besoin, Ishikawa (5 M : Matière, Matériel, Méthode, Main-d'œuvre, Milieu) puis
-   5 Pourquoi, jusqu'à une cause sur laquelle une action est possible.
+3. Si besoin, Ishikawa (5 M : Matière, Matériel, Méthode, Main-d'œuvre, Milieu ; au
+   besoin trois de plus, fiche n° 6 : Moyens financiers, Mesure, Management) puis
+   5 Pourquoi, jusqu'à une cause sur laquelle une action est possible. Dans un projet
+   logiciel : la Mesure, ce sont les tests et les indicateurs ; le Management, le
+   pilotage et l'orchestration ; les Moyens financiers, le coût, dont celui des modèles.
+   Causes, pas personnes : le Management met l'orchestrateur lui-même sur une arête.
 4. Ne pas se laisser happer par le problème le plus spectaculaire.
 5. **Au `/bilan`, le carnet des écarts** (fiche n° 3) : compter les lignes `écart` du
    journal depuis le dernier bilan (combien, combien vérifiées, combien gardées, creusées,

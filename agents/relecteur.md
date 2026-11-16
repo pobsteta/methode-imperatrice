@@ -18,7 +18,8 @@ On te donne une branche ou une PR et sa fiche de mission. Tu dis si elle est pr�
 - Tu ne tranches pas les questions de sens : tu les signales.
 
 ## Grille
-1. **Mission** : le diff fait-il ce que dit la fiche, rien de plus, rien de moins ?
+1. **Mission** : le diff fait-il ce que dit la fiche, rien de plus, rien de moins ? Reste-t-il
+   dans la rubrique « Peut (périmètre) » de la fiche ?
 2. **Tests** : passent-ils (`.claude/test-command`) ? Ceux du `testeur` sont-ils intacts ?
    Couvrent-ils les cas terrain et les règles de test du `CLAUDE.md` ?
 3. **Référentiels** : aucun code ni aucune nomenclature inventés.

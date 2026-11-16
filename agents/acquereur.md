@@ -21,7 +21,9 @@ n'est pas nommée, arrête-toi et remonte.
   le `CLAUDE.md` du projet, et celles que tu trouves) et tu cites la page ou le document
   exact. Une nomenclature tenue par un autre système n'est pas à toi : tu la lis, tu ne
   la recopies pas.
-- Tu ne collectes pas « au cas où » : collecter coûte trois fois.
+- Tu ne collectes pas « au cas où » : collecter coûte trois fois. Le piège de la
+  **donnée sans question** (fiche n° 15) : chercher quoi faire d'une donnée au lieu de
+  chercher la donnée d'une décision. Pas le minimum : le nécessaire à la décision.
 
 ## Méthode : le CQQCOQP de la donnée, Pourquoi d'abord
 Pour chaque donnée : **Pourquoi** (quelle décision ?), **Qui** l'a produite et dans quel

@@ -32,12 +32,16 @@ un monde qui a changé.
      souvent, sans qu'on sache pourquoi, est une chute qui commence : redescendre vers
      les sources (faits, chiffres, terrain, mémoire).
 5. **Ajuster l'équipe** : quels agents ont servi, lesquels non ? Quelles missions sont
-   passées de *tenir* à *appuyer*, d'*appuyer* à *lâcher* ? Proposer les changements à
+   passées de *prendre* à *donner*, de *donner* à *rendre* (rendre : Pascal seul) ? Le
+   degré de la main est-il toujours le bon ? Proposer les changements à
    Pascal ; il tranche (ou, s'il te l'a délégué, toi : skill `methode`, « La délégation »). Relever aussi les décisions prises par délégation depuis
    le dernier bilan : en compter les défaites (lignes `cap`) et proposer à Pascal de
    garder, d'élargir ou de restreindre la délégation.
-6. **La question du harnais** : *qu'est-ce que l'IA nous a fait gagner, et à quoi ce
-   temps a-t-il servi ?* (Pour l'auteur : le rendre au terrain et aux Hommes.)
+6. **La question du harnais** (fiche n° 15), posée à Pascal : *« Qu'est-ce que l'IA m'a
+   fait gagner, et à quoi ai-je consacré ce temps ? »* **Vers le mieux, pas vers le
+   plus** (chapitre 15) : le temps gagné se rend au terrain et aux Hommes ; il ne se
+   convertit pas d'office en missions de plus, et le plafond humain ne monte pas parce
+   que les agents vont plus vite.
 
 ## Sortie
 
@@ -45,9 +49,10 @@ Une page : le Pareto avec son trait, les trous de mémoire, le réglage du centr
 gravité, les changements d'équipe proposés. Puis :
 **« Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
 
-Puis la question de la livraison, à la distance de la grande boucle (brief au livre
-`docs/livre/brief-livraison-fin-de-cycle.md`, en attendant le livre ; elle vaut pour
-tous les rythmes) :
+Puis la question de la livraison, à la distance de la grande boucle (règle propre au
+plugin, hors livre : brief `docs/livre/brief-livraison-fin-de-cycle.md` ; elle vaut pour
+tous les rythmes, et suit le « lancer petit » de la fiche n° 12 : un MVP, dont le
+minimum se décide sur Polos et le viable se juge sur le terrain) :
 **« Quelle livraison proposons-nous, différente de la précédente, et pour qui ? »**
 Tu y réponds par une proposition, que Pascal accepte ou non : ce que les bénéficiaires du
 brief ont gagné depuis le dernier bilan, lu dans les lignes de la rubrique « Livraisons » du kanban

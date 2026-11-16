@@ -10,8 +10,8 @@
 [![Licence](https://img.shields.io/badge/licence-GPL--3.0-blue)](LICENSE)
 
 Piloter une équipe d'agents IA selon **la méthode de l'Impératrice** de Pascal Obstétar
-(*La méthode de l'Impératrice — Emmener le bureau en forêt*, livre imprimé, Boîte à outils
-p. 203-275) : **l'IA propose, l'homme tranche et assume.** Le plugin reprend les formules
+(*La méthode de l'Impératrice — Emmener le bureau en forêt*, livre imprimé du 7 novembre
+2026, Boîte à outils p. 207-286) : **l'IA propose, l'homme tranche et assume.** Le plugin reprend les formules
 du livre ; `tests/test_alignement_livre.py` vérifie qu'elles y sont.
 
 Ce dépôt contient la méthode, et elle seule. Chaque projet garde son produit (`docs/`) et
@@ -23,7 +23,7 @@ garde-fous viennent d'ici, sans copie.
 | Élément | Contenu |
 |---|---|
 | **Commandes** | `/imperatrice:demarrer` (installer la méthode dans un projet), `/imperatrice:brief` (Abstraction, porte n° 1), `/imperatrice:mission` (staffing, porte n° 2), `/imperatrice:boucle` (OODA, porte n° 3), `/imperatrice:bilan` (PDCA) ; `boucle` et `bilan` se closent sur une livraison différente de la précédente |
-| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main, le harnais en sept points (dont « ma réponse d'abord »), le crible FRANCE, plier ou tenir, la liste de contrôle d'auto-relecture avant « prêt » (`liste-de-controle.md`, pour l'acquéreur et le testeur) |
+| **La méthode** | skill `imperatrice:methode` : les six A, la règle de staffing, les trois temps de la main (prendre, donner, rendre) et son degré, le harnais en huit points (dont le journal et « ma réponse d'abord »), le crible FRANCE, plier ou tenir, la liste de contrôle d'auto-relecture avant « prêt » (`liste-de-controle.md`, pour l'acquéreur et le testeur) |
 | **Agents** | `contradicteur`, `acquereur`, `archiviste`, `analyste`, `afficheur`, `dev`, `testeur`, `relecteur` |
 | **Garde-fous** (hooks Python 3) | pas de commit ni de push sur `main`, pas de push forcé ; `pilotage/journal.md` en ajout seul (commandes filtrées, et résultat vérifié à chaque arrêt et en CI) ; pas de « terminé » sans tests verts (`.claude/test-command`, attente du verrou comprise, 630 s au plus) ; au second arrêt sans tests verts, l'agent sort mais c'est inscrit au journal |
 | **Gabarits** | fiche de mission (ma réponse d'abord, valeur provisoire à mesurer avant gel, critère d'arrêt de la relecture), ADR au crible FRANCE (« prêts à payer ? »), `CLAUDE.md`, brief, équipe, kanban (cartes, cycles et livraisons), journal (lignes `écart` et `cap`) |
@@ -159,6 +159,33 @@ réserve ; dans cette portée, l'orchestrateur tranche, inscrit chaque décision
 la dit à Pascal. Ne se délèguent pas : la réponse d'abord de Pascal et les garde-fous
 (pas de push sur `main`, tests verts, journal en ajout seul). Révocable d'un mot. Hors
 délégation, rien ne change : l'IA propose, Pascal tranche.
+
+**Ce que change la 1.0.0** (demandé par Pascal le 16 novembre 2026 ; brief
+`docs/brief-v1.0.0.md`) : le plugin suit le livre du 7 novembre 2026.
+
+- **Les trois temps de la main changent de nom** : prendre (mener), donner (aider, si
+  besoin), rendre (comme le cavalier). C'est la rupture qui fait passer en 1.0.0 : les
+  fiches et les commandes disent désormais « prendre / donner / rendre ». Les fiches
+  écrites avant, en « tenir / appuyer / lâcher », restent lues comme prendre / donner /
+  rendre ; on ne réécrit ni elles ni le journal.
+- **Le harnais passe à huit points** : le Journal s'ajoute ; « l'interdit se câble, le
+  contexte s'écrit » ; des périmètres disjoints dans l'équipe (`/boucle` ne lance pas
+  ensemble deux missions qui partagent un fichier, la fiche a une rubrique « Peut
+  (périmètre) ») ; « qui tranche » pose le fait à ceux que l'action touche. Deux pièges :
+  l'interdit écrit au crayon, la donnée sans question.
+- **Jamais au pivot** : les agents servent à tous les niveaux (fiche ENSEMBLE), mais
+  l'IA ne prend pas la main et ce n'est pas à elle de la rendre. La délégation de la
+  0.8.0 reste, mais ne couvre plus **rendre la main** ni **ce qui touche l'extérieur et
+  ne se défait pas** (release, tag, déploiement, message, système tiers).
+- **Le degré de la main** (fiche n° 9), écrit dans la fiche de mission : le chef tranche
+  (défaut), sollicitation d'avis, ou partage d'intention (dans la portée d'une
+  délégation, pour ce qui ne touche que le dépôt).
+- **Lancer petit** (fiche n° 12) : la livraison de fin de cycle est un MVP, dont le
+  minimum se décide sur Polos et le viable se juge sur le terrain. La question de
+  livraison reste une règle propre au plugin, hors livre.
+- **`/bilan`** pose la question de contrôle exacte de la fiche n° 15 et la règle « vers
+  le mieux, pas vers le plus » ; l'`analyste` connaît les huit M d'Ishikawa ;
+  l'`acquereur`, le piège de la donnée sans question.
 
 **Note de la 0.2.0 — le hook de tests ne fixe plus `ANDROID_HOME`** (ADR 0001). Jusqu'en
 0.1.0, il le fixait à `~/Android/Sdk` (ou `~/Library/Android/sdk`) quand la variable et

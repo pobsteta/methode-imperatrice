@@ -1,5 +1,11 @@
 # Brief au livre — à chaque fin de cycle, une livraison différente de la précédente
 
+> **État au 16 novembre 2026** : le livre du 7 novembre ne reprend pas cette question ;
+> il dit « lancer petit » (fiche n° 12 : la plus petite version qui rend déjà un service
+> réel, un MVP ; le minimum se décide sur Polos, le viable se juge sur le terrain). Le
+> plugin garde la question comme règle propre, marquée « hors livre », accordée à ce
+> « lancer petit » (version 1.0.0).
+
 > Proposé par Claude le 22 octobre 2026, à partir de la réponse de Pascal ; complété le
 > même jour de ses deux décisions (tous les rythmes, la mauvaise nouvelle comme
 > livraison). À reporter dans le livre par Pascal ; le plugin le suit dès la v0.3.0
