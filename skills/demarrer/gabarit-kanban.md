@@ -34,7 +34,8 @@ _Avec la raison, en une ligne._
 
 _Une ligne par cycle, ajoutée sous la précédente à la fin de chaque `/boucle`, et une
 par `/bilan` : la livraison que Pascal a retenue, pour qui, et ce qu'elle apporte de plus
-que la précédente du même rythme. Un cycle sans livraison neuve livre sa mauvaise
+que la précédente du même rythme. On lance petit (fiche n° 12) : la plus petite version
+qui rend déjà un service réel, un MVP, essayée tout de suite sur le terrain. Un cycle sans livraison neuve livre sa mauvaise
 nouvelle, car
 « une mauvaise nouvelle est une livraison sur laquelle on apprend » (Pascal) : on
 l'inscrit avec ce qu'elle nous apprend._

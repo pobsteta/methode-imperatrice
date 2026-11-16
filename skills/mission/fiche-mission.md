@@ -17,7 +17,13 @@
 | Sait-il comment faire ? (sources, conventions nommées ci-dessous) | oui / non | |
 | A-t-il les moyens ? (outils, données d'essai, tests) | oui / non | |
 
-**Temps de la main :** tenir / appuyer / lâcher — _et pourquoi._
+**Temps de la main :** prendre / donner / rendre — _et pourquoi._ (Rendre : décision de
+Pascal seulement. Une fiche ancienne qui dit tenir / appuyer / lâcher se lit prendre /
+donner / rendre.)
+
+**Degré de la main :** le chef tranche / sollicitation d'avis / partage d'intention —
+_écrit avant de confier, pour cette mission seulement (fiche n° 9). Partage d'intention :
+seulement dans la portée d'une délégation, et pour ce qui ne touche que le dépôt._
 
 ## Ma réponse d'abord
 
@@ -33,9 +39,21 @@ pas._
 
 ## Harnais
 
-- **Peut :** _…_
-- **Ne doit pas :** _sortir du périmètre, inventer un code, toucher à `main`, …_
-- **Sources autorisées :** _fichiers, référentiels, ADR à lire — juste le nécessaire._
+- **Peut (périmètre) :** _les fichiers et dossiers que l'agent écrit. Aucun en commun avec
+  une mission qui tourne en même temps._
+- **Câblé (ne peut pas) :** _ce que les hooks refusent : pas de `main`, pas de « terminé »
+  sans tests verts, journal en ajout seul ; plus ceux du projet. Ce qui ne doit jamais
+  arriver se câble : une consigne écrite n'est qu'une suggestion._
+- **Ne doit pas (écrit) :** _ce qui dépend du contexte : sortir du périmètre, inventer un
+  code, …_
+- **Sources autorisées :** _fichiers, référentiels, ADR à lire — juste le nécessaire. Et
+  celles qui sont fermées._
+
+## Journal
+
+- **Ce que l'agent inscrit :** _une ligne par rendu et par aller-retour, proposée à
+  l'orchestrateur, dans `pilotage/journal.md` (ajout seul) : ce qu'il a vu, ce qu'il a
+  fait, ce qui permettrait de le défaire._
 
 ## Valeur provisoire (chiffre, réglage)
 
@@ -83,7 +101,9 @@ constaté est bien celui qui est annoncé, ni plus, ni moins.
   d'avance quand la boucle de relecture s'arrête ») ; au-delà, la décision remonte à
   Pascal._
 - **Point de suivi :** _à quel moment l'orchestrateur fait le point._
-- **Qui tranche :** Pascal.
+- **Qui tranche :** Pascal. _Si l'action touche d'autres personnes que l'équipe
+  (utilisateurs, terrain, autre projet) : le moment où Pascal leur pose le fait, avant
+  de trancher._
 
 ## Comment saura-t-on que ça marche ?
 

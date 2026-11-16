@@ -1,6 +1,6 @@
 ---
 name: mission
-description: Règle de staffing de la méthode de l'Impératrice. Découpe la spec en missions d'une phrase, applique à chacune les trois questions (un Homme, une mission, des moyens), fixe le temps de la main et propose pilotage/equipe.md à la validation de Pascal.
+description: Règle de staffing de la méthode de l'Impératrice. Découpe la spec en missions d'une phrase, applique à chacune les trois questions (un Homme, une mission, des moyens), fixe le temps et le degré de la main et propose pilotage/equipe.md à la validation de Pascal.
 ---
 # /mission — un Homme, une mission, des moyens
 
@@ -25,22 +25,29 @@ Sinon : arrête-toi et propose `/brief`.
 
    | Résultat | Décision |
    |---|---|
-   | Non à la 1re | pas d'agent : redécouper, ou poser la question à Pascal |
-   | Non à la 2e | **appuyer** au mieux, ou **tenir** : l'agent rend un plan d'abord |
-   | Non à la 3e | **ne pas lâcher** : créer d'abord la mission qui fournit le moyen manquant (référentiel → `acquereur`, tests → `testeur`) |
+   | Non à la 1re | **prendre la main** : pas d'agent ; redécouper, ou poser la question à Pascal |
+   | Non à la 2e | **donner la main** : l'agent rend un plan d'abord, on reste à portée |
+   | Non à la 3e | **ne pas rendre la main** : créer d'abord la mission qui fournit le moyen manquant (référentiel → `acquereur`, tests → `testeur`) |
    | Trois oui | confier ; temps de la main selon l'enjeu |
 
 3. **Choisir l'agent** dans le vivier (`pilotage/equipe.md`) : le plus simple qui suffit.
    Jamais un agent « par principe ». Modèle `sonnet` par défaut ; `opus` si la mission
    engage l'architecture ou la justesse des données.
-4. **Fixer le temps de la main, par mission** : *tenir* pour ce qui engage la durée
-   (modèle de données, codes, stack) ; *appuyer* par défaut ; *lâcher* seulement sur
-   décision de Pascal (ou la tienne, par délégation), pour une mission déjà réussie deux fois.
+4. **Fixer le temps de la main, par mission** : *prendre* pour ce qui engage la durée
+   (modèle de données, codes, stack) ; *donner* par défaut ; *rendre* seulement sur
+   décision de Pascal, pour une mission déjà réussie deux fois (ce n'est pas à l'IA de
+   rendre la main, même par délégation). **Fixer aussi le degré de la main** (skill
+   `methode`) : le chef tranche par défaut ; sollicitation d'avis pour un sujet qui
+   divise ; partage d'intention seulement dans la portée d'une délégation, pour ce qui
+   ne touche que le dépôt et se défait.
 5. **Appliquer le plafond humain** : pas plus de missions en revue simultanée que le
    plafond de `pilotage/equipe.md`. Le reste va en « planifié ».
 6. **Écrire chaque fiche** dans `pilotage/missions/NNN-titre.md` à partir du
-   gabarit `fiche-mission.md` (à côté de ce fichier), harnais en sept points compris (brief, harnais,
-   tests, terrain, équipe, ma réponse d'abord, qui tranche). Renseigner la rubrique « Valeur
+   gabarit `fiche-mission.md` (à côté de ce fichier), harnais en huit points compris (brief, harnais,
+   journal, tests, terrain, équipe, ma réponse d'abord, qui tranche). La rubrique « Peut » du
+   harnais est le **périmètre** de l'agent : les fichiers et dossiers qu'il écrit. Deux
+   missions qui pourront tourner en même temps n'ont aucun fichier en commun dans leur
+   périmètre ; sinon, l'une dépend de l'autre (rubrique « Dépend de »). Renseigner la rubrique « Valeur
    provisoire (chiffre, réglage) » : toute valeur fixée ou reprise avant d'être mesurée est nommée, avec
    ce qui la mesure, la date et l'étape où elle gèle. Mesure dans les moyens de la mission :
    première tâche. Mesure qui revient à un autre (essai de Pascal, outil tiers absent) :
@@ -54,7 +61,7 @@ Sinon : arrête-toi et propose `/brief`.
 ## Sortie
 
 Présenter à Pascal, en dix secondes de lecture : le nombre de missions, les agents
-mobilisés et pourquoi, les missions tenues, et **ce qui manque** (missions qui n'ont pas
+mobilisés et pourquoi, les missions où l'on prend la main, et **ce qui manque** (missions qui n'ont pas
 passé les trois questions). Clore par :
 **« Valides-tu cette équipe ? Qui fait quoi, d'ici quand ? »**
 Rien ne démarre sans son « oui », ou ta décision inscrite au journal si la porte n° 2 t'est

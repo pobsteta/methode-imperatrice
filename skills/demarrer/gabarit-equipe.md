@@ -19,7 +19,8 @@
 
 - **Portée :** _aucune_
 - **Jusqu'à :** _…_
-- **Réservé à Pascal :** _…_
+- **Réservé à Pascal :** _…_ (toujours, même si rien n'est écrit : sa réponse d'abord ;
+  rendre la main ; ce qui touche l'extérieur et ne se défait pas)
 - **Inscrite au journal le :** _…_
 
 ## Le vivier (catalogue, pas une équipe)

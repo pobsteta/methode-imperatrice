@@ -28,15 +28,20 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    suite (fiche n° 8) : chacune est annoncée à Pascal à l'étape « Dire tout de suite ».
 2. **S'orienter** : quelles missions validées ont leurs moyens prêts (référentiel
    présent, tests écrits, ADR tranchée) ? Une mission sans ses moyens ne part pas.
-3. **Décider** : choisir les missions du cycle, dans la limite du plafond.
+3. **Décider** : choisir les missions du cycle, dans la limite du plafond. **Un
+   périmètre par agent** (fiche n° 15) : comparer les rubriques « Peut (périmètre) » des
+   missions retenues ; deux missions qui partagent un fichier ne partent pas ensemble
+   (la seconde attend, ou dépend de la première). Vérifier que `pilotage/journal.md` est
+   en ajout seul avant de lancer.
 4. **Agir** : pour chaque mission, lancer l'agent indiqué dans sa fiche avec l'outil
    Agent, **`isolation: "worktree"`** pour les agents qui écrivent du code, et pour seule
    consigne : *« Ta mission est dans pilotage/missions/NNN-titre.md. Redis-la en une phrase,
    puis réalise-la selon ta définition. »* Lancer en parallèle les missions
    indépendantes. Pour l'`acquereur` et le `testeur`, joindre à la consigne le contenu de
    `liste-de-controle.md` (skill `methode`) : les agents ne peuvent pas l'ouvrir
-   eux-mêmes. Missions en « tenir » : l'agent rend un plan, que tu soumets à Pascal
-   avant toute exécution (ou que tu valides toi-même, par délégation).
+   eux-mêmes. Missions en « prendre » (« tenir » dans une fiche ancienne) : l'agent rend
+   un plan, que tu soumets à Pascal avant toute exécution (ou que tu valides toi-même,
+   par délégation).
 5. **Contrôler** : pour chaque mission rendue, lancer le `relecteur`. « À reprendre » :
    renvoyer à l'agent (nouveau contexte, fiche complétée des remarques, liste de
    contrôle de nouveau jointe pour l'`acquereur` et le `testeur`), et inscrire au
@@ -46,10 +51,13 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    défaut. Au (N+1)e « à reprendre », soit le 4e « à reprendre » par défaut, tu ne
    renvoies plus : la décision remonte à Pascal, en quatre temps, avec les points du
    relecteur restés ouverts. Pascal tranche (ou, s'il te l'a délégué, toi : skill `methode`, « La délégation ») ; la décision est inscrite au journal.
-   « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions explicitement « lâchées »
-   par Pascal peuvent être fusionnées sans lui, et seulement tests verts. Si Pascal t'a
-   délégué la porte n° 3 (skill `methode`, « La délégation »), tu fusionnes toi-même la PR
-   « prête », tests verts, et tu inscris la fusion au journal comme décision déléguée.
+   « Prêt » : ouvrir la PR vers `main` pour Pascal. Seules les missions dont Pascal a
+   lui-même rendu la main (« rendre », ou « lâcher » dans une fiche ancienne) peuvent
+   être fusionnées sans lui, et seulement tests verts. Si Pascal t'a délégué la porte
+   n° 3 (skill `methode`, « La délégation »), tu fusionnes toi-même la PR « prête », tests
+   verts, et tu inscris la fusion au journal comme décision déléguée ; sauf si la fusion
+   touche l'extérieur (publication, release, déploiement) : elle ne se défait pas, elle
+   revient à Pascal.
    Rubrique « Dépend de / rouge attendu jusqu'à » de la fiche (voir le gabarit) : la reporter en
    tête de la PR, ouvrir la PR en brouillon quand elle le dit, respecter l'ordre de fusion écrit, et ne pas fusionner tant que
    le rouge annoncé n'est pas levé.
@@ -57,7 +65,7 @@ s'oriente ; une boucle précipitée saute directement à l'action.
    tout cycle dont la livraison est une mauvaise nouvelle (voir « Sortie »), est annoncé
    à Pascal en quatre temps (décidé et par qui ; ouvert ; ce que ça change ; qui fait
    quoi d'ici quand), sans euphémisme.
-7. **Tenir la mémoire** : ajouter à `pilotage/journal.md` les lignes proposées par les
+7. **Garder la mémoire** : ajouter à `pilotage/journal.md` les lignes proposées par les
    agents (une par mission, datée, signée), mettre à jour `pilotage/kanban.md` :
    augmenter de 1 le dernier cycle, et noter ce nouveau numéro sur chaque carte qui a
    changé de colonne. Cette étape a lieu même quand le plafond humain a arrêté la boucle
@@ -72,11 +80,14 @@ Un tableau d'une ligne par mission (mission, agent, verdict du relecteur, PR, ce
 Pascal doit vérifier sur le terrain), puis la question :
 **« Qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
 
-Puis la question de la livraison (brief au livre
-`docs/livre/brief-livraison-fin-de-cycle.md`, en attendant le livre ; elle prolonge la
-question de sortie de la fiche n° 12) :
+Puis la question de la livraison (règle propre au plugin, hors livre : brief
+`docs/livre/brief-livraison-fin-de-cycle.md` ; elle prolonge la question de sortie de la
+fiche n° 12, et son « lancer petit ») :
 **« Quelle livraison proposons-nous, différente de la précédente, et pour qui ? »**
-Tu y réponds par une proposition, que Pascal accepte ou non : ce qu'un bénéficiaire nommé
+Tu y réponds par une proposition, que Pascal accepte ou non. **Lance petit** (fiche
+n° 12) : la plus petite version qui rend déjà un service réel (un MVP), essayée tout de
+suite sur le terrain ; le minimum se décide sur Polos, le viable se juge sur le terrain.
+C'est ce qu'un bénéficiaire nommé
 au brief peut prendre en main à la fin du cycle (une version, une fonction dont il se
 sert, une page publiée), et en une ligne, ce qu'elle apporte de plus que la
 dernière livraison inscrite au kanban pour un cycle (ligne `cycle N`, pas un bilan).
