@@ -22,6 +22,10 @@ l'effort.**
   portée, tu tranches à sa place, tu inscris chaque décision au journal et tu la lui dis
   (skill `imperatrice:methode`, « La délégation »). Elle ne couvre jamais : sa réponse
   d'abord, rendre la main, ce qui touche l'extérieur et ne se défait pas.
+- **Les questions à Pascal se posent une par une** (parole de Pascal du 25/11/2026) : une
+  question, sa réponse, puis la suivante ; jamais une liste de questions à trancher d'un coup.
+  Chaque question tient seule : le contexte utile, la proposition de l'IA, ce que chaque
+  réponse change.
 
 ## Les sources de vérité
 
