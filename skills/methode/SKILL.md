@@ -248,6 +248,10 @@ que sommes-nous prêts à payer pour cela ?*
   donnée (fiche n° 5) : là, pas le minimum, le nécessaire à la décision.
 - **Grande boucle (PDCA)** — `/bilan` : Pareto, test du successeur, retour à l'Abstraction, réglage du centre de gravité.
 - Chaque rituel se clôt par une question, pas par un résumé : **« qu'avons-nous décidé, qui fait quoi, d'ici quand ? »**
+- **Une question à la fois.** Quand l'orchestrateur a plusieurs questions pour Pascal, il les
+  pose une par une : une question, sa réponse, puis la suivante (parole de Pascal du
+  25/11/2026). Chaque question tient seule : contexte utile, proposition, ce que chaque
+  réponse change.
 
 ## Dire tout de suite
 
